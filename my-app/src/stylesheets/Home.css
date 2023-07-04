@@ -1,0 +1,36 @@
+#opening {
+    background-color: rgb(1, 1, 60);
+    color: white;
+    min-height: 85vh;
+    padding: 20vh 15vh 20vh;
+}
+
+.opening-item {
+    word-wrap: break-word;
+    box-sizing: inherit;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(255, 255, 255);
+    max-width: 60rem;
+}
+
+#tagline {
+    font-size: 4rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: #0089d9;
+    font-size: 32px;
+    text-decoration: none;
+    padding: 2rem 1rem 2rem 0px;
+}
+
+.highlighted {
+    background: linear-gradient(to bottom, transparent 55%, #0089d9 50%);
+}
