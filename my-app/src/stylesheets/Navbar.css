@@ -1,16 +1,16 @@
-nav {
+nav { /* Navigation bar */
     background-color: #051924;
     padding: 20px 80px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     width: 100%;
   }
   
-  #home-link {
+  #home-link { /* 'Steven Vasquez' Link to home page */
     margin-bottom: 20px;
     text-align: center;
   }
   
-  #nav-bar-links {
+  #nav-bar-links { /* Navigation bar links */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,7 +52,7 @@ nav {
   }
   
 /* Styles for small screens */
-#mobile {
+#mobile { /* Hamburber menu not displayed*/
   display: none;
 }
 
@@ -61,8 +61,8 @@ nav {
     align-items: center;
 }
 
-@media screen and (max-width: 769px) {
-  #nav-bar-links {
+@media screen and (max-width: 769px) { /* Media query for small screens */
+  #nav-bar-links { /* Navigation bar links */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -81,31 +81,32 @@ nav {
     right: 0px;
   }
   #nav-bar-links li {
-    padding: 10px 0; /* Adjust the padding as per your preference */
+    padding: 10px 0;
   }
   #nav-bar-links {
     padding-top: 0px;
   }
-  #mobile {
+  #mobile { /* Hamburber menu */
     display: block;
     position: absolute;
-    top: 26px;
-    right: 100px; /* Adjust the right position as needed */
+    top: 22px;
+    right: 50px;
   }
   #mobile i {
     font-size: 25px;
     cursor: pointer;
   }
-  #home-link {
+  #home-link { /* 'Steven Vasquez' Link to home page */
     margin-bottom: 0px;
     text-align: center;
     display: flex;
-    align-items: center; /* Add align-items property */
-    justify-content: center; /* Add justify-content property */
+    align-items: center; 
+    justify-content: center;
   }
-  nav {
+  nav { /* Navigation bar */
+    height: 68px;
     background-color: #051924;
-    padding: 20px 80px 20px 20px;
+    padding: 20px 20px 20px 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   }
 }
