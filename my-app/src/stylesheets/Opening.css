@@ -1,0 +1,121 @@
+#opening {
+    background-color: #051924;
+    color: white;
+    min-height: 87.5vh;
+    padding: 20vh 15vh 20vh;
+}
+
+.opening-item {
+    word-wrap: break-word;
+    box-sizing: inherit;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(255, 255, 255);
+    max-width: 60rem;
+}
+
+#tagline {
+    font-size: 4rem;
+}
+
+.social-row {
+    display: flex;
+    align-items: center;
+    padding-bottom: .5rem;
+}
+
+.social-icons a {
+    color: #0089d9;
+    font-size: 48px;
+    text-decoration: none;
+    padding-right: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+
+.social-icons a:hover,
+.resume-button:hover {
+    color: white;
+}
+
+
+.resume-button {
+    color: #051924;
+    text-decoration: none;
+    background-color: #0089d9;
+    font-size: 36px;
+    border-radius: 36px;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+}
+/*
+-webkit-text-size-adjust: 100%;
+text-align: center;
+box-sizing: border-box;
+margin: 0;
+border: 0;
+font: inherit;
+vertical-align: baseline;
+text-decoration: none;
+color: white;
+background-color: #8444df;
+padding: 15px 35px;
+border-radius: 40px;
+letter-spacing: 2px;
+font-size: 0.9rem;
+font-weight: 300;
+display: inline-block;
+transition: all 0.3s ease-in;
+*/
+
+.resume-button:hover {
+    background-color: white;
+}
+
+.highlighted-text {
+    background: linear-gradient(to right, transparent 0%, transparent 50%, #0089d9 50%, #25b15b 100%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position 0.3s ease-in-out;
+}
+
+.highlighted-text:hover {
+    background-position: 0 0;
+}
+
+.opening-description {
+    word-wrap: break-word;
+    margin-bottom: 1.75rem;
+    font-weight: 300;
+    color: rgb(199, 199, 199);
+    font-size: 1.2rem;
+    max-width: 45rem;
+}
+
+.opening-item b {
+    display: contents;
+    /* Add this line */
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    #opening {
+        padding: 10vh 5vh;
+    }
+
+    #tagline {
+        font-size: 3rem;
+    }
+
+    .social-icons a {
+        font-size: 36px;
+    }
+
+    .opening-description {
+        font-size: 1rem;
+    }
+}
