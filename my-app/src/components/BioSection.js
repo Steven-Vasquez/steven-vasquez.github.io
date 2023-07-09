@@ -5,7 +5,14 @@ export function Biography() {
         <>
             <div className="bio-section">
                 <div className="bio-header">
-                    <h1>My Skills</h1>
+                    <h1 style={{ display: 'flex', flexDirection: 'row' }}>
+                        <div>My</div>
+                        <span>&nbsp;</span>
+                        <div className="highlight"> 
+                            <div>Skills</div>
+                            <div></div>
+                        </div>
+                    </h1>
                 </div>
 
                 <div className="left-side">
@@ -15,7 +22,6 @@ export function Biography() {
 
                 <div className="bio">
                     <div id="skills-container">
-                        <h1>Skills</h1>
                         <ul className="skills">
                             <li className="skill-box">Java</li>
                             <li className="skill-box">Python</li>
@@ -35,13 +41,13 @@ export function Biography() {
                             <li className="skill-box">AWS</li>
                         </ul>
                     </div>
-
+                    
+                    
                     <div id="bio-text-container">
-                        <h1>Bio</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <b>Hello</b>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                        <p>Link to Bio</p>
                     </div>
-
-
 
 
                 </div>
