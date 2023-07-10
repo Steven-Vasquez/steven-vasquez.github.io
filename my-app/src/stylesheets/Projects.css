@@ -2,11 +2,118 @@
     padding: 4rem 2rem;
     max-width: 1100px;
     margin: auto;
-    
+
 }
 
 .projects-header {
     font-weight: 100;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
+.individual-project {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas:
+        "top top"
+        "title image"
+        "tags image"
+        "button image"
+        "text image";
+    padding-top: 2em;
+}
+
+.project-role {
+    grid-area: top;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.project-name {
+    grid-area: title;
+    font-weight: 400;
+    padding-top: .5rem;
+    font-size: 3.5rem;
+}
+
+.skills-used {
+    grid-area: tags;
+    word-wrap: break-word;
+    color: rgb(18, 30, 39);
+    flex-wrap: wrap;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    padding-top: .75rem;
+    padding-right: 4rem;
+    max-width: 80%;
+
+}
+
+.skill-box {
+    font-size: .85rem;
+    font-weight: 500;
+    word-wrap: break-word;
+    white-space: nowrap;
+    background: rgb(18, 30, 39);
+    color: rgb(255, 255, 255);
+    padding: 0.35rem 0.7rem;
+    margin: 0px 0.25rem .85rem 0px;
+    text-align: center;
+    display: flex;
+}
+
+.project-button {
+    grid-area: button;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 125px;
+    text-decoration: none;
+}
+
+.project-button a {
+    margin-top: 2rem;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.project-button :nth-child(1) {
+    background: #1babff;
+    color: rgb(255, 255, 255);
+    z-index: 100;
+    transform: translate3d(-8px, -8px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transition: transform 0.2s ease-in-out 0s, 
+                background-color .3s ease-in-out 0s,
+                color .3s ease-in-out 0s;
+    position: absolute;
+}
+
+.project-button :nth-child(2) {
+    z-index: 0;
+    border: 2px solid rgb(18, 30, 39);
+    position: absolute;
+    color: transparent;
+}
+
+.project-button :nth-child(1):hover {
+    transform: translate3d(2px, 2px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    background-color: #1570a4;
+    color: #c0c7cc;
+}
+
+.project-description {
+    grid-area: text;
+    word-wrap: break-word;
+    margin-bottom: 1.75rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    max-width: 80%;
+    line-height: 1.75;
+}
+
+.project-images {
+    grid-area: image;
+}

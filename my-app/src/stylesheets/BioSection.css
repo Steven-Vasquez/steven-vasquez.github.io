@@ -6,7 +6,7 @@
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 5fr;
     border-color: black solid 2px;
-    padding: 2rem 2rem;
+    padding: 4rem 2rem;
     max-width: 1100px;
     margin: auto;
 
@@ -14,11 +14,9 @@
 
 .bio-header {
     grid-area: header;
-    padding-top: 25px;
-    padding-bottom: 25px;
     font-weight: 100;
-    font-size: 1.5rem;
-    height: 3rem;
+    font-size: 1.2rem;
+    height: 100%;
 }
 
 .left-side {
@@ -33,9 +31,9 @@
 #image-container {
     border-radius: 20px;
     overflow: hidden;
-    max-height: 85%;
-    max-width: 85%;
-  }
+    max-height: 90%;
+    max-width: 90%;
+}
 
 #headshot {
     object-fit: contain;
@@ -89,7 +87,7 @@
 }
 
 #about-page-link {
-    color: #1babff; 
+    color: #1babff;
     text-decoration: none;
     transition: .3s ease-in-out;
 }
@@ -121,22 +119,21 @@
         justify-content: center;
         align-items: center;
     }
-    
+
     .skills {
         display: flex;
         justify-content: center;
-        align-items: center;   
+        align-items: center;
     }
 
     #bio-text-container {
-        display: flex;
         padding-top: 2rem;
     }
 
     #about-text {
         padding-top: 1rem;
     }
-    
+
     #about-page-link {
         padding-top: 1rem;
     }
