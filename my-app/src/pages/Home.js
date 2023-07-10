@@ -1,6 +1,7 @@
 import '../components/Opening';
 import Opening from '../components/Opening';
 import BioSection from '../components/BioSection';
+import Projects from '../components/Projects';
 
 export function Home() {
     
@@ -8,6 +9,7 @@ export function Home() {
         <>
             <Opening />
             <BioSection />
+            <Projects />
         </>
     );
 }

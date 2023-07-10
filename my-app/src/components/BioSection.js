@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import "../stylesheets/BioSection.css"
 
 export function Biography() {
@@ -16,8 +17,9 @@ export function Biography() {
                 </div>
 
                 <div className="left-side">
-                    {/* Insert your headshot photo here */}
-                    <img src="/images/headshot.jpg" alt="Headshot" id="headshot" />
+                    <div id="image-container">
+                        <img src="/images/headshot.jpg" alt="Headshot" id="headshot" />
+                    </div>
                 </div>
 
                 <div className="bio">
@@ -44,9 +46,11 @@ export function Biography() {
                     
                     
                     <div id="bio-text-container">
-                        <b>Hello</b>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                        <p>Link to Bio</p>
+                        <b>(Hello)</b>
+                        <p id="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                        <NavLink exact to="/" activeClassName="active" id="about-page-link">
+                            <b style={{fontSize: ".85em", fontWeight: "1000"}}>Read my full bio</b>
+                        </NavLink>
                     </div>
 
 
