@@ -19,9 +19,11 @@ function IndividualProject(props) {
                 <a tabIndex="1" href={projectLink}>View Project</a>
             </div>
             <p className="project-description">{projectDescription}</p>
-            <div className="project-images">
+            <div className="project-image-container">
                 {projectImages.map((image) => (
-                    <img src={image} alt="Project Image" key={image} />
+                    <a href={projectLink}>
+                        <img src={image} alt="Project Image" key={image} className="project-image" />
+                    </a>
                 ))}
             </div>
         </div>
@@ -36,9 +38,7 @@ export function Projects() {
         projectDescription: "Served as backend lead in a team of 6 to create a language learning web app that connects native speakers to exchange language and culture. The site features ",
         projectLink: "https://example.com",
         projectImages: [
-            "",
-            "",
-            ""
+            "/images/Project_Images/ULingual/ULingual_screenshot_2.png",
         ]
     };
 
