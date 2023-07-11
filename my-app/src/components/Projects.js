@@ -31,14 +31,25 @@ function IndividualProject(props) {
 }
 
 export function Projects() {
-    const projectData = {
+    const projectData1 = {
         projectRole: "LEAD BACKEND DEVELOPER",
         projectTitle: "ULingual",
         techSkills: ["JavaScript", "React", "NodeJS", "ExpressJS", "SQL", "AWS", "Twilio API"],
-        projectDescription: "Served as backend lead in a team of 6 to create a language learning web app that connects native speakers to exchange language and culture. The site features ",
+        projectDescription: "Led backend development in a team of 6 to create a language learning web app that connects native speakers to exchange language and culture.",
         projectLink: "https://example.com",
         projectImages: [
             "/images/Project_Images/ULingual/ULingual_screenshot_2.png",
+        ]
+    };
+
+    const projectData2 = {
+        projectRole: "",
+        projectTitle: "",
+        techSkills: [],
+        projectDescription: "",
+        projectLink: "",
+        projectImages: [
+            "",
         ]
     };
 
@@ -55,7 +66,7 @@ export function Projects() {
                 </div>
 
                 <div className="projects">
-                    <IndividualProject {...projectData} />
+                    <IndividualProject {...projectData1} />
 
                 </div>
             </div>

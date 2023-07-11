@@ -2,6 +2,7 @@ import '../components/Opening';
 import Opening from '../components/Opening';
 import BioSection from '../components/BioSection';
 import Projects from '../components/Projects';
+import ContactForm from '../components/ContactForm';
 
 export function Home() {
     
@@ -10,6 +11,7 @@ export function Home() {
             <Opening />
             <BioSection />
             <Projects />
+            <ContactForm />
         </>
     );
 }
