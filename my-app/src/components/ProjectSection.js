@@ -1,9 +1,12 @@
-import "../stylesheets/Projects.css"
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+import "../stylesheets/ProjectSection.css"
 
 
 // IndividualProject component
 function IndividualProject(props) {
-    const { projectRole, projectTitle, techSkills, projectLink, projectDescription, projectImages } = props;
+    const { projectRole, projectTitle, techSkills, projectRoute, projectDescription, projectImages } = props;
 
     return (
         <div className="individual-project">
@@ -15,34 +18,24 @@ function IndividualProject(props) {
                 ))}
             </ul>
             <div className="project-button">
-                <a tabIndex="0" href={projectLink}>View Project</a>
-                <a tabIndex="1" href={projectLink}>View Project</a>
+                <a tabIndex="0" href={projectRoute}>View Project</a>
+                <a tabIndex="1" href={projectRoute}>View Project</a>
             </div>
             <p className="project-description">{projectDescription}</p>
             <div className="project-image-container">
                 {projectImages.map((image) => (
-                    <a href={projectLink}>
+                    <Link to={projectRoute}>
                         <img src={image} alt="Project Image" key={image} className="project-image" />
-                    </a>
+                    </Link>
                 ))}
             </div>
         </div>
     );
 }
 
-export function Projects() {
-    const projectData1 = {
-        projectRole: "LEAD BACKEND DEVELOPER",
-        projectTitle: "ULingual",
-        techSkills: ["JavaScript", "React", "NodeJS", "ExpressJS", "SQL", "AWS", "Twilio API"],
-        projectDescription: "Led backend development in a team of 6 to create a language learning web app that connects native speakers to exchange language and culture.",
-        projectLink: "https://example.com",
-        projectImages: [
-            "/images/Project_Images/ULingual/ULingual_screenshot_2.png",
-        ]
-    };
-
-    const projectData2 = {
+export function ProjectSection() {
+    /*
+    const projectData = {
         projectRole: "",
         projectTitle: "",
         techSkills: [],
@@ -52,6 +45,31 @@ export function Projects() {
             "",
         ]
     };
+    */
+
+    const ULingualData = {
+        projectRole: "LEAD BACKEND DEVELOPER",
+        projectTitle: "ULingual",
+        techSkills: ["JavaScript", "React", "NodeJS", "ExpressJS", "SQL", "AWS", "Twilio Video API"],
+        projectDescription: "Led backend development in a team of 6 to create a language learning web app that connects native speakers to exchange language and culture.",
+        projectRoute: "/projects/ULingual",
+        projectImages: [
+            "/images/Project_Images/ULingual/ULingual_screenshot_homeSmall.png",
+        ]
+    };
+
+    
+    const MonopolyData = {
+        projectRole: "TEAM LEAD",
+        projectTitle: "Monopoly",
+        techSkills: ["JavaScript", "PostgreSQL", "NodeJS", "ExpressJS", "Socket.io", "Webpack"],
+        projectDescription: "Led a team of 4 to create a multiplayer Monopoly game using Socket.io. ",
+        projectRoute: "https://example.com",
+        projectImages: [
+            "/images/Project_Images/Monopoly/Monopoly_screenshot_1.png",
+        ]
+    };
+    
 
     return (
         <>
@@ -66,8 +84,8 @@ export function Projects() {
                 </div>
 
                 <div className="projects">
-                    <IndividualProject {...projectData1} />
-
+                    <IndividualProject {...ULingualData} />
+                    <IndividualProject {...MonopolyData} />
                 </div>
             </div>
         </>
@@ -75,4 +93,4 @@ export function Projects() {
 }
 
 
-export default Projects;
+export default ProjectSection;
