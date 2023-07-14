@@ -14,11 +14,25 @@ export function ULingualPage() {
 
     return (
         <>
-            <div className="page-container">
+            <div className="project-page-container">
                 <ProjectPageIntro {...introDetails} />
+                
                 <div className="image-container"> 
                     <img src = "/images/Project_Images/ULingual/ULingual_screenshot_1.png" alt="Project Image" className="project-images"></img>
                 </div>
+
+                <h1>Project Purpose and Goal</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh venenatis cras sed felis eget velit. Gravida in fermentum et sollicitudin ac orci phasellus. Quis viverra nibh cras pulvinar mattis nunc sed blandit libero. Tristique senectus et netus et malesuada.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut pharetra sit amet aliquam. Eget dolor morbi non arcu risus quis varius quam. Velit dignissim sodales ut eu sem integer. Enim facilisis gravida neque convallis a cras semper auctor.</p>
+
+                <h1>Web Stack and Explanation</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Habitant morbi tristique senectus et netus. Scelerisque eu ultrices vitae auctor eu augue ut. Urna condimentum mattis pellentesque id nibh. Quis varius quam quisque id diam vel quam elementum. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis.</p>
+
+                <h1>Problems and Thought Process</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A lacus vestibulum sed arcu non odio euismod. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Feugiat nibh sed pulvinar proin gravida hendrerit lectus.</p>
+
+
+
             </div>
         </>
     );

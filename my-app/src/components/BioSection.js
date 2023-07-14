@@ -24,24 +24,23 @@ export function Biography() {
 
                 <div className="bio">
                     <ul className="skills">
-                        <li className="skill-box">Java</li>
-                        <li className="skill-box">Python</li>
-                        <li className="skill-box">JavaScript</li>
-                        <li className="skill-box">TypeScript</li>
-                        <li className="skill-box">C++</li>
-                        <li className="skill-box">MATLAB</li>
-                        <li className="skill-box">R</li>
-                        <li className="skill-box">SQL</li>
-                        <li className="skill-box">PostgreSQL</li>
-                        <li className="skill-box">HTML</li>
-                        <li className="skill-box">CSS</li>
-                        <li className="skill-box">React</li>
-                        <li className="skill-box">Node.js</li>
-                        <li className="skill-box">Express.js</li>
-                        <li className="skill-box">Git</li>
-                        <li className="skill-box">AWS</li>
+                        <li className="bio-skill-box">Java</li>
+                        <li className="bio-skill-box">Python</li>
+                        <li className="bio-skill-box">JavaScript</li>
+                        <li className="bio-skill-box">TypeScript</li>
+                        <li className="bio-skill-box">C++</li>
+                        <li className="bio-skill-box">MATLAB</li>
+                        <li className="bio-skill-box">R</li>
+                        <li className="bio-skill-box">PostgreSQL</li>
+                        <li className="bio-skill-box">SQL</li>
+                        <li className="bio-skill-box">HTML</li>
+                        <li className="bio-skill-box">CSS</li>
+                        <li className="bio-skill-box">React</li>
+                        <li className="bio-skill-box">Node.js</li>
+                        <li className="bio-skill-box">Express.js</li>
+                        <li className="bio-skill-box">Git</li>
+                        <li className="bio-skill-box">AWS</li>
                     </ul>
-
 
 
                     <div id="bio-text-container">

@@ -22,7 +22,7 @@ export function Opening() {
                         <a href="https://linkedin.com/in/your-profile" target="_blank"><i className="fab fa-linkedin"></i></a>
                         <a href="mailto:your-email@example.com"><i className="fas fa-envelope"></i></a>
                     </div>
-                    <a href="path/to/resume.pdf" target="_blank" class="resume-button">Resume <i class="fas fa-external-link-alt"></i></a>
+                    <a href="path/to/resume.pdf" target="_blank" class="resume-button">Resumé <i class="fas fa-external-link-alt"></i></a>
                 </div>
 
 

@@ -21,7 +21,8 @@ function IndividualProject(props) {
                 <a tabIndex="0" href={projectRoute}>View Project</a>
                 <a tabIndex="1" href={projectRoute}>View Project</a>
             </div>
-            <p className="project-description">{projectDescription}</p>
+            <p className="project-description" dangerouslySetInnerHTML={{ __html: projectDescription }}></p>
+
             <div className="project-image-container">
                 {projectImages.map((image) => (
                     <Link to={projectRoute}>
@@ -50,8 +51,8 @@ export function ProjectSection() {
     const ULingualData = {
         projectRole: "LEAD BACKEND DEVELOPER",
         projectTitle: "ULingual",
-        techSkills: ["JavaScript", "React", "NodeJS", "ExpressJS", "SQL", "AWS", "Twilio Video API"],
-        projectDescription: "Led backend development in a team of 6 to create a language learning web app that connects native speakers to exchange language and culture.",
+        techSkills: ["JavaScript", "React", "NodeJS", "ExpressJS", "MySQL", "AWS", "Twilio Video API"],
+        projectDescription: "Led backend development in a team of 6 to create a language learning web app that connects native speakers to exchange language and culture. Implemented the video chatroom service using the Twilio Video API.",
         projectRoute: "/projects/ULingual",
         projectImages: [
             "/images/Project_Images/ULingual/ULingual_screenshot_homeSmall.png",
@@ -70,6 +71,16 @@ export function ProjectSection() {
         ]
     };
     
+    const SubylertData = {
+        projectRole: "HACKATHON TEAM LEAD",
+        projectTitle: "Subylert",
+        techSkills: ["Android Studio", "Java", "Firebase", "Room Database", "Notivize API"],
+        projectDescription: "<strong>Hackathon winner!</strong> A subscription manager app",
+        projectLink: "https://example.com",
+        projectImages: [
+            "/images/Project_Images/Subylert/Subylert_screenshot_1.png",
+        ]
+    };
 
     return (
         <>
@@ -86,6 +97,7 @@ export function ProjectSection() {
                 <div className="projects">
                     <IndividualProject {...ULingualData} />
                     <IndividualProject {...MonopolyData} />
+                    <IndividualProject {...SubylertData} />
                 </div>
             </div>
         </>
