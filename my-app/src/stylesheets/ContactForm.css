@@ -27,6 +27,25 @@
     border: #d8d8d8 solid 2px;
 }
 
+@media (max-width: 768px) {
+    .contact-header {
+        padding: 0 0 2rem 2rem;
+    }
+
+    .contact-form {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    .contact-section {
+        padding: 0;
+    }
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -93,3 +112,4 @@
     transition: all 0.3s ease-in;
     margin: auto;
 }
+

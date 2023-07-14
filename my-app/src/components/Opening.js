@@ -17,12 +17,12 @@ export function Opening() {
                 </div>
 
                 <div className='social-row'>
-                    <div className="social-icons">
+                    <div className="social-icons social-icons-small">
                         <a href="https://github.com/your-username" target="_blank"><i className="fab fa-github"></i></a>
                         <a href="https://linkedin.com/in/your-profile" target="_blank"><i className="fab fa-linkedin"></i></a>
                         <a href="mailto:your-email@example.com"><i className="fas fa-envelope"></i></a>
                     </div>
-                    <a href="path/to/resume.pdf" target="_blank" class="resume-button">Resumé <i class="fas fa-external-link-alt"></i></a>
+                    <a href="path/to/resume.pdf" target="_blank" class="resume-button">Resumé <i class="fas fa-external-link-alt social-icons"></i></a>
                 </div>
 
 

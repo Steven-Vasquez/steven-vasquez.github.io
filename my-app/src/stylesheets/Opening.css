@@ -21,11 +21,19 @@
 
 .social-row {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding-bottom: .5rem;
+    gap: 8px 0px;
+}
+
+.social-icons-small {
+    display: flex;
 }
 
 .social-icons a {
+    display: flex;
+    flex-direction: column;
     color: #1babff;
     font-size: 48px;
     text-decoration: none;
@@ -86,13 +94,15 @@
 
 /* Media Queries */
 
+
 @media (max-width: 768px) {
-    #opening {
-        padding: 10vh 5vh;
+    #opening { 
+        padding: 10vh 5vh; 
     }
 
     #tagline {
         font-size: 3rem;
+        
     }
 
     .social-icons a {
@@ -101,5 +111,10 @@
 
     .opening-description {
         font-size: 1rem;
+    }
+}
+@media (max-width: 912px) and (min-width: 769px) {
+    #opening {
+        padding: 20vh 10vh 20vh;
     }
 }
