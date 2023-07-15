@@ -78,7 +78,7 @@ export function ProjectSection() {
         projectDescription: "<strong>Hackathon winner!</strong> A subscription manager app",
         projectLink: "https://example.com",
         projectImages: [
-            "/images/Project_Images/Subylert/Subylert_screenshot_1.png",
+            "/images/Project_Images/Subylert/Subylert_screenshot_2.jpeg",
         ]
     };
 

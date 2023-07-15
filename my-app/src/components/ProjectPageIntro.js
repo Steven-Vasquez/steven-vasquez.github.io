@@ -7,7 +7,7 @@ export function ProjectPageIntro(props) {
         <div className="project-intro-container">
             <h1>{projectTitle}</h1>
             <div id="read-time">{readTime}</div>
-            <p>{introText}</p>
+            <p dangerouslySetInnerHTML={{ __html: introText }}></p>
 
             <div className="intro-project-details">
                 <div>
