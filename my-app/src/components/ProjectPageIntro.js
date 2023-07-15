@@ -6,6 +6,7 @@ export function ProjectPageIntro(props) {
     return (
         <div className="project-intro-container">
             <h1>{projectTitle}</h1>
+
             <div id="read-time">{readTime}</div>
             <p dangerouslySetInnerHTML={{ __html: introText }}></p>
 
@@ -21,7 +22,7 @@ export function ProjectPageIntro(props) {
                         <div key={skill}>{skill}</div>
                     ))}
                 </div>
-                
+
                 <div>
                     <h3>Code</h3>
                     <a href={codeLink} target="blank">GitHub</a>
@@ -29,7 +30,7 @@ export function ProjectPageIntro(props) {
 
                 <div>
                     <h3>Live</h3>
-                    <a href={liveLink} target="blank">Site</a> 
+                    <a href={liveLink} target="blank">Site</a>
                 </div>
             </div>
         </div>

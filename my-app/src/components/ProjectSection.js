@@ -12,6 +12,7 @@ function IndividualProject(props) {
         <div className="individual-project">
             <div className="project-role">{projectRole}</div>
             <h1 className="project-name">{projectTitle}</h1>
+            
             <ul className="skills-used">
                 {techSkills.map((skill) => (
                     <li key={skill} className="skill-box">{skill}</li>
