@@ -32,7 +32,7 @@ export function Biography() {
                         <li className="bio-skill-box">MATLAB</li>
                         <li className="bio-skill-box">R</li>
                         <li className="bio-skill-box">PostgreSQL</li>
-                        <li className="bio-skill-box">SQL</li>
+                        <li className="bio-skill-box">MySQL</li>
                         <li className="bio-skill-box">HTML</li>
                         <li className="bio-skill-box">CSS</li>
                         <li className="bio-skill-box">React</li>

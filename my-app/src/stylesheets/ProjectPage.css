@@ -69,13 +69,17 @@
 
 .image-container {
     border-radius: 20px;
-}
-
-.project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project-images {
     max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    max-height: 500px;
+    object-fit: scale-down;
     box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.3);
     border: 1.5px solid rgb(181, 181, 181);
-    
-}
+  }
