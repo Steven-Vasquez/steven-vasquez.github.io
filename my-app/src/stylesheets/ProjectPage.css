@@ -56,14 +56,14 @@
     font-size: 1rem;
 }
 
-.intro-project-details div a {
+a {
     color: #1babff;
     font-weight: bold;
     transition: filter 0.4s ease-in-out 0s;
     text-decoration: none;
 }
 
-.intro-project-details div a:hover {
+a:hover {
     color: #1570a4;
 }
 

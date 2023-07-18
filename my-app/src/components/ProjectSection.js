@@ -65,7 +65,7 @@ export function ProjectSection() {
         projectRole: "TEAM LEAD",
         projectTitle: "Monopoly",
         techSkills: ["JavaScript", "PostgreSQL", "NodeJS", "ExpressJS", "Socket.io", "Webpack"],
-        projectDescription: "Led a team of 4 to create a multiplayer Monopoly web app capible of hosting unlimited games with live updates and chat using WebSockets. ",
+        projectDescription: "Led a team of 4 to create a multiplayer Monopoly web app capible of hosting unlimited games with live updates and chat using WebSockets.",
         projectRoute: "/projects/Monopoly",
         projectImages: [
             "/images/Project_Images/Monopoly/Monopoly_screenshot_1.png",
@@ -77,9 +77,9 @@ export function ProjectSection() {
         projectTitle: "Subylert",
         techSkills: ["Android Studio", "Java", "XML", "Firebase", "Room Database", "Notivize API"],
         projectDescription: "<strong>Hackathon winner!</strong> An Android submarine-themed subscription manager app that allows users to track their payment subscriptions and receive notifications when a subscription is about to renew.",
-        projectLink: "https://example.com",
+        projectRoute: "/projects/Subylert",
         projectImages: [
-            "/images/Project_Images/Subylert/Subylert_screenshot_2.jpeg",
+            "/images/Project_Images/Subylert/Subylert_screenshot_1.png",
         ]
     };
 

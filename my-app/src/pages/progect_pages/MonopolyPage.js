@@ -1,7 +1,7 @@
 import ProjectPageIntro from "../../components/ProjectPageIntro";
 import "../../stylesheets/ProjectPage.css"
 
-export function ULingualPage() {
+export function MonopolyPage() {
     const introDetails = {
         projectTitle: "Monopoly",
         readTime: "2 minute read",
@@ -45,4 +45,4 @@ export function ULingualPage() {
     );
 }
 
-export default ULingualPage;
+export default MonopolyPage;
