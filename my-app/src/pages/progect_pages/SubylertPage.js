@@ -18,9 +18,10 @@ export function SubylertPage() {
     }
 
     const carouselImages = ["/images/Project_Images/Subylert/Subylert_screenshot_1.png",
-        "/images/Project_Images/Subylert/Subylert_screenshot_1.png",]
+        "/images/Project_Images/Subylert/Subylert_screenshot_2.png",
+        "/images/Project_Images/Subylert/Subylert_screenshot_3.png",]
 
-    
+    const carouselCaptions = ["blah", "blah2", "blah3"]
 
     return (
         <>
@@ -28,12 +29,13 @@ export function SubylertPage() {
                 <ProjectPageIntro {...introDetails} />
 
                 
-                <ImageCarousel carouselImages={carouselImages} />
+                <ImageCarousel carouselImages={carouselImages} captions={carouselCaptions} />
 
+                {/*}
                 <div className="image-container">
                     <img src="/images/Project_Images/Subylert/Subylert_screenshot_1.png" alt="Project Image" className="project-images"></img>
                 </div>
-
+                */}
                 <h1>Project Purpose and Goal</h1>
                 <p>Me and my team originally created this mobile app to compete in the <strong>Winter 2021 Code Day Hackathon</strong>. We created and submitted version one of the app and won the <strong>Best in Class App</strong> award at the hackathon. Moving forward, we knew we could do better, so we improved the app.</p>
                 <p><a href="https://showcase.codeday.org/project/cklohluef13895811qffuyjne2t" target="_blank">Here</a> is our original hackathon submition, check it out!</p>

@@ -1,3 +1,36 @@
-.carousel.carousel-slider .control-arrow {
-    background-color: rgb(203, 203, 203);
+.carousel-container {
+    max-width: 800px;
+    max-height: 650px;
+    margin: 0 auto;
+
 }
+
+.carousel-images {
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.carousel.carousel-slider .control-arrow {
+    background-color: rgb(163, 163, 163);
+    width: 42px;
+}
+
+
+.carousel .control-disabled.control-arrow {
+    display: block;
+    opacity: .4;
+}
+
+.carousel .carousel-status {
+    top: 0px;
+    right: 60px;
+    color: #000;
+    font-size: 1.4rem;
+    text-shadow: none;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+  .carousel .control-arrow.control-prev {
+    display: block !important;
+  }
