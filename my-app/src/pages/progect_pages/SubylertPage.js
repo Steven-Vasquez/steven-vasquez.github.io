@@ -1,10 +1,15 @@
 import ProjectPageIntro from "../../components/ProjectPageIntro";
+import ImageCarousel from "../../components/ImageCarousel";
 import "../../stylesheets/ProjectPage.css"
+
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 
 export function SubylertPage() {
     const introDetails = {
         projectTitle: "Subylert",
-        readTime: "X minute read",
+        readTime: "1.5 minute read",
         introText: "Ever had sneaky subscription fees that you forgot about? Subylert a mobile app meant to prevent that. <strong>By storing subscription information locally</strong> using Android's Room database, <strong>Subylert can send push and email notifications to users when a subscription is about to renew using Notivize API</strong>.",
         projectType: "Entertainment",
         techStack: ["Android Studio", "Java", "XML", "Firebase", "Room Database", "Notivize API"],
@@ -12,13 +17,21 @@ export function SubylertPage() {
         liveLink: "",
     }
 
+    const carouselImages = ["/images/Project_Images/Subylert/Subylert_screenshot_1.png",
+        "/images/Project_Images/Subylert/Subylert_screenshot_1.png",]
+
+    
+
     return (
         <>
             <div className="project-page-container">
                 <ProjectPageIntro {...introDetails} />
+
                 
-                <div className="image-container"> 
-                    <img src = "/images/Project_Images/Subylert/Subylert_screenshot_1.png" alt="Project Image" className="project-images"></img>
+                <ImageCarousel carouselImages={carouselImages} />
+
+                <div className="image-container">
+                    <img src="/images/Project_Images/Subylert/Subylert_screenshot_1.png" alt="Project Image" className="project-images"></img>
                 </div>
 
                 <h1>Project Purpose and Goal</h1>
