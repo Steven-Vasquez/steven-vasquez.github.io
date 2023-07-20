@@ -2,7 +2,6 @@ import ProjectPageIntro from "../../components/ProjectPageIntro";
 import ImageCarousel from "../../components/ImageCarousel";
 import "../../stylesheets/ProjectPage.css"
 
-import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 
@@ -11,7 +10,7 @@ export function SubylertPage() {
         projectTitle: "Subylert",
         readTime: "1.5 minute read",
         introText: "Ever had sneaky subscription fees that you forgot about? Subylert a mobile app meant to prevent that. <strong>By storing subscription information locally</strong> using Android's Room database, <strong>Subylert can send push and email notifications to users when a subscription is about to renew using Notivize API</strong>.",
-        projectType: "Entertainment",
+        projectType: "Utility",
         techStack: ["Android Studio", "Java", "XML", "Firebase", "Room Database", "Notivize API"],
         codeLink: "",
         liveLink: "",
@@ -21,7 +20,7 @@ export function SubylertPage() {
         "/images/Project_Images/Subylert/Subylert_screenshot_2.png",
         "/images/Project_Images/Subylert/Subylert_screenshot_3.png",]
 
-    const carouselCaptions = ["blah", "blah2", "blah3"]
+    const carouselCaptions = ["Home page of Subylert's subscription management service", "Adding a subscription to your Subylert account", "Settings page of Subylert"]
 
     return (
         <>

@@ -7,7 +7,7 @@ const ImageCarousel = ({ carouselImages, captions }) => {
 
   return (
     <div className='carousel-container'>
-      <Carousel >
+      <Carousel infiniteLoop={true} >
         {carouselImages.map((image, index) => (
           <div key={index}>
             <img src={image} alt={`Image ${index + 1}`} className="carousel-images"/>

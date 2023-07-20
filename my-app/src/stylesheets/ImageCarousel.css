@@ -13,12 +13,36 @@
 .carousel.carousel-slider .control-arrow {
     background-color: rgb(163, 163, 163);
     width: 42px;
+    
 }
 
 
 .carousel .control-disabled.control-arrow {
     display: block;
     opacity: .4;
+}
+
+.carousel.carousel-slider .control-arrow.active {
+    opacity: 1 !important;
+  }
+
+  .carousel .control-arrow:focus {
+    opacity: none;
+    filter: none;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+background: rgb(163, 163, 163);
+}
+
+.carousel .control-arrow:focus {
+    opacity: .4;
+    filter: alpha(opacity=100);
+}
+
+.carousel .control-arrow:hover {
+    opacity: 1 !important;
+    filter: alpha(opacity=100);
 }
 
 .carousel .carousel-status {
@@ -30,7 +54,18 @@
     margin-top: 1rem;
     text-transform: uppercase;
     font-weight: 200;
-  }
-  .carousel .control-arrow.control-prev {
+}
+
+.carousel .control-arrow.control-prev {
     display: block !important;
-  }
+}
+
+.carousel-caption {
+    word-wrap: break-word;
+    max-width: calc(100% - 94px);
+    margin-left: 47px;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #bebebe47;
+}
