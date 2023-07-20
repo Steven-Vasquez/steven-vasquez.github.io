@@ -15,7 +15,7 @@ export function ContactForm() {
 
                 <div>
                     <form className="contact-form">
-                        <h1 className="form-group" id="title">Get in touch</h1>
+                        <h1 className="form-group" id="title">Get in touch (not functional)</h1>
                         <div className="form-group" id="contact-name">
                             <label for="name"></label>
                             <input type="text" id="name" name="name" required placeholder="Your Name*" />
