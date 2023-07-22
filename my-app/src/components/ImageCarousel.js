@@ -11,6 +11,7 @@ const ImageCarousel = ({ carouselImages, captions }) => {
         {carouselImages.map((image, index) => (
           <div key={index}>
             <img src={image} alt={`Image ${index + 1}`} className="carousel-images"/>
+            
             <p className="carousel-caption">{captions[index]}</p>
           </div>
         ))}

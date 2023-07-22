@@ -1,53 +1,68 @@
-import { NavLink } from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import '../stylesheets/Navbar.css';
-import { Component } from 'react';
 
 export class Navbar extends Component {
-    state = { clicked: false };
-    handleClick = () => {
-        this.setState({ clicked: !this.state.clicked });
-    };
+  state = { clicked: false };
+  handleClick = () => {
+    this.setState({ clicked: !this.state.clicked });
+  };
 
-    render() {
-        return (
-            <>
-                <nav>
-                    <div id="home-link">
-                        <NavLink exact to="/" activeClassName="active">
-                            Steven Vasquez
-                        </NavLink>
-                    </div>
-            
-                    <ul id="nav-bar-links" className={this.state.clicked ? "#navbar active" : "#navbar"}>
-                        <li>
-                            <NavLink exact to="/" activeClassName="active">
-                                Home
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/about" activeClassName="active">
-                                About
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/projects" activeClassName="active">
-                                Projects
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/contact" activeClassName="active">
-                                Contact
-                            </NavLink>
-                        </li>
-                    </ul>
+  handleNavLinkClick = () => {
+    this.setState({ clicked: false });
+  };
 
-                    <div id="mobile" onClick={this.handleClick}>
-                        <i id="bar" className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-                    </div>
-                </nav>
-            </>
-        );
-    }
+  render() {
+    return (
+      <>
+        <nav>
+          <div id="home-link">
+            <Link to="/">Steven Vasquez</Link>
+          </div>
+
+          <ul id="nav-bar-links" className={this.state.clicked ? "navbar active" : "navbar"}>
+            <li>
+              <Link to="/" onClick={this.handleNavLinkClick}>Home</Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={ this.handleNavLinkClick}>About</Link>
+            </li>
+            <li>
+              <ScrollLink
+                activeClass="active"
+                to="Projects"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={this.handleNavLinkClick}
+              >
+                Projects
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                activeClass="active"
+                to="Contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={this.handleNavLinkClick}
+              >
+                Contact
+              </ScrollLink>
+            </li>
+          </ul>
+
+          <div id="mobile" onClick={this.handleClick}>
+            <i id="bar" className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+          </div>
+        </nav>
+      </>
+    );
+  }
 }
 
 export default Navbar;

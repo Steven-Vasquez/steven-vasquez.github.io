@@ -3,7 +3,7 @@ import "../stylesheets/ContactForm.css"
 export function ContactForm() {
     return (
         <>
-            <div className="contact-section">
+            <div className="contact-section" id="Contact">
                 <div className="contact-header">
                     <h1 style={{ display: 'flex', flexDirection: 'row', fontWeight: 400 }}>
                         <div className="highlight">

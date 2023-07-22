@@ -9,7 +9,7 @@ export function Footer() {
 
                     <div className="site-info">
                         <a>Steven Vasquez</a>
-                        <div>© 2023, Built by myself in Visual Studio code using React.js, deployed with (somethon)</div>
+                        <div>© 2023, Built by myself in <strong>Visual Studio Code</strong> using <strong>React.js</strong>, deployed with <strong>(something)</strong></div>
                     </div>
 
                     <div className="site-links">
@@ -25,9 +25,9 @@ export function Footer() {
                     <div className="contact-links">
                         <div className="footer-header">Get in touch</div>
                         <div className="footer-social-icons">
-                            <a href="https://github.com/your-username" target="_blank"><i className="fab fa-github"></i></a>
-                            <a href="https://linkedin.com/in/your-profile" target="_blank"><i className="fab fa-linkedin"></i></a>
-                            <a href="mailto:your-email@example.com"><i className="fas fa-envelope"></i></a> 
+                            <a href="https://github.com/Steven-Vasquez" target="_blank"><i className="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/steven-vasquez/" target="_blank"><i className="fab fa-linkedin"></i></a>
+                            <a href="mailto:stevenvasquez.pro@gmail.com"><i className="fas fa-envelope"></i></a> 
                         </div>
                     </div>
                 </div>

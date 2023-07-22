@@ -85,7 +85,7 @@ export function ProjectSection() {
 
     return (
         <>
-            <div className="projects-section">
+            <div className="projects-section" id='Projects'>
                 <div className="projects-header">
                     <h1 style={{ display: 'flex', flexDirection: 'row'}}>
                         <div className="highlight">

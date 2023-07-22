@@ -13,7 +13,7 @@
 .carousel.carousel-slider .control-arrow {
     background-color: rgb(163, 163, 163);
     width: 42px;
-    
+
 }
 
 
@@ -24,15 +24,15 @@
 
 .carousel.carousel-slider .control-arrow.active {
     opacity: 1 !important;
-  }
+}
 
-  .carousel .control-arrow:focus {
+.carousel .control-arrow:focus {
     opacity: none;
     filter: none;
 }
 
 .carousel.carousel-slider .control-arrow:hover {
-background: rgb(163, 163, 163);
+    background: rgb(163, 163, 163);
 }
 
 .carousel .control-arrow:focus {
@@ -63,9 +63,10 @@ background: rgb(163, 163, 163);
 .carousel-caption {
     word-wrap: break-word;
     max-width: calc(100% - 94px);
-    margin-left: 47px;
     margin-top: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px;
     background-color: #bebebe47;
+    display: inline-block;
+    text-align: center;
+
 }
