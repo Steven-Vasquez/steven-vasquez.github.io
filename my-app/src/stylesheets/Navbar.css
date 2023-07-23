@@ -33,6 +33,7 @@ nav { /* Navigation bar */
   
   #nav-bar-links li a:hover {
     color: #c0c7cc;
+    cursor: pointer;
   }
 
   #nav-bar-links li a::after {

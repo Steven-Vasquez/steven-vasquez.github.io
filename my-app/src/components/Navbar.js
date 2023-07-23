@@ -1,34 +1,37 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink} from 'react-scroll';
 import '../stylesheets/Navbar.css';
 
-export class Navbar extends Component {
-  state = { clicked: false };
-  handleClick = () => {
-    this.setState({ clicked: !this.state.clicked });
+export function Navbar() {
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(!clicked);
   };
 
-  handleNavLinkClick = () => {
-    this.setState({ clicked: false });
+  const handleNavLinkClick = () => {
+    setClicked(false);
   };
 
-  render() {
-    return (
-      <>
-        <nav>
-          <div id="home-link">
-            <Link to="/">Steven Vasquez</Link>
-          </div>
+  const isHomePage = window.location.pathname === '/';
 
-          <ul id="nav-bar-links" className={this.state.clicked ? "navbar active" : "navbar"}>
-            <li>
-              <Link to="/" onClick={this.handleNavLinkClick}>Home</Link>
-            </li>
-            <li>
-              <Link to="/about" onClick={ this.handleNavLinkClick}>About</Link>
-            </li>
-            <li>
+  return (
+    <>
+      <nav>
+        <div id="home-link">
+          <Link to="/">Steven Vasquez</Link>
+        </div>
+
+        <ul id="nav-bar-links" className={clicked ? "navbar active" : "navbar"}>
+          <li>
+            <Link to="/" onClick={handleNavLinkClick}>Home</Link>
+          </li>
+          <li>
+            <Link to="/about" onClick={handleNavLinkClick}>About</Link>
+          </li>
+          <li>
+            {isHomePage ? (
               <ScrollLink
                 activeClass="active"
                 to="Projects"
@@ -36,12 +39,18 @@ export class Navbar extends Component {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                onClick={this.handleNavLinkClick}
+                onClick={handleNavLinkClick}
               >
                 Projects
               </ScrollLink>
-            </li>
-            <li>
+            ) : (
+              <a href="/#Projects" onClick={handleNavLinkClick}>
+                Projects
+              </a>
+            )}
+          </li>
+          <li>
+            {isHomePage ? (
               <ScrollLink
                 activeClass="active"
                 to="Contact"
@@ -49,20 +58,24 @@ export class Navbar extends Component {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                onClick={this.handleNavLinkClick}
+                onClick={handleNavLinkClick}
               >
                 Contact
               </ScrollLink>
-            </li>
-          </ul>
+            ) : (
+              <a href="/#Contact" onClick={handleNavLinkClick}>
+                Contact
+              </a>
+            )}
+          </li>
+        </ul>
 
-          <div id="mobile" onClick={this.handleClick}>
-            <i id="bar" className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-          </div>
-        </nav>
-      </>
-    );
-  }
+        <div id="mobile" onClick={handleClick}>
+          <i id="bar" className={clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+        </div>
+      </nav>
+    </>
+  );
 }
 
 export default Navbar;
