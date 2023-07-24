@@ -13,12 +13,14 @@ export function ContactForm() {
     // This function handles the form submission.
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log("REACT_APP_EMAILJS_SERVICE_ID is " + process.env.REACT_APP_EMAILJS_SERVICE_ID);
 
+        
         emailjs.sendForm(
-            process.env.EMAILJS_SERVICE_ID, // Service ID
-            process.env.EMAILJS_TEMPLATE_ID, // Template ID
+            process.env.REACT_APP_EMAILJS_SERVICE_ID, // Service ID
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Template ID
             form.current,
-            process.env.EMAILJS_PUBLIC_KEY // Public key
+            process.env.REACT_APP_EMAILJS_PUBLIC_KEY // Public key
         )
             .then((result) => {
                 console.log(result.text);
