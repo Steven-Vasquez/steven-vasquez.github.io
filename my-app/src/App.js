@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
+import About from './pages/About';
 import ULingualPage from './pages/progect_pages/ULingualPage';
 import MonopolyPage from './pages/progect_pages/MonopolyPage';
 import SubylertPage from './pages/progect_pages/SubylertPage';
@@ -14,6 +15,7 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/projects/ULingual" element={<ULingualPage />} />
         <Route path="/projects/Monopoly" element={<MonopolyPage />} />
         <Route path="/projects/Subylert" element={<SubylertPage />} />

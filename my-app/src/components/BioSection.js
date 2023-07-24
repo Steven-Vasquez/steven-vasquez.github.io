@@ -44,8 +44,10 @@ export function Biography() {
 
 
                     <div id="bio-text-container">
-                        <b>(Hello)</b>
-                        <p id="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+                        <b>A bit about me...</b>
+                        <p id="about-text">
+                            I am a 2023 graduate from San Francisco State University with a B.S. in Computer Science with a 3.8 GPA. I've shifted my focus from becoming an academic researcher to software engineer because it's what I enjoy. I'm glad that the skills I've gained from research help me to be a better engineer.
+                        </p>
                         <NavLink exact to="/" activeClassName="active" id="about-page-link">
                             <b style={{ fontSize: ".85em", fontWeight: "1000" }}>Read my full bio</b>
                         </NavLink>

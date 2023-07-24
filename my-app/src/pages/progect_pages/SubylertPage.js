@@ -12,7 +12,7 @@ export function SubylertPage() {
         introText: "Ever had sneaky subscription fees that you forgot about? Subylert a mobile app meant to prevent that. <strong>By storing subscription information locally</strong> using Android's Room database, <strong>Subylert can send push and email notifications to users when a subscription is about to renew using Notivize API</strong>.",
         projectType: "Utility",
         techStack: ["Android Studio", "Java", "XML", "Firebase", "Room Database", "Notivize API"],
-        codeLink: "",
+        codeLink: "https://github.com/Steven-Vasquez/Subylert",
         liveLink: "",
     }
 

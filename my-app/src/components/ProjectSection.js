@@ -12,7 +12,7 @@ function IndividualProject(props) {
         <div className="individual-project">
             <div className="project-role">{projectRole}</div>
             <h1 className="project-name">{projectTitle}</h1>
-            
+
             <ul className="skills-used">
                 {techSkills.map((skill) => (
                     <li key={skill} className="skill-box">{skill}</li>
@@ -26,9 +26,9 @@ function IndividualProject(props) {
 
             <div className="project-image-container">
                 {projectImages.map((image) => (
-                    <Link to={projectRoute}>
-                        <img src={image} alt="Project Image" key={image} className="project-image" />
-                    </Link>
+                    <a href={projectRoute} key={image} className="project-image-link">
+                        <img src={image} alt="Project Image" className="project-image" />
+                    </a>
                 ))}
             </div>
         </div>
@@ -60,7 +60,7 @@ export function ProjectSection() {
         ]
     };
 
-    
+
     const MonopolyData = {
         projectRole: "TEAM LEAD",
         projectTitle: "Monopoly",
@@ -71,7 +71,7 @@ export function ProjectSection() {
             "/images/Project_Images/Monopoly/Monopoly_screenshot_1.png",
         ]
     };
-    
+
     const SubylertData = {
         projectRole: "HACKATHON TEAM LEAD",
         projectTitle: "Subylert",
@@ -87,7 +87,7 @@ export function ProjectSection() {
         <>
             <div className="projects-section" id='Projects'>
                 <div className="projects-header">
-                    <h1 style={{ display: 'flex', flexDirection: 'row'}}>
+                    <h1 style={{ display: 'flex', flexDirection: 'row' }}>
                         <div className="highlight">
                             <div>Projects</div>
                             <div></div>

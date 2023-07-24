@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Link as ScrollLink} from 'react-scroll';
 import '../stylesheets/Navbar.css';
 
 export function Navbar() {
+  const location = useLocation();
+
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -20,15 +22,15 @@ export function Navbar() {
     <>
       <nav>
         <div id="home-link">
-          <Link to="/">Steven Vasquez</Link>
+          <a href="/">Steven Vasquez</a>
         </div>
 
         <ul id="nav-bar-links" className={clicked ? "navbar active" : "navbar"}>
           <li>
-            <Link to="/" onClick={handleNavLinkClick}>Home</Link>
+            <NavLink to="/" onClick={handleNavLinkClick}>Home</NavLink>
           </li>
           <li>
-            <Link to="/about" onClick={handleNavLinkClick}>About</Link>
+            <NavLink to="/about" onClick={handleNavLinkClick}>About</NavLink>
           </li>
           <li>
             {isHomePage ? (

@@ -23,15 +23,21 @@ export function ProjectPageIntro(props) {
                     ))}
                 </div>
 
-                <div>
-                    <h3>Code</h3>
-                    <a href={codeLink} target="blank">GitHub</a>
-                </div>
+                {codeLink === "" ? null : (
+                    <div>
+                        <h3>Code</h3>
+                        <a href={codeLink} target="blank">GitHub</a>
+                    </div>
+                )}
 
-                <div>
-                    <h3>Live</h3>
-                    <a href={liveLink} target="blank">Site</a>
-                </div>
+
+                {liveLink === "" ? null : (
+                    <div>
+                        <h3>Live</h3>
+                        <a href={liveLink} target="blank">Site</a>
+                    </div>
+                )}
+
             </div>
         </div>
     );

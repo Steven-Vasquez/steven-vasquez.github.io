@@ -25,7 +25,7 @@
     max-height: 100%;
     display: flex;
     align-items: center;
-    padding-right: 2rem;
+    padding-right: 1rem;
 }
 
 #image-container {
@@ -84,6 +84,10 @@
     flex-direction: column;
     justify-content: space-between;
     padding-top: 2em;
+}
+
+#bio-text-container b {
+    font-weight: 550;
 }
 
 #about-page-link {
