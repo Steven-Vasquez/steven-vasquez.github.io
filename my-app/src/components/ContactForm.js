@@ -1,7 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
+
 import "../stylesheets/ContactForm.css"
 
 export function ContactForm() {
+    /*********************************/
+    // Emailjs code from https://www.emailjs.com/docs/examples/reactjs/
+    /*********************************/
+    const form = useRef();
+
+    // This function handles the form submission.
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            process.env.EMAILJS_SERVICE_ID, // Service ID
+            process.env.EMAILJS_TEMPLATE_ID, // Template ID
+            form.current,
+            process.env.EMAILJS_PUBLIC_KEY // Public key
+        )
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
+    /*********************************/
+
+    // This is the state of the form data.
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -9,6 +36,7 @@ export function ContactForm() {
         message: ""
     });
 
+    // This function handles updating the state properties for each input field.
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevFormData) => ({
@@ -17,14 +45,7 @@ export function ContactForm() {
         }));
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Here, you can perform form validation and make the actual form submission.
-        // For simplicity, we will just print the form data for now.
-        console.log(formData);
-        // You can make an HTTP POST request here to submit the form data to a backend server.
-        // For example, using the fetch API or Axios.
-    };
+
 
     return (
         <>
@@ -39,7 +60,7 @@ export function ContactForm() {
                 </div>
 
                 <div>
-                    <form className="contact-form" onSubmit={handleSubmit}>
+                    <form ref={form} className="contact-form" onSubmit={handleSubmit}>
                         <h1 className="form-group" id="title">Get in touch (not functional)</h1>
                         <div className="form-group" id="contact-name">
                             <label htmlFor="name"></label>
