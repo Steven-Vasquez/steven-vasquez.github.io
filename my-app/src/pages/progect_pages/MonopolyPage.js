@@ -16,9 +16,9 @@ export function MonopolyPage() {
         <>
             <div className="project-page-container">
                 <ProjectPageIntro {...introDetails} />
-                
-                <div className="image-container"> 
-                    <img src = "/images/Project_Images/Monopoly/Monopoly_screenshot_1.png" alt="Project Image" className="project-images"></img>
+
+                <div className="image-container">
+                    <img src="/images/Project_Images/Monopoly/Monopoly_screenshot_1.png" alt="Project Image" className="project-images"></img>
                 </div>
 
                 <h1>Project Purpose and Goal</h1>
@@ -28,18 +28,18 @@ export function MonopolyPage() {
                 <h1>Web Stack and Explanation</h1>
                 <p>Built the project using <strong>Javascript and EJS (Embedded JavaScript templates) with vanilla HTML/CSS for the frontend</strong>. Knowing that we had much to learn for backend technologies such as WebSockets, we wanted to keep our stack simple but functional.</p>
                 <p>I designed our database visually using dbdiagram.io referencing Monopoly wiki pages and implemented the design using PostgreSQL. <strong>We opted for using PostgreSQL since hosting many simultaneous games would require many constant high speed read and write updates</strong>.</p>
-                <div className="image-container" style={{marginBottom: "1.75rem"}}> 
-                    <img src = "/images/Project_Images/Monopoly/Monopoly_dbdiagram.png" alt="Project Image" className="project-images" style={{maxHeight: "400px", border: "0px"}}></img>
-                    <h4 style={{fontWeight: "425"}}>My database design visualized with dbdiagram.io</h4>
-                </div>
                 <p>The backend was created using Express server running on a Node.js runtime and project code is bundled with code linting using WebPack.</p>
 
                 <h1>Problems and Thought Process</h1>
                 <p>Since my teammates and I had no experience creating apps with live updates using WebSockets, we ran into many roadblocks of not knowing how to implement features that we wanted. For example, on one occasion, we fell a week behind our schedule because we were stuck on implementing a login feature with WebSockets and cookies.</p>
-                <p>On top of this, we didn't finish our project for the class! <strong>We managed to implement our game API, database, user authentication, game creation, and live chat with WebSockets</strong>, but could not send live game updates. All of our preparations and design held up by one last roadblock.</p> 
+                <p>On top of this, we didn't finish our project for the class! <strong>We managed to implement our game API, database, user authentication, game creation, and live chat with WebSockets</strong>, but could not send live game updates. All of our preparations and design held up by one last roadblock.</p>
                 <p>It was disappointing to not present a completed project to the class. However, my team and I are <strong>in the process of revamping our Monopoly web app and rewriting it using tools such as React and TypeScript</strong>. We have a working database, API design, and UI mockup to build our newer, better app from scratch using the knowledge that we'd gained from working on this class project.</p>
 
-
+                <h1>Technical Images</h1>
+                <div className="image-container" style={{ marginBottom: "1.75rem" }}>
+                    <img src="/images/Project_Images/Monopoly/Monopoly_dbdiagram.png" alt="Project Image" className="project-images" style={{ maxWidth: "100%", border: "0px" }}></img>
+                    <h4 style={{ fontWeight: "425" }}>My database design visualized with dbdiagram.io</h4>
+                </div>
             </div>
         </>
     );

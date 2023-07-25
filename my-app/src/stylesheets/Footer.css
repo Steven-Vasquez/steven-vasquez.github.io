@@ -49,6 +49,10 @@
   transition: color 0.2s ease-in-out;
 }
 
+.footer-site-links a:hover {
+  cursor: pointer;
+}
+
 .contact-links,
 .site-links,
 .site-info {

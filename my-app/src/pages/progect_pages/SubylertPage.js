@@ -2,8 +2,6 @@ import ProjectPageIntro from "../../components/ProjectPageIntro";
 import ImageCarousel from "../../components/ImageCarousel";
 import "../../stylesheets/ProjectPage.css"
 
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
 
 export function SubylertPage() {
     const introDetails = {
@@ -20,14 +18,16 @@ export function SubylertPage() {
         "/images/Project_Images/Subylert/Subylert_screenshot_2.png",
         "/images/Project_Images/Subylert/Subylert_screenshot_3.png",]
 
-    const carouselCaptions = ["Home page of Subylert's subscription management service", "Adding a subscription to your Subylert account", "Settings page of Subylert"]
+    const carouselCaptions = ["Home page of Subylert's subscription management service",
+        "Adding a subscription to your Subylert account",
+        "Settings page of Subylert"]
 
     return (
         <>
             <div className="project-page-container">
                 <ProjectPageIntro {...introDetails} />
 
-                
+
                 <ImageCarousel carouselImages={carouselImages} captions={carouselCaptions} />
 
                 <h1>Project Purpose and Goal</h1>

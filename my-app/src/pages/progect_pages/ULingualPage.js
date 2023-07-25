@@ -1,5 +1,7 @@
 import ProjectPageIntro from "../../components/ProjectPageIntro";
+import ImageCarousel from "../../components/ImageCarousel";
 import "../../stylesheets/ProjectPage.css"
+
 
 export function ULingualPage() {
     const introDetails = {
@@ -12,13 +14,24 @@ export function ULingualPage() {
         liveLink: "https://example.com",
     }
 
+    const mockupCarouselImages = ["/images/Project_Images/ULingual/ULingual_mockup_1.png",
+        "/images/Project_Images/ULingual/ULingual_mockup_2.png",
+        "/images/Project_Images/ULingual/ULingual_mockup_3.png",
+        "/images/Project_Images/ULingual/ULingual_mockup_4.png",
+        "/images/Project_Images/ULingual/ULingual_mockup_5.png",
+        "/images/Project_Images/ULingual/ULingual_mockup_6.png",
+        "/images/Project_Images/ULingual/ULingual_mockup_7.png",
+    ]
+    const mockupCarouselCaptions = [""]
+
+
     return (
         <>
             <div className="project-page-container">
                 <ProjectPageIntro {...introDetails} />
-                
-                <div className="image-container"> 
-                    <img src = "/images/Project_Images/ULingual/ULingual_screenshot_1.png" alt="Project Image" className="project-images"></img>
+
+                <div className="image-container">
+                    <img src="/images/Project_Images/ULingual/ULingual_screenshot_1.png" alt="Project Image" className="project-images"></img>
                 </div>
 
                 <h1>Project Purpose and Goal</h1>
@@ -34,6 +47,8 @@ export function ULingualPage() {
                 <p>Originally, ULingual was supposed to act as a language-learning platform with paid tutors and students as users. Because of a lack of available tutors and a need to deliver a product to our CTO (my professor), we pivoted to a community-focused learning platform where users can connect with each other. This led to redesigning large portions of our database to meet new funtional requirements.</p>
                 <p>Since we were to treat this as a real product, we opted to using services such as AWS and Twilio to ensure ULingual would be <strong>scalable and flexible</strong>.</p>
 
+                <h1>Design/Mockup Images</h1>
+                <ImageCarousel carouselImages={mockupCarouselImages} captions={mockupCarouselCaptions} />
 
             </div>
         </>
