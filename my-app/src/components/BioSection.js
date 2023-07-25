@@ -29,8 +29,6 @@ export function Biography() {
                         <li className="bio-skill-box">JavaScript</li>
                         <li className="bio-skill-box">TypeScript</li>
                         <li className="bio-skill-box">C++</li>
-                        <li className="bio-skill-box">MATLAB</li>
-                        <li className="bio-skill-box">R</li>
                         <li className="bio-skill-box">PostgreSQL</li>
                         <li className="bio-skill-box">MySQL</li>
                         <li className="bio-skill-box">HTML</li>
@@ -38,8 +36,10 @@ export function Biography() {
                         <li className="bio-skill-box">React</li>
                         <li className="bio-skill-box">Node.js</li>
                         <li className="bio-skill-box">Express.js</li>
-                        <li className="bio-skill-box">Git</li>
                         <li className="bio-skill-box">AWS</li>
+                        <li className="bio-skill-box">Git</li>
+                        <li className="bio-skill-box">MATLAB</li>
+                        <li className="bio-skill-box">R</li>
                     </ul>
 
 

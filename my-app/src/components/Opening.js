@@ -22,7 +22,7 @@ export function Opening() {
                         <a href="https://www.linkedin.com/in/steven-vasquez/" target="_blank"><i className="fab fa-linkedin"></i></a>
                         <a href="mailto:stevenvasquez.pro@gmail.com"><i className="fas fa-envelope"></i></a>
                     </div>
-                    <a href="path/to/resume.pdf" target="_blank" class="resume-button">Resumé <i class="fas fa-external-link-alt social-icons"></i></a>
+                    <a href="https://drive.google.com/file/d/12UVnsDig2Ual_XUyzHGj9DoJ7-wU0T2W/view?usp=sharing" target="_blank" class="resume-button">Resumé <i class="fas fa-external-link-alt social-icons"></i></a>
                 </div>
 
 

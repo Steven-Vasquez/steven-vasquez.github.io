@@ -22,7 +22,7 @@ export function Footer() {
                     <div className="site-links">
                         <div className="footer-header">Site Links</div>
                         <div className="footer-site-links">
-                            <NavLink to="/">Home</NavLink>
+                            <a href="/">Home</a>
 
                             {isHomePage ? (
                                 <ScrollLink

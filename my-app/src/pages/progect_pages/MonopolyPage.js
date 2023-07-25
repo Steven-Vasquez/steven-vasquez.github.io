@@ -35,7 +35,7 @@ export function MonopolyPage() {
                 <p>On top of this, we didn't finish our project for the class! <strong>We managed to implement our game API, database, user authentication, game creation, and live chat with WebSockets</strong>, but could not send live game updates. All of our preparations and design held up by one last roadblock.</p>
                 <p>It was disappointing to not present a completed project to the class. However, my team and I are <strong>in the process of revamping our Monopoly web app and rewriting it using tools such as React and TypeScript</strong>. We have a working database, API design, and UI mockup to build our newer, better app from scratch using the knowledge that we'd gained from working on this class project.</p>
 
-                <h1>Technical Images</h1>
+                <h1>Design Images</h1>
                 <div className="image-container" style={{ marginBottom: "1.75rem" }}>
                     <img src="/images/Project_Images/Monopoly/Monopoly_dbdiagram.png" alt="Project Image" className="project-images" style={{ maxWidth: "100%", border: "0px" }}></img>
                     <h4 style={{ fontWeight: "425" }}>My database design visualized with dbdiagram.io</h4>

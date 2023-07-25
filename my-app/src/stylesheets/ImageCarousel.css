@@ -2,10 +2,10 @@
     max-width: 800px;
     max-height: 650px;
     margin: 0 auto;
-
 }
 
-.carousel-images {
+.carousel-display a img {
+    max-width: calc(100% - 94px);
     max-height: 400px;
     object-fit: contain;
 }
@@ -16,11 +16,27 @@
 
 }
 
-
 .carousel .control-disabled.control-arrow {
     display: block;
     opacity: .4;
 }
+
+.carousel-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+@media (max-width: 769px) {
+
+
+    .carousel-caption {
+        font-size: .6rem !important;
+    }
+}
+
 
 .carousel.carousel-slider .control-arrow.active {
     opacity: 1 !important;
@@ -68,5 +84,4 @@
     background-color: #bebebe47;
     display: inline-block;
     text-align: center;
-
 }

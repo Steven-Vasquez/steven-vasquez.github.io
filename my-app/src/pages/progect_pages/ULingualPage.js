@@ -6,24 +6,40 @@ import "../../stylesheets/ProjectPage.css"
 export function ULingualPage() {
     const introDetails = {
         projectTitle: "ULingual",
-        readTime: "2 minute read",
+        readTime: "2.5 minute read",
         introText: "Learning a new language is difficult, especially when you don't have anyone to practice with. ULingual is a <strong>language-learning web app</strong> that connects native speakers to exchange language and culture using <strong>video rooms created with React hooks and Twilio Video API</strong>.",
         projectType: "Education",
         techStack: ["JavaScript", "React", "NodeJS", "ExpressJS", "MySQL", "AWS", "Twilio Video API"],
-        codeLink: "https://example.com",
-        liveLink: "https://example.com",
+        codeLink: "https://github.com/Steven-Vasquez/ULingual",
+        liveLink: "",
     }
-
-    const mockupCarouselImages = ["/images/Project_Images/ULingual/ULingual_mockup_1.png",
-        "/images/Project_Images/ULingual/ULingual_mockup_2.png",
-        "/images/Project_Images/ULingual/ULingual_mockup_3.png",
-        "/images/Project_Images/ULingual/ULingual_mockup_4.png",
-        "/images/Project_Images/ULingual/ULingual_mockup_5.png",
-        "/images/Project_Images/ULingual/ULingual_mockup_6.png",
-        "/images/Project_Images/ULingual/ULingual_mockup_7.png",
+    
+    // Design/Mockup images carousel
+    const mockupCarouselImages = ["/images/Project_Images/ULingual/mockups/ULingual_mockup_1.png",
+        "/images/Project_Images/ULingual/mockups/ULingual_mockup_2.png",
+        "/images/Project_Images/ULingual/mockups/ULingual_mockup_3.png",
+        "/images/Project_Images/ULingual/mockups/ULingual_mockup_4.png",
+        "/images/Project_Images/ULingual/mockups/ULingual_mockup_5.png",
+        "/images/Project_Images/ULingual/mockups/ULingual_mockup_6.png",
+        "/images/Project_Images/ULingual/mockups/ULingual_mockup_7.png",
     ]
-    const mockupCarouselCaptions = [""]
+    const mockupCarouselCaptions = ["Creating a ULingual Account",
+        "Joining a Video Room",
+        "Access Recommended Music Playlists",
+        "Accessing Flashcards",
+        "Creating a Forum",
+        "Editing Your Profile",
+        "Viewing a Friends Profile"]
 
+
+
+    const databaseCarouselImages = ["/images/Project_Images/ULingual/database_images/ULingual_database_1.png",
+        "/images/Project_Images/ULingual/database_images/ULingual_database_2.png",
+        "/images/Project_Images/ULingual/database_images/ULingual_database_3.png",]
+    const databaseCarouselCaptions = ["Entity-Relationship (ER) Diagram of database design",
+        "Enhanced Entity-Relationship (EER) Diagram of database design",
+        "UML Diagram of database design"
+]
 
     return (
         <>
@@ -50,6 +66,8 @@ export function ULingualPage() {
                 <h1>Design/Mockup Images</h1>
                 <ImageCarousel carouselImages={mockupCarouselImages} captions={mockupCarouselCaptions} />
 
+                <h1>Database Design</h1>
+                <ImageCarousel carouselImages={databaseCarouselImages} captions={databaseCarouselCaptions} />
             </div>
         </>
     );

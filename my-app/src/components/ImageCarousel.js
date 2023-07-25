@@ -9,8 +9,10 @@ const ImageCarousel = ({ carouselImages, captions }) => {
     <div className='carousel-container'>
       <Carousel infiniteLoop={true} >
         {carouselImages.map((image, index) => (
-          <div key={index}>
-            <img src={image} alt={`Image ${index + 1}`} className="carousel-images"/>
+          <div key={index} className='carousel-display'>
+            <a href={image} target="_blank" rel="noopener noreferrer">
+              <img src={image} alt={`Image ${index + 1}`} className="carousel-big-images"/>
+            </a>
             
             <p className="carousel-caption">{captions[index]}</p>
           </div>
