@@ -1,0 +1,18 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Page Not Found</title>
+    </head>
+
+    <body>
+        <script>
+            const url = window.location.href;
+            const base = '/';
+            const path = url.replace(/https?:\/\/[^\/]+/, '');
+            window.location.href = base + path;
+        </script>
+    </body>
+
+    </html>
