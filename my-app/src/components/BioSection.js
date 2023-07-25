@@ -4,7 +4,7 @@ import "../stylesheets/BioSection.css"
 export function Biography() {
     return (
         <>
-            <div className="bio-section">
+            <div className="bio-section" id="Bio">
                 <div className="bio-header">
                     <h1 style={{ display: 'flex', flexDirection: 'row', fontWeight: 400 }}>
                         <div>My</div>
@@ -48,8 +48,9 @@ export function Biography() {
                         <p id="about-text">
                             I am a 2023 graduate from San Francisco State University with a B.S. in Computer Science with a 3.8 GPA. I've shifted my focus from becoming an academic researcher to software engineer because it's what I enjoy. I'm glad that the skills I've gained from research help me to be a better engineer.
                         </p>
-                        <NavLink exact to="/" activeClassName="active" id="about-page-link">
-                            <b style={{ fontSize: ".85em", fontWeight: "1000" }}>Read my full bio</b>
+                        
+                        <NavLink exact to="/About" activeClassName="active" id="about-page-link">
+                            <b style={{ fontSize: ".85em", fontWeight: "1000" }}>Full bio page coming soon!</b>
                         </NavLink>
                     </div>
 

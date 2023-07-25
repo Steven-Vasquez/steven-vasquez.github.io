@@ -15,7 +15,7 @@ export function Footer() {
                 <div className="footer-flexbox">
 
                     <div className="site-info">
-                    <Link to="/">Steven Vasquez</Link>
+                        <Link to="/">Steven Vasquez</Link>
                         <div>© 2023, Built by myself in <strong>Visual Studio Code</strong> using <strong>React.js</strong>, deployed with <strong>(something)</strong></div>
                     </div>
 
@@ -41,7 +41,23 @@ export function Footer() {
                                 </a>
                             )}
 
-                            <a href="/about">About</a>
+                            {/*<NavLink to="/about" onClick={handleNavLinkClick}>About</NavLink>*/}
+                            {isHomePage ? (
+                                <ScrollLink
+                                    activeClass="active"
+                                    to="Bio"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                >
+                                    About
+                                </ScrollLink>
+                            ) : (
+                                <a href="/#Bio">
+                                    About
+                                </a>
+                            )}
 
                             {isHomePage ? (
                                 <ScrollLink

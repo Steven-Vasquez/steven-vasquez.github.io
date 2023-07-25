@@ -4,6 +4,7 @@ export function Opening() {
     //Ideas for background: 
     // 1. Fly in Text https://www.sliderrevolution.com/resources/css-animated-background/#:~:text=with%20moving%20clouds.-,Fly%20in%20Text%20on,CodePen%20Embed%20Fallback,-Created%20by%20Sydney
     // 2. 
+    const resumeLink = process.env.REACT_APP_RESUME_LINK;
     return (
         <>
             <div id="opening">
@@ -22,7 +23,7 @@ export function Opening() {
                         <a href="https://www.linkedin.com/in/steven-vasquez/" target="_blank"><i className="fab fa-linkedin"></i></a>
                         <a href="mailto:stevenvasquez.pro@gmail.com"><i className="fas fa-envelope"></i></a>
                     </div>
-                    <a href="https://drive.google.com/file/d/12UVnsDig2Ual_XUyzHGj9DoJ7-wU0T2W/view?usp=sharing" target="_blank" class="resume-button">Resumé <i class="fas fa-external-link-alt social-icons"></i></a>
+                    <a href={resumeLink} target="_blank" class="resume-button">Resumé <i class="fas fa-external-link-alt social-icons"></i></a>
                 </div>
 
 

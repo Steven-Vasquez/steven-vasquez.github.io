@@ -29,9 +29,28 @@ export function Navbar() {
           <li>
             <NavLink to="/" onClick={handleNavLinkClick}>Home</NavLink>
           </li>
+          
           <li>
-            <NavLink to="/about" onClick={handleNavLinkClick}>About</NavLink>
+            {/*<NavLink to="/about" onClick={handleNavLinkClick}>About</NavLink>*/}
+            {isHomePage ? (
+              <ScrollLink
+                activeClass="active"
+                to="Bio"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={handleNavLinkClick}
+              >
+                About
+              </ScrollLink>
+            ) : (
+              <a href="/#Bio" onClick={handleNavLinkClick}>
+                About
+              </a>
+            )}
           </li>
+
           <li>
             {isHomePage ? (
               <ScrollLink
@@ -51,6 +70,7 @@ export function Navbar() {
               </a>
             )}
           </li>
+
           <li>
             {isHomePage ? (
               <ScrollLink
