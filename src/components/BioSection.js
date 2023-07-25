@@ -49,7 +49,7 @@ export function Biography() {
                             I am a 2023 graduate from San Francisco State University with a B.S. in Computer Science with a 3.8 GPA. I've shifted my focus from becoming an academic researcher to software engineer because it's what I enjoy. I'm glad that the skills I've gained from research help me to be a better engineer.
                         </p>
                         
-                        <NavLink exact to="/About" activeClassName="active" id="about-page-link">
+                        <NavLink exact to="/about" activeClassName="active" id="about-page-link">
                             <b style={{ fontSize: ".85em", fontWeight: "1000" }}>Full bio page coming soon!</b>
                         </NavLink>
                     </div>
