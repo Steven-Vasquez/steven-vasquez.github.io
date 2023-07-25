@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://steven-vasquez.com",
+  "homepage": "https://steven-vasquez.github.io/Stevens-Portfolio",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
