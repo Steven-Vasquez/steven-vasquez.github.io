@@ -18,7 +18,7 @@
   margin-right: auto;
 }
 
-.site-info a {
+.site-info .name-link {
   color: white;
   font-size: 1.4rem;
   line-height: 2rem !important;
@@ -26,19 +26,24 @@
   transition: color 0.3s ease-in-out;
 }
 
-.site-info a:hover {
+.site-info .name-link:hover {
   cursor: pointer;
   color: rgb(234, 234, 234);
 }
 
-.site-info div {
+.site-info div,
+.site-info div a {
   font-size: 0.8rem;
   word-wrap: break-word;
   color: rgb(199, 199, 199);
   padding-top: .5rem;
+  transition: color 0.3s ease-in-out;
 }
 
-.site-links {}
+.site-info div a:hover {
+  color: rgb(234, 234, 234);
+}
+
 
 .footer-site-links {
   display: grid;
@@ -79,7 +84,6 @@
   color: white;
 }
 
-.contact-info {}
 
 .footer-header {
   color: rgb(199, 199, 199);

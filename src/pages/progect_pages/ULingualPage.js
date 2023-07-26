@@ -13,7 +13,7 @@ export function ULingualPage() {
         codeLink: "https://github.com/Steven-Vasquez/ULingual",
         liveLink: "",
     }
-    
+
     // Design/Mockup images carousel
     const mockupCarouselImages = ["/images/Project_Images/ULingual/mockups/ULingual_mockup_1.png",
         "/images/Project_Images/ULingual/mockups/ULingual_mockup_2.png",
@@ -33,13 +33,17 @@ export function ULingualPage() {
 
 
 
-    const databaseCarouselImages = ["/images/Project_Images/ULingual/database_images/ULingual_database_1.png",
+    const technicalCarouselImages = ["/images/Project_Images/ULingual/database_images/ULingual_database_1.png",
         "/images/Project_Images/ULingual/database_images/ULingual_database_2.png",
-        "/images/Project_Images/ULingual/database_images/ULingual_database_3.png",]
-    const databaseCarouselCaptions = ["Entity-Relationship (ER) Diagram of database design",
+        "/images/Project_Images/ULingual/database_images/ULingual_database_3.png",
+        "/images/Project_Images/ULingual/technical_images/ULingual_application_network_diagram.png",
+        "/images/Project_Images/ULingual/technical_images/ULingual_deployment_diagram.png",]
+    const technicalCarouselCaptions = ["Entity-Relationship (ER) Diagram of database design",
         "Enhanced Entity-Relationship (EER) Diagram of database design",
-        "UML Diagram of database design"
-]
+        "UML Diagram of database design",
+        "Application Network Diagram",
+        "Deployment Diagram"
+    ]
 
     return (
         <>
@@ -64,10 +68,11 @@ export function ULingualPage() {
                 <p>Since we were to treat this as a real product, we opted to using services such as AWS and Twilio to ensure ULingual would be <strong>scalable and flexible</strong>.</p>
 
                 <h1>Design/Mockup Images</h1>
+                <p>Here are our mockup designs that showcase our site's functionality:</p>
                 <ImageCarousel carouselImages={mockupCarouselImages} captions={mockupCarouselCaptions} />
 
-                <h1>Database Design</h1>
-                <ImageCarousel carouselImages={databaseCarouselImages} captions={databaseCarouselCaptions} />
+                <h1>Database/Technical Images</h1>
+                <ImageCarousel carouselImages={technicalCarouselImages} captions={technicalCarouselCaptions} />
             </div>
         </>
     );

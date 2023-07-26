@@ -4,7 +4,7 @@
     margin: 0 auto;
 }
 
-.carousel-display a img {
+.carousel-display img {
     max-width: calc(100% - 94px);
     max-height: 400px;
     object-fit: contain;
@@ -27,6 +27,10 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
+}
+
+.carousel-display:hover {
+    cursor: pointer;
 }
 
 @media (max-width: 769px) {

@@ -15,8 +15,17 @@ export function Footer() {
                 <div className="footer-flexbox">
 
                     <div className="site-info">
-                        <Link to="/">Steven Vasquez</Link>
-                        <div>© 2023, Built by myself in <strong>Visual Studio Code</strong> using <strong>React.js</strong>, deployed with <strong>(something)</strong></div>
+                        <Link to="/" className='name-link'>Steven Vasquez</Link>
+                        <div>© 2023, Built by myself in
+                            <span>&nbsp;</span>
+                            <strong><a href='https://code.visualstudio.com/' target='blank'>Visual Studio Code</a></strong>
+                            <span>&nbsp;</span>
+                            with
+                            <span>&nbsp;</span>
+                            <strong><a href='https://react.dev/' target='blank'>React.js</a></strong>
+                            , deployed with 
+                            <span>&nbsp;</span>
+                            <strong><a href='https://vercel.com/' target='blank'>Vercel</a></strong></div>
                     </div>
 
                     <div className="site-links">
