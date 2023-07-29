@@ -8,9 +8,13 @@ import SubylertPage from './pages/progect_pages/SubylertPage';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer'
 
+import { Analytics } from '@vercel/analytics/react';
+
 function App() {
   return (
     <Router>
+      <Analytics id='prj_Gd8G6N3EPMp9yr7AXdiKTHdLe5jp' />;
+
       <Navbar />
       
       <Routes>
