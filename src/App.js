@@ -13,7 +13,7 @@ import { Analytics } from '@vercel/analytics/react';
 function App() {
   return (
     <Router>
-      <Analytics id='prj_Gd8G6N3EPMp9yr7AXdiKTHdLe5jp' />;
+      <Analytics id='prj_Gd8G6N3EPMp9yr7AXdiKTHdLe5jp' />
 
       <Navbar />
       
