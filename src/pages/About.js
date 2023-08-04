@@ -27,7 +27,7 @@ export function About() {
             <p>Throughout my undergraduate at San Francisco State University, I explored the academic route for computer science, focusing on research relating to robotics and machine learning. I was able to do so after I was accepted into the Genentech Foundation Scholars program to get funding for undergraduate research. </p>
 
             <h2>Professional Experience</h2>
-            <p></p>
+            <p>blah blah</p>
 
             <h2>Skills</h2>
             <p></p>
