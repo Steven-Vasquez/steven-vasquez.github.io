@@ -2,18 +2,18 @@ import "../stylesheets/About.css"
 
 export function About() {
     
-    
+    /*
     return (
         <div className="about-page-container">
             <h1>Under Construction</h1>
             <p>This page is currently under construction. Please check back later!</p>
         </div>
     )
-
+    */
 
     const resumeLink = process.env.REACT_APP_RESUME_LINK;
 
-    /*
+    
     return (
         <div className="about-page-container">
             <h1>Some headline</h1>
@@ -27,7 +27,7 @@ export function About() {
             <p>Throughout my undergraduate at San Francisco State University, I explored the academic route for computer science, focusing on research relating to robotics and machine learning. I was able to do so after I was accepted into the Genentech Foundation Scholars program to get funding for undergraduate research. </p>
 
             <h2>Professional Experience</h2>
-            <p>blah blah</p>
+            <p>blah blah.</p>
 
             <h2>Skills</h2>
             <p></p>
@@ -39,7 +39,7 @@ export function About() {
             <p>my interests and hobbies are...</p>
         </div>
     );
-    */
+    
     
 }
 

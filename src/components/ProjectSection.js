@@ -53,7 +53,7 @@ export function ProjectSection() {
         projectRole: "LEAD BACKEND DEVELOPER",
         projectTitle: "ULingual",
         techSkills: ["JavaScript", "React", "NodeJS", "ExpressJS", "MySQL", "AWS", "Twilio Video API"],
-        projectDescription: "Led backend development in a team of 6 to create a language learning web app that connects native speakers to exchange language and culture. Implemented the video chatroom service using the Twilio Video API.",
+        projectDescription: "Led backend development in a team of 6 to create a language learning web app that connects native speakers to exchange language and culture. Implemented the video chatroom service using the Twilio Video API and React hooks.",
         projectRoute: "/projects/ULingual",
         projectImages: [
             "/images/Project_Images/ULingual/ULingual_screenshot_homeSmall.png",
