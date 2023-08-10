@@ -2,18 +2,18 @@ import "../stylesheets/About.css"
 
 export function About() {
     
-    /*
+    
     return (
         <div className="about-page-container">
             <h1>Under Construction</h1>
             <p>This page is currently under construction. Please check back later!</p>
         </div>
     )
-    */
+    
 
     const resumeLink = process.env.REACT_APP_RESUME_LINK;
 
-    
+    /*
     return (
         <div className="about-page-container">
             <h1>Some headline</h1>
@@ -39,7 +39,7 @@ export function About() {
             <p>my interests and hobbies are...</p>
         </div>
     );
-    
+    */
     
 }
 
