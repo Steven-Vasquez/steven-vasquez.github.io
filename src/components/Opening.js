@@ -27,7 +27,7 @@ export function Opening() {
                 </div>
 
 
-                <p className="opening-description opening-item">An aspiring <b>Software Engineer</b> with a history in academic research recently graduated from San Francisco State University
+                <p className="opening-description opening-item">An aspiring <b>Software Engineer</b> with a history in academic research graduated from San Francisco State University
 
 
                 </p>
