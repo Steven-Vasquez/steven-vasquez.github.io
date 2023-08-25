@@ -14,6 +14,7 @@ export function About() {
     const resumeLink = process.env.REACT_APP_RESUME_LINK;
 
     /*
+    
     return (
         <div className="about-page-container">
             <h1>Some headline</h1>
