@@ -31,7 +31,7 @@ export function Opening() {
 
 
                 </p>
-                <p className='opening-description opening-item'>I’m a lifelong learner who’s always exploring new paths and hobbies. Some hobbies of mine are reading 📖, gardening 🌱, and playing darts 🎯</p>
+                <p className='opening-description opening-item'>I’m a lifelong learner who’s always exploring new paths and hobbies. Some hobbies of mine are reading 📖, gardening 🌱, and playing cooking 👨‍🍳</p>
 
             </div>
         </>
