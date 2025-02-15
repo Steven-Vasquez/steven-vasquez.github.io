@@ -83,6 +83,17 @@ export function ProjectSection() {
         ]
     };
 
+    const DealershipDatabaseData = {
+        projectRole: "DEVELOPER",
+        projectTitle: "Car Dealership Manager",
+        techSkills: ["MySQL", "PHP", "Apache", "HTML/CSS"],
+        projectDescription: "Worked in a team of 4 to create a <strong>web-based database application</strong> designed to help dealerships track vehicle inventory, customer purchases, and sales data efficiently <strong>utilizing a MySQL database</strong>.",
+        projectRoute: "/projects/DealershipDatabase",
+        projectImages: [
+            "/images/Project_Images/DealershipDatabase/add_customer.png",
+        ]
+    };
+
     return (
         <>
             <div className="projects-section" id='Projects'>
@@ -99,6 +110,7 @@ export function ProjectSection() {
                     <IndividualProject {...ULingualData} />
                     <IndividualProject {...MonopolyData} />
                     <IndividualProject {...SubylertData} />
+                    <IndividualProject {...DealershipDatabaseData} />
                 </div>
             </div>
         </>

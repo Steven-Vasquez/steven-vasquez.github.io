@@ -27,11 +27,11 @@ export function Opening() {
                 </div>
 
 
-                <p className="opening-description opening-item">A <b>Software Engineer</b> with a history in academic research graduated from San Francisco State University
+                <p className="opening-description opening-item">A <b>Software Engineer</b> with a history in academic research graduated from San Francisco State University pursuing a <b>Master's in Cybersecurity at Georia Tech</b>
 
 
                 </p>
-                <p className='opening-description opening-item'>I’m a lifelong learner who’s always exploring new paths and hobbies. Some hobbies of mine are reading 📖, gardening 🌱, and playing cooking 👨‍🍳</p>
+                <p className='opening-description opening-item'>I’m a lifelong learner who’s always exploring new paths and hobbies. Some hobbies of mine are reading 📖, gardening 🌱, and cooking 👨‍🍳</p>
 
             </div>
         </>
