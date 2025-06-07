@@ -53,7 +53,7 @@ export function ProjectSection() {
         projectRole: "LEAD BACKEND DEVELOPER",
         projectTitle: "ULingual",
         techSkills: ["JavaScript", "React", "NodeJS", "ExpressJS", "MySQL", "AWS", "Twilio Video API"],
-        projectDescription: "Led backend development in a team of 6 to create a language learning web app that connects native speakers to exchange language and culture. Implemented the video chatroom service using the Twilio Video API and React hooks.",
+        projectDescription: "Led backend development in a team of 6 to create a <strong>language learning web app</strong> that connects native speakers to exchange language and culture. Implemented the <strong>video chatroom service</strong> using the <strong>Twilio Video API</strong> and <strong>React hooks</strong>.",
         projectRoute: "/projects/ULingual",
         projectImages: [
             "/images/Project_Images/ULingual/ULingual_screenshot_homeSmall.png",
@@ -65,7 +65,7 @@ export function ProjectSection() {
         projectRole: "TEAM LEAD",
         projectTitle: "Monopoly",
         techSkills: ["JavaScript", "PostgreSQL", "NodeJS", "ExpressJS", "Socket.io", "Webpack"],
-        projectDescription: "Led a team of 4 to create a multiplayer Monopoly web app capible of hosting unlimited games with live updates and chat using WebSockets.",
+        projectDescription: "Led a team of 4 to create a multiplayer Monopoly <strong>web app</strong> capible of hosting unlimited games with <strong>live updates</strong> and chat using <strong>WebSockets</strong>.",
         projectRoute: "/projects/Monopoly",
         projectImages: [
             "/images/Project_Images/Monopoly/Monopoly_screenshot_1.png",
@@ -76,7 +76,7 @@ export function ProjectSection() {
         projectRole: "HACKATHON TEAM LEAD",
         projectTitle: "Subylert",
         techSkills: ["Android Studio", "Java", "XML", "Firebase", "Room Database", "Notivize API"],
-        projectDescription: "<strong>Hackathon winner!</strong> An Android submarine-themed subscription manager app that allows users to track their payment subscriptions and receive notifications when a subscription is about to renew.",
+        projectDescription: "<strong>Hackathon winner!</strong> An Android submarine-themed <strong>subscription manager app</strong> that allows users to track their payment subscriptions and receive notifications when a subscription is about to renew.",
         projectRoute: "/projects/Subylert",
         projectImages: [
             "/images/Project_Images/Subylert/Subylert_screenshot_1.png",
@@ -107,10 +107,10 @@ export function ProjectSection() {
                 </div>
 
                 <div className="projects">
+                    <IndividualProject {...DealershipDatabaseData} />
                     <IndividualProject {...ULingualData} />
                     <IndividualProject {...MonopolyData} />
                     <IndividualProject {...SubylertData} />
-                    <IndividualProject {...DealershipDatabaseData} />
                 </div>
             </div>
         </>

@@ -46,7 +46,10 @@ export function Biography() {
                     <div id="bio-text-container">
                         <b>A bit about me...</b>
                         <p id="about-text">
-                            I am a 2023 graduate from San Francisco State University with a B.S. in Computer Science with a 3.8 GPA. I've shifted my focus from becoming an academic researcher to software engineer because it's what I enjoy. I'm glad that the skills I've gained from research help me to be a better engineer.
+                            I graduated in 2023 from San Francisco State University with a B.S. in Computer Science (GPA 3.8), and I’m currently pursuing an M.S. in Cybersecurity at Georgia Tech.
+                        </p> 
+                        <p id="about-text" style={{ marginTop: '10px' }}>
+                            While my background started in software engineering and research, I’ve recently shifted my focus toward cybersecurity. I'm interested in how security principles apply to real-world systems, and I’m building hands-on experience through my coursework, labs, and personal projects.
                         </p>
                         
                         <NavLink exact to="/about" activeClassName="active" id="about-page-link">

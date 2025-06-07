@@ -11,9 +11,9 @@ export function Opening() {
                 <div>
                     <div id="tagline" className='opening-item'>
                         <span>Hi, I'm Steven | </span>
-                        <span className='highlighted-text'>Software </span>
+                        <span className='highlighted-text' id='top-highlighted-text'>Developer,</span>
                         <span>&nbsp;</span>
-                        <span className='highlighted-text'>Engineer</span>
+                        <span className='highlighted-text'>Cybersecurity M.S. Student</span>
                     </div>
                 </div>
 
@@ -26,12 +26,9 @@ export function Opening() {
                     <a href={resumeLink} target="_blank" class="resume-button">Resumé <i class="fas fa-external-link-alt social-icons"></i></a>
                 </div>
 
-
-                <p className="opening-description opening-item">A <b>Software Engineer</b> with a history in academic research graduated from San Francisco State University pursuing a <b>Master's in Cybersecurity at Georia Tech</b>
-
-
-                </p>
-                <p className='opening-description opening-item'>I’m a lifelong learner who’s always exploring new paths and hobbies. Some hobbies of mine are reading 📖, gardening 🌱, and cooking 👨‍🍳</p>
+                <p className='opening-description opening-item'>I’m an <b>M.S. Cybersecurity student at Georgia Tech</b>, building on a strong foundation in full-stack development. My experience includes building <b>web apps</b>, designing <b>relational databases</b>, and deploying to <b>cloud infrastructure</b>. </p>
+                
+                <p className='opening-description opening-item'>I’m a lifelong learner who’s always exploring new paths and hobbies. Some hobbies of mine are reading 📖, hacking gaming consoles 🎮, and cooking 👨‍🍳</p>
 
             </div>
         </>
