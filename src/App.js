@@ -2,15 +2,18 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
+import Blog from './pages/Blog';
+
+import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer'
+import { Analytics } from '@vercel/analytics/react';
+
 import ULingualPage from './pages/progect_pages/ULingualPage';
 import MonopolyPage from './pages/progect_pages/MonopolyPage';
 import SubylertPage from './pages/progect_pages/SubylertPage';
 import DealershipDatabasePage from './pages/progect_pages/DealershipDatabasePage';
-import { Navbar } from './components/Navbar';
-import { Footer } from './components/Footer'
 
-import { Analytics } from '@vercel/analytics/react';
-
+import BlogTest from './pages/blog_pages/BlogTest';
 function App() {
   return (
     <Router>
@@ -21,6 +24,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+
+        <Route path="/blog" element={<Blog/>} />
+        <Route path="/blog/test" element={<BlogTest/>} />
+
+
         <Route path="/projects/ULingual" element={<ULingualPage />} />
         <Route path="/projects/Monopoly" element={<MonopolyPage />} />
         <Route path="/projects/Subylert" element={<SubylertPage />} />

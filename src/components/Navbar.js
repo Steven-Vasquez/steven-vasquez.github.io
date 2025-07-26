@@ -30,8 +30,9 @@ export function Navbar() {
             <NavLink to="/" onClick={handleNavLinkClick}>Home</NavLink>
           </li>
           
+          {/*
           <li>
-            {/*<NavLink to="/about" onClick={handleNavLinkClick}>About</NavLink>*/}
+            {//<NavLink to="/about" onClick={handleNavLinkClick}>About</NavLink>}
             {isHomePage ? (
               <ScrollLink
                 activeClass="active"
@@ -49,6 +50,11 @@ export function Navbar() {
                 About
               </a>
             )}
+          </li>
+          */}
+          
+          <li>
+            <NavLink to="/blog" onClick={handleNavLinkClick}>Blog</NavLink>
           </li>
 
           <li>
