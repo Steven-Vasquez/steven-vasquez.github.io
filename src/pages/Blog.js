@@ -58,9 +58,9 @@ export function Blog() {
     const TestBlog = {
         completionDate: "7/25/2025",
         projectTitle: "DanaBot",
-        categorySkills: ["Network Forensics"],
+        categorySkills: ["Network Forensics", "Security"],
         techSkills: ["Wireshark", "VirusTotal", "ANY.RUN", "Network Miner", "Kali Linux"],
-        blogDescription: "Identified the <strong>infection vector</strong>, analyzed the <strong>network traffic</strong> of DanaBot, and extracted <strong>indicators of compromise</strong> (IOCs) from a packet capture (PCAP) file.",
+        blogDescription: "Identified the <strong>infection vector</strong>, analyzed the <strong>network traffic</strong> of DanaBot, and extracted <strong>indicators of compromise</strong> (IOCs) from a packet capture (PCAP) file of a system compromised by DanaBot malware.",
         blogRoute: "/blog/test",
         blogImages: [
             "",
