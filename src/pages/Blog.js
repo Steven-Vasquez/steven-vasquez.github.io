@@ -60,8 +60,8 @@ export function Blog() {
         projectTitle: "DanaBot",
         categorySkills: ["Network Forensics", "Security"],
         techSkills: ["Wireshark", "VirusTotal", "ANY.RUN", "Network Miner", "Kali Linux"],
-        blogDescription: "Identified the <strong>infection vector</strong>, analyzed the <strong>network traffic</strong> of DanaBot, and extracted <strong>indicators of compromise</strong> (IOCs) from a packet capture (PCAP) file of a system compromised by DanaBot malware.",
-        blogRoute: "/blog/test",
+        blogDescription: "Identified the <strong>infection vector</strong>, analyzed the <strong>network traffic</strong>, and extracted <strong>indicators of compromise</strong> (IOCs) from a packet capture (PCAP) file of a system compromised by DanaBot malware.",
+        blogRoute: "/blog/DanaBot",
         blogImages: [
             "",
         ]

@@ -8,7 +8,10 @@ export function BlogPageIntro(props) {
             <h1>{projectTitle}</h1>
 
             <div id="read-time">{readTime}</div>
-            <p dangerouslySetInnerHTML={{ __html: introText }}></p>
+            
+            {introText.map((text) => (
+                <p key={text} dangerouslySetInnerHTML={{ __html: text }} ></p>
+            ))}
 
             <div className="intro-project-details">
                 <div>

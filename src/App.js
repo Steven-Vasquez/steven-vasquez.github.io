@@ -13,7 +13,7 @@ import MonopolyPage from './pages/progect_pages/MonopolyPage';
 import SubylertPage from './pages/progect_pages/SubylertPage';
 import DealershipDatabasePage from './pages/progect_pages/DealershipDatabasePage';
 
-import BlogTest from './pages/blog_pages/BlogTest';
+import DanaBotBlog from './pages/blog_pages/DanaBotBlog';
 function App() {
   return (
     <Router>
@@ -26,7 +26,7 @@ function App() {
         <Route path="/about" element={<About />} />
 
         <Route path="/blog" element={<Blog/>} />
-        <Route path="/blog/test" element={<BlogTest/>} />
+        <Route path="/blog/DanaBot" element={<DanaBotBlog/>} />
 
 
         <Route path="/projects/ULingual" element={<ULingualPage />} />
