@@ -63,7 +63,7 @@ export function Blog() {
         blogDescription: "Identified the <strong>infection vector</strong>, analyzed the <strong>network traffic</strong>, and extracted <strong>indicators of compromise</strong> (IOCs) from a packet capture (PCAP) file of a system compromised by DanaBot malware.",
         blogRoute: "/blog/DanaBot",
         blogImages: [
-            "",
+            "/images/Blog_Images/DanaBot/1_identifying_suspicious_DNS_server.png",
         ]
     };
 

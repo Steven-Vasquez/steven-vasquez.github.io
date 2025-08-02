@@ -18,12 +18,12 @@ export function DanaBotBlog() {
 
     // Images used for identifying the attacker IP and DNS server
     const whatIDiscoveredImages = [
-        "/images/Blog_Images/DanaBot/1_identifying_malicious_IP.png",
-        "/images/Blog_Images/DanaBot/2_identifying_suspicious_DNS_server.png"
+        "/images/Blog_Images/DanaBot/1_identifying_suspicious_DNS_server.png",
+        "/images/Blog_Images/DanaBot/2_identifying_malicious_IP.png"
     ]
     const whatIDiscoveredCaptions = [
-        "Identifying the malicious IP address used by the attacker",
-        "Identifying the suspicious DNS server used by the attacker"
+        "Identifying the suspicious DNS server used by the attacker using WireShark",
+        "Confirming the malicious IP address used by the attacker using VirusTotal"
     ]
 
     // Images used for analyzing the attack vector and payload
