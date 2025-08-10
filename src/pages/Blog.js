@@ -55,7 +55,19 @@ export function Blog() {
    };
    */
 
-    const TestBlog = {
+    const WinActiveDirectoryBlog = {
+        completionDate: "8/8/2025",
+        projectTitle: "Windows AD Guide (name WIP)",
+        categorySkills: ["todo", "todo"],
+        techSkills: ["todo", "todo", "todo"],
+        blogDescription: "todo",
+        blogRoute: "/blog/windows-active-directory-lab",
+        blogImages: [
+            "",
+        ]
+    };
+
+    const DanaBotBlog = {
         completionDate: "7/25/2025",
         projectTitle: "DanaBot",
         categorySkills: ["Network Forensics", "Security"],
@@ -78,14 +90,15 @@ export function Blog() {
                 <div className="projects-header">
                     <h1 style={{ display: 'flex', flexDirection: 'row' }}>
                         <div className="highlight">
-                            <div>Labs</div>
+                            <div>Posts</div>
                             <div></div>
                         </div>
                     </h1>
                 </div>
 
                 <div className="projects">
-                    <IndividualProject {...TestBlog} />
+                    <IndividualProject {...WinActiveDirectoryBlog} />
+                    <IndividualProject {...DanaBotBlog} />
                 </div>
             </div>
         </>

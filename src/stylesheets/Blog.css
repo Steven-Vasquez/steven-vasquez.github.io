@@ -1,0 +1,83 @@
+.inline-code {
+    font-family: 'Segoe UI Mono', Consolas, monospace;
+    background-color: #eaeaea;
+    /* light gray */
+    color: #333;
+    padding: 0px 4px;
+    border-radius: 4px;
+    font-weight: normal;
+    /* avoid bold to keep subtle */
+    white-space: nowrap;
+}
+
+.text-snippet {
+    /*font-family: 'Segoe UI Mono', Consolas, monospace;*/
+    background-color: #e8f1ff;
+    /* very subtle blue */
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: #005a9c;
+}
+
+.highlight-yellow {
+    background-color: #fff9c4;
+    /* light yellow */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.highlight-green {
+    background-color: #e0ffe3;
+    /* light green */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.highlight-red {
+    background-color: #ffe0e0;
+    /* light red */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.note {
+    font-style: italic;
+    color: #666666;
+    /* font-size: 0.9em; */
+    display: inline-block;
+    /* so it appears as its own paragraph */
+}
+
+.inline-note {
+    font-style: italic;
+    color: #666666;
+}
+
+.term {
+    font-style: normal;
+    color: #1a73e8;
+    /* subtle blue */
+    text-decoration: underline dotted;
+    cursor: help;
+    /* optional: hints it’s a defined term */
+}
+
+ul,
+ol {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+.indented {
+    margin-left: 1.5em;
+}
+
+.section-title {
+    color: #1babff;
+}
+
+.small-image-container {
+
+}
+
+

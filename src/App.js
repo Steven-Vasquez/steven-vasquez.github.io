@@ -14,6 +14,10 @@ import SubylertPage from './pages/progect_pages/SubylertPage';
 import DealershipDatabasePage from './pages/progect_pages/DealershipDatabasePage';
 
 import DanaBotBlog from './pages/blog_pages/DanaBotBlog';
+
+import WinActiveDirectoryBlog from './pages/blog_pages/WinActiveDirectoryBlog';
+import TestPage from './pages/blog_pages/TestPage';
+
 function App() {
   return (
     <Router>
@@ -24,11 +28,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-
         <Route path="/blog" element={<Blog/>} />
+
+        {/* Security Blog Pages */}
         <Route path="/blog/DanaBot" element={<DanaBotBlog/>} />
 
+        {/* IT Blog Pages */}
+        <Route path="/blog/windows-active-directory-lab" element={<WinActiveDirectoryBlog/>} />
+        <Route path="/blog/test-page" element={<TestPage/>} />
 
+        {/* Project Pages */}
         <Route path="/projects/ULingual" element={<ULingualPage />} />
         <Route path="/projects/Monopoly" element={<MonopolyPage />} />
         <Route path="/projects/Subylert" element={<SubylertPage />} />
