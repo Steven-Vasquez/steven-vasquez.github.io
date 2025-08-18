@@ -154,6 +154,65 @@ export function WinActiveDirectoryBlog() {
         "todo caption",
         "todo caption"
     ];
+
+    // Images for creating groups
+    const creatingGroupsImages = [
+        "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/2a_creating_groups.png",
+        "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/2b_creating_groups.png",
+    ]
+    const creatingGroupsCaptions = [
+        "todo caption",
+        "todo caption"
+    ];
+
+    // Images for creating users
+    const creatingUsersImages = [
+        "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3a_creating_users.png",
+        "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3b_creating_users.png",
+        "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3c_creating_users.png",
+        "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3a_creating_users.png",
+        "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3b_creating_users.png",
+        "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3c_creating_users.png"
+    ]
+    const creatingUsersCaptions = [
+        "todo caption",
+        "todo caption",
+        "todo caption",
+        "todo caption",
+        "todo caption",
+        "todo caption"
+    ];
+
+    // Images for creating GPOs
+    const creatingGPOsImages = [
+        "/images/Blog_Images/WinActiveDirectory/7_applying_group_policies/1a_creating_GPO.png",
+        "/images/Blog_Images/WinActiveDirectory/7_applying_group_policies/1b_creating_GPO.png",
+        "/images/Blog_Images/WinActiveDirectory/7_applying_group_policies/1c_editing_GPO.png",
+        "/images/Blog_Images/WinActiveDirectory/7_applying_group_policies/1d_editing_GPO.png",
+        "/images/Blog_Images/WinActiveDirectory/7_applying_group_policies/1e_editing_GPO.png",
+        "/images/Blog_Images/WinActiveDirectory/7_applying_group_policies/1f_editing_GPO.png",
+        "/images/Blog_Images/WinActiveDirectory/7_applying_group_policies/1g_editing_GPO.png",
+
+    ]
+    const creatingGPOsCaptions = [
+        "todo caption",
+        "todo caption",
+        "todo caption",
+        "todo caption",
+        "todo caption",
+        "todo caption",
+        "todo caption"
+    ];
+
+    // Images for applying/linking GPOs
+    const linkingGPOsImages = [
+        "/images/Blog_Images/WinActiveDirectory/7_applying_group_policies/2a_linking_GPO.png",
+        "/images/Blog_Images/WinActiveDirectory/7_applying_group_policies/2b_linking_GPO.png",
+    ]
+    const linkingGPOsCaptions = [
+        "todo caption",
+        "todo caption"
+    ];
     return (
         <>
             <div className="project-page-container">
@@ -721,17 +780,118 @@ export function WinActiveDirectoryBlog() {
 
 
                 <h4 className="section-header">7.2.2 <span className="section-title">How to Create Groups + Example</span></h4>
-                <p><strong>Steps:</strong></p>
+                <p><strong>Steps:</strong>
+                    <br></br>
+                    For this example, we will create a security group called "<span>HR_Access</span>" and add all HR staff to it instead of assigning permissions to each user individually.
+                    <ol>
+                        <li>Log into the <span className="inline-code">Windows Server 2022 Domain Controller</span> using your domain admin account.</li>
+                        <li>Open the <span className="inline-code">Active Directory Users and Computers</span> app and navigate to the OU where you want to place the group in. This only determines the storage location in AD’s hierarchy, choose wherever makes most logical sense for the scenario.
+                            <span className="note">The OU a group is placed does <strong>not</strong> automatically determine who is in that group. Membership in a group is <strong>manually assigned</strong> or done programmatically and groups within one OU can have members from anywhere in the domain, even other departments.</span>
+                        </li>
+                        <li>Right-click the chosen OU and select <span className="inline-code">New</span> → <span className="inline-code">Group</span>.</li>
+                        <li>Enter a group name (“HR_Access” for our lab example).</li>
+                        <li>Set <span className="inline-code">Group Scope</span> to <span className="inline-code">Group</span>.
+                            <span className="note">Because this is a departmental group with users from one domain only and needs these permissions no matter where they log in from (another office, remote access, SSO, etc).</span>
+                        </li>
+                        <li>Set <span className="inline-code">Group type</span> to <span className="inline-code">Security</span>.
+                            <span className="note">Because this group will be used to assign permission to a shared folder in our hypothetical example.</span>
+                        </li>
+                        <li>Click <span className="inline-note">OK</span>.</li>
+                    </ol>
+                    <ImageCarousel carouselImages={creatingGroupsImages} captions={creatingGroupsCaptions} />
+                </p>
 
                 <h3 className="section-header">7.3 <span className="section-title">Users</span></h3>
                 <h4 className="section-header">7.3.1 <span className="section-title">What are Users in Active Directory?</span></h4>
+                <p>Users in Active Directory represent individual people or service accounts that log in to the domain. Each user has a username, password, and can be assigned permissions through group memberships.</p>
+
                 <h4 className="section-header">7.3.2 <span className="section-title">How to Create Users + Example</span></h4>
+                <p>
+                    <strong>Example Scenario</strong>
+                    <br></br>
+                    You’ve just hired a new HR employee, John Doe. You’ll want to create their user account in the HR Organizational Unit (OU) and add them to the "<span className="inline-code">HR_Access</span>" group so they have the proper access rights.
+                </p>
+                <p><strong>Steps to Create a User:</strong>
+                    <ol>
+                        <li>Log into the <span className="inline-code">Windows Server 2022 Domain Controller</span> using your domain admin account.</li>
+                        <li>Open the <span className="inline-code">Active Directory Users and Computers</span> app and navigate to the OU where you want to place the new user in (HR, for example).</li>
+                        <li>Right-click the OU and select <span className="inline-code">New</span> → <span className="inline-code">User</span>.</li>
+                        <li>Fill out the form with the mew user's example details:
+                            <ul>
+                                <li><strong>First name:</strong> John</li>
+                                <li><strong>Last name:</strong> Doe</li>
+                                <li><strong>User logon name:</strong> jdoe</li>
+                            </ul>
+                        </li>
+                        <li>Click <span className="inline-code">Next</span>.</li>
+                        <li>Set an initial password.
+                            <br></br>
+                            <span className="note">For this lab, you may want to uncheck <span className="inline-code">User must channge password at next logon</span> to keep things simple (but in real environments, keep it checked for security).</span>
+                        </li>
+                        <li>Click <span className="inline-code">Next</span> and then <span className="inline-code">Finish</span> to create the user account.</li>
+                        <li>To assign permissions, right-click the new user, select <span className="inline-code">Add to a group</span>, type the group name (HR_Access) where prompted, and click <span className="inline-code">OK</span>.</li>
+                    </ol>
+                    <ImageCarousel carouselImages={creatingUsersImages} captions={creatingUsersCaptions} />
+                </p>
+
                 <h2 className="section-header">8 <span className="section-title">Applying Group Policies</span></h2>
                 <h3 className="section-header">8.1 <span className="section-title">What is a Group Policy Object (GPO)?</span></h3>
+                <p>A Group Policy Object (GPO) is a virtual collection of policy settings that control how computers behave within an Active Directory environment. GPOs allow administrators to centrally manage security settings, desktop configurations, software deployment, and much more.</p>
+
                 <h3 className="section-header">8.2 <span className="section-title">Why Use GPOs?</span></h3>
+                <p>Instead of manually configuring each computer or user account, GPOs let you enforce consistent policies across many machines, improving security and productivity.</p>
+
                 <h3 className="section-header">8.3 <span className="section-title">Example Policies We Will Apply</span></h3>
+                <ol>
+                    <li>
+                        <strong>Enforce Password Complexity</strong>
+                        <ul>
+                            <li>Ensures users create strong passwords that include uppercase, lowercase, numbers, and symbols.</li>
+                            <li>Helps protect your domain from simple password attacks.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Configure Screensaver Timeout</strong>
+                        <ul>
+                            <li>Forces computers to lock after a set idle timer, reducing security risk from unattended machines.</li>
+                        </ul>
+                    </li>
+                </ol>
+
                 <h3 className="section-header">8.4 <span className="section-title">Steps to Create a GPO</span></h3>
+                <p>
+                    <ol>
+                        <li>Log into the <span className="inline-code">Windows Server 2022 Domain Controller</span> using your domain admin account.</li>
+                        <li>Open the <span className="inline-code">Group Policy Management</span> app.</li>
+                        <li>On the left pane, expand your domain by expanding <span className="inline-code">Forest: lab.local</span> → <span className="inline-code">Domains</span> → <span className="inline-code">lab.local</span>.</li>
+                        <li>Right-click <span className="inline-code">Group Policy Objects</span>, select <span className="inline-code">New</span>, and give your GPO a name (we'll use "Security Settings").</li>
+                        <li>On the left pane, right-click the new GPO and click <span className="inline-code">Edit</span> to open the <span className="inline-code">Grroup Policy Management Editor</span>.</li>
+                        <li>Navigate to the specific settings for your policies:
+                            <ul>
+                                <li>For password policies:
+                                    <br></br>
+                                    <span className="inline-code">Computer Configuration</span> → <span className="inline-code">Policies</span> → <span className="inline-code">Windows Settings</span> → <span className="inline-code">Security Settings</span> → <span className="inline-code">Account Policies</span> → <span className="inline-code">Password Policy</span>
+                                </li>
+                                <li>For screensaver timeout:
+                                    <br></br>
+                                    <span className="inline-code">User Configuration</span> → <span className="inline-code">Policies</span> → <span className="inline-code">Administrative Templates</span> → <span className="inline-code">Control Panel</span> → <span className="inline-code">Personalization</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Configure the settings you want, such as enabling password complexity or setting the screensaver timeout value by double-clicking the policy on the right side.</li>
+                        <li>Close the editor.</li>
+                    </ol>
+                    <ImageCarousel carouselImages={creatingGPOsImages} captions={creatingGPOsCaptions} />
+                </p>
+
                 <h3 className="section-header">8.5 <span className="section-title">Steps to Link a GPO</span></h3>
+                <p>
+                    <li>Log into the <span className="inline-code">Windows Server 2022 Domain Controller</span> using your domain admin account.</li>
+                    <li>Open the <span className="inline-code">Group Policy Management</span> app.</li>
+                    <li>Right-click the domain or OU and select <span className="inline-code">Link an Existing GPO</span>, then select your new GPO ("Security Settings" in our example).</li>
+                    <li>Click <span className="inline-code">OK</span> to apply.</li>
+                    <ImageCarousel carouselImages={linkingGPOsImages} captions={linkingGPOsCaptions} />
+                </p>
 
                 <h1 className="section-header">III. <span className="section-title">Conclusion</span></h1>
                 <h2 className="section-header">• <span className="section-title">What I Learned</span></h2>
