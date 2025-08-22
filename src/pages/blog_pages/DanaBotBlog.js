@@ -9,9 +9,13 @@ export function DanaBotBlog() {
         introText: ["In this lab, hosted on CyberDefenders, I <strong>investigated a packet capture</strong> (PCAP) file from a network infected with DanaBot. The objective was to analyze network traffic to <strong>identify the infection vector</strong>, <strong>extract indicators of compromise</strong> (IOCs), and <strong>understand the malware’s behavior</strong> through hands-on network forensics.",
             "DanaBot is a <strong>modular trojan malware</strong> (modular meaning it's capabilities can be extented through downloadable components) used to steal sensitive information, often targeting financial data. First observed in 2018, DanaBot became a threat globally by communicating with attackers’ remote command-and-control (C2) servers after infecting a system, enabling it to exfiltrate credentials, download additional payloads, and maintain persistent access. <strong>Infecting over 300k computers worldwide, losses totaled at over $50 million in damages</strong>."
         ],
-        labType: "Network Analysis",
-        tacticsUsed: ["Execution", "Command and Control"],
-        toolsUsed: ["Wireshark", "VirusTotal", "ANY.RUN", "Kali Linux"],
+        columnTitles: ["Type📁", "Tactics Used🧠", "Tools Used🛠️"],
+        columnRowsInfo:
+            [
+                ["Network Analysis"],
+                ["Execution", "Command and Control"],
+                ["Wireshark", "VirusTotal", "ANY.RUN", "Kali Linux"],
+            ],
         labSource: "CyberDefenders",
         labLink: "https://cyberdefenders.org/blueteam-ctf-challenges/danabot/"
     }

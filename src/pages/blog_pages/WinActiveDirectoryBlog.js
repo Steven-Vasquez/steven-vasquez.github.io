@@ -1,5 +1,6 @@
 import BlogPageIntro from "../../components/BlogPageIntro";
 import ImageCarousel from "../../components/ImageCarousel";
+import FileTree from "../../components/FileTree";
 import { Link as ScrollLink } from 'react-scroll';
 
 
@@ -8,17 +9,41 @@ import "../../stylesheets/Blog.css";
 
 export function WinActiveDirectoryBlog() {
     const introDetails = {
-        projectTitle: "Windows Active Directory Walkthrough [THIS PAGE IS ICOMPLETE, WIP]",
-        readTime: "x minute read",
-        introText: ["In this guide, I walk through building a simulated small-enterprise Windows network lab using multiple virtual machines. The lab environment includes a Windows Server 2022 machine configured as a Domain Controller and one or more Windows 10 client machines joined to the domain.",
-            "This guide provides hands-on experience with core Windows administration tasks such as configuring Active Directory, creating and managing users, and applying group policies, the same tasks used in a real IT environment. Along the way, I try to explain key concepts and reasoning behind each step I chose, making this guide useful as a lab walkthrough and as a learning resource for myself and others."
+        projectTitle: "Windows Active Directory Lab Setup Guide [THIS PAGE IS ICOMPLETE, WIP]",
+        readTime: "23 minute read",
+        introText: ["In this guide, I walk through <strong>building a simulated small-enterprise Windows network lab using multiple virtual machines</strong>. The lab environment includes a <strong>Windows Server 2022 machine configured as a Domain Controller</strong> and one or more <strong>Windows 10 client machines joined to the domain</strong>.",
+            "This guide provides <strong>hands-on experience</strong> with core Windows administration tasks such as <strong>configuring Active Directory</strong>, <strong>creating and managing users</strong>, and <strong>applying group policies</strong>, the same tasks used in a real IT environment. Along the way, I try to explain key concepts and reasoning behind each step I chose, making this guide useful as a lab walkthrough and as a learning resource for myself and others."
         ],
-        labType: "lab type",
-        tacticsUsed: ["tactics used"],
-        toolsUsed: ["Oracle VirtualBox"],
-        labSource: "lab source",
-        labLink: "lab link"
+        columnTitles: ["Type📁", "Tools Used🛠️", "Skills Learned🧠"],
+        columnRowsInfo: [
+            ["IT Guide", "Networking"],
+            ["VirtualBox", "Windows Server 2022", "Windows 10"],
+            ["Active Directory", "Group Policy Objects (GPOs)", "Network Configuration", "User Management", "Windows Server Administration"]
+        ],
+        labSource: "",
+        labLink: ""
     };
+
+    const fileTreeData = [
+        {
+            type: "drive",
+            name: "VM_Lab",
+            children: [
+                {
+                    type: "folder",
+                    name: "ISOs",
+                },
+                {
+                    type: "folder",
+                    name: "VMs",
+                },
+                {
+                    type: "folder",
+                    name: "Scripts",
+                }
+            ]
+        }
+    ]
 
     // Images for formatting USB drive
     const CreatingTheServerVMImages = [
@@ -28,10 +53,10 @@ export function WinActiveDirectoryBlog() {
         "/images/Blog_Images/WinActiveDirectory/1_server_VM_setup/1d_windows_server_setup.png"
     ]
     const CreatingTheServerVMCaptions = [
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
+        "Name and Operating System options",
+        "Unattended Install options",
+        "Hardware Options",
+        "Hard Disk options",
     ];
 
     // Images for installing Windows Server
@@ -56,10 +81,10 @@ export function WinActiveDirectoryBlog() {
         "/images/Blog_Images/WinActiveDirectory/3_client_VM_setup/1d_client_windows_10_VM_setup.png",
     ]
     const CreatingWindows10VMCaptions = [
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption"
+        "Name and Operating System options",
+        "Unattended Install options",
+        "Hardware Options",
+        "Hard Disk options",
     ]
 
     //Images for fixing potential product key issue in Windows 10 VM
@@ -68,8 +93,8 @@ export function WinActiveDirectoryBlog() {
         "/images/Blog_Images/WinActiveDirectory/3_client_VM_setup/2b_fixing_product_key.png"
     ]
     const FixingProductKeyIssueCaptions = [
-        "todo caption",
-        "todo caption"
+        "Potential product key error",
+        "Steps 2-5 screen"
     ];
 
     // Images for installing Windows 10
@@ -82,12 +107,12 @@ export function WinActiveDirectoryBlog() {
         "/images/Blog_Images/WinActiveDirectory/3_client_VM_setup/3f_windows_installation.png"
     ]
     const Windows10InstallationCaptions = [
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption"
+        "Step 1 screen",
+        "Step 2 screen",
+        "Step 3 screen",
+        "Step 4 screen",
+        "Step 5 screen",
+        "Step 6 screen",
     ];
 
     // Images for connecting VMs to same internal network
@@ -96,8 +121,8 @@ export function WinActiveDirectoryBlog() {
         "/images/Blog_Images/WinActiveDirectory/4_internal_network_setup/1b_server_internal_network_setup.png"
     ]
     const connectingInternalNetworkCaptions = [
-        "todo caption",
-        "todo caption"
+        "Visual reference for client steps",
+        "Visual reference for server steps"
     ];
 
 
@@ -112,13 +137,13 @@ export function WinActiveDirectoryBlog() {
         "/images/Blog_Images/WinActiveDirectory/2_promote_server_to_domain_controller/1g_install_ad_dc_role.png",
     ]
     const ADDSRoleInstallationCaptions = [
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
+        "Visual reference for step 3",
+        "Visual reference for step 4",
+        "Visual reference for step 5",
+        "Visual reference for step 6a",
+        "Visual reference for step 6b",
+        "Visual reference for step 7",
+        "Visual reference for step 8",
     ];
 
     // Images for promoting server to domain controller
@@ -133,14 +158,14 @@ export function WinActiveDirectoryBlog() {
         "/images/Blog_Images/WinActiveDirectory/2_promote_server_to_domain_controller/2h_promote_to_dc.png",
     ];
     const promoteServerToDCCaptions = [
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
+        "Visual reference for step 1a",
+        "Visual reference for step 1b",
+        "Visual reference for step 2",
+        "Visual reference for step 3",
+        "Visual reference for step 4",
+        "Visual reference for step 5",
+        "Visual reference for step 6",
+        "Visual reference for step 7",
     ];
 
     // Images for creating OUs
@@ -150,9 +175,9 @@ export function WinActiveDirectoryBlog() {
         "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/1c_creating_OUs.png"
     ];
     const creatingOUsCaptions = [
-        "todo caption",
-        "todo caption",
-        "todo caption"
+        "Visual reference for steps 1-2",
+        "Visual reference for steps 3-4",
+        "Visual reference for step 7"
     ];
 
     // Images for creating groups
@@ -161,8 +186,8 @@ export function WinActiveDirectoryBlog() {
         "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/2b_creating_groups.png",
     ]
     const creatingGroupsCaptions = [
-        "todo caption",
-        "todo caption"
+        "Visual reference for steps 2-3",
+        "Visual reference for steps 4-7"
     ];
 
     // Images for creating users
@@ -170,17 +195,17 @@ export function WinActiveDirectoryBlog() {
         "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3a_creating_users.png",
         "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3b_creating_users.png",
         "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3c_creating_users.png",
-        "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3a_creating_users.png",
-        "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3b_creating_users.png",
-        "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3c_creating_users.png"
+        "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3d_creating_users.png",
+        "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3e_creating_users.png",
+        "/images/Blog_Images/WinActiveDirectory/6_creating_OUs_groups_users/3f_creating_users.png"
     ]
     const creatingUsersCaptions = [
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption"
+        "Visual reference for steps 2-3",
+        "Visual reference for step 4",
+        "Visual reference for step 6",
+        "Visual reference for step 7",
+        "Visual reference for step 8",
+        "Visual reference for step 9"
     ];
 
     // Images for creating GPOs
@@ -195,13 +220,13 @@ export function WinActiveDirectoryBlog() {
 
     ]
     const creatingGPOsCaptions = [
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption",
-        "todo caption"
+        "Visual reference for steps 2-4a",
+        "Visual reference for step 4b",
+        "Visual reference for step 5",
+        "Visual reference for step 6a",
+        "Visual reference for step 6a",
+        "Visual reference for step 6b",
+        "Visual reference for step 6b"
     ];
 
     // Images for applying/linking GPOs
@@ -210,8 +235,8 @@ export function WinActiveDirectoryBlog() {
         "/images/Blog_Images/WinActiveDirectory/7_applying_group_policies/2b_linking_GPO.png",
     ]
     const linkingGPOsCaptions = [
-        "todo caption",
-        "todo caption"
+        "Visual reference for steps 2-3a",
+        "Visual reference for steps 3b-4"
     ];
     return (
         <>
@@ -225,17 +250,17 @@ export function WinActiveDirectoryBlog() {
                     <ol>
                         <li>Strengthen my hands-on skills in areas commonly used in IP support, system administration, and cybersecurity roles, including:
                             <ul>
-                                <li>Active Directory (AD)</li>
-                                <li>Group Policy Objects (GPOs)</li>
-                                <li>Network configuration</li>
-                                <li>User management</li>
+                                <li><strong>Active Directory (AD)</strong></li>
+                                <li><strong>Group Policy Objects (GPOs)</strong></li>
+                                <li><strong>Network configuration</strong></li>
+                                <li><strong>User management</strong></li>
                             </ul>
                         </li>
                         <li>To create a reproduible testing environment for:
                             <ul>
-                                <li>CyberSecurity practice</li>
-                                <li>IT help desk training</li>
-                                <ul>Advanced Windows administration tasks</ul>
+                                <li><strong>CyberSecurity practice</strong></li>
+                                <li><strong>IT training</strong></li>
+                                <ul><strong>Advanced Windows administration tasks</strong></ul>
                             </ul>
                             <p>Referencing this guide, I can quickly rebuild a consistent lab setup for future projects, troubleshooting, or skill refreshers.</p>
                             <p>While this guide was designed for my own use, I’ve written it so that anyone can follow along to build their own Windows Server lab. I’ve also included the reasoning behind my choices to help both myself and any potential readers understand the decision-making process.</p>
@@ -265,11 +290,13 @@ export function WinActiveDirectoryBlog() {
 
                 <h1 className="section-header">II <span className="section-title">Step-by-Step Lab Guide</span></h1>
                 <h2 className="section-header">1 <span className="section-title">Formatting the USB Drive</span></h2>
-                <p>To conserve space on my laptop’s internal drive, I used a <strong>256 GB USB 3.0 drive</strong> to store my virtual machines. Before setting up the lab, I formatted the drive using the <strong>NTFS file system</strong> with a <strong>4096-byte allocation unit size</strong> with the volume label: <span className="inline-code">VM_Lab</span></p>
-                <div className="image-container">
-                    <img src="/images/Blog_Images/WinActiveDirectory/0_formatting_USB/rufus_formatting.png" alt="Blog Image" className="project-images"></img>
-                </div>
-                <br></br>
+                <p>To conserve space on my laptop’s internal drive, I used a <strong>256 GB USB 3.0 drive</strong> to store my virtual machines. Before setting up the lab, I formatted the drive using the <strong>NTFS file system</strong> with a <strong>4096-byte allocation unit size</strong> with the volume label: <span className="inline-code">VM_Lab</span>
+                    <br></br><br></br>
+                    <div className="image-container">
+                        <img src="/images/Blog_Images/WinActiveDirectory/0_formatting_USB/rufus_formatting.png" alt="Blog Image" className="project-images"></img>
+                    </div>
+                </p>
+
                 <p>I chose <strong>NTFS</strong> over exFAT because:
                     <ul>
                         <li>NTFS supports <strong>large VM disk files</strong> (over 4GB) with no issues</li>
@@ -278,13 +305,8 @@ export function WinActiveDirectoryBlog() {
                     </ul>
                 </p>
                 <p>Next, inside of the USB drive, create the folder structure:
-                    TODO make file structure React component
                     <br></br>
-                    <span className="file-structure">VM_Lab/
-                        <br></br>├── ISOs/
-                        <br></br>├── VMs/
-                        <br></br>├── Scripts/
-                    </span>
+                    <FileTree data={fileTreeData} />
                 </p>
                 <p>In VirtualBox settings/preferences, set default VM storage to: <span className="inline-code">D:\VMs</span> (replace <span className="inline-code">D:</span> with your USB drive letter)</p>
 
@@ -639,8 +661,8 @@ export function WinActiveDirectoryBlog() {
                         <li>In the "<span className="inline-code">Paths</span>" page, leave all paths as default and click <span className="inline-code">Next</span>.
                             <span className="note">Advanced setups may redirect these folders to different drives for performance/redundancy, but that's unnecessary for our basic lab environment.</span>
                         </li>
-                        <li>In the "<span className="inline-note">Review Options</span>" page, review the configuration, then click <span className="inline-note">Next</span>.</li>
-                        <li>In the "<span className="inline-note">Prerequisite Check</span>" page, you'll see a list of checks being performed. You may see warnings, but as long as there are <span className="highlight-red">no errors</span>, it's safe to proceed. Click <span className="inline-note">Install</span>.</li>
+                        <li>In the "<span className="inline-code">Review Options</span>" page, review the configuration, then click <span className="inline-code">Next</span>.</li>
+                        <li>In the "<span className="inline-code">Prerequisite Check</span>" page, you'll see a list of checks being performed. You may see warnings, but as long as there are <span className="highlight-red">no errors</span>, it's safe to proceed. Click <span className="inline-code">Install</span>.</li>
                         <li>If successful, the VM should restart after Active Directory Domaib Services is installed.</li>
                     </ol>
                     <ImageCarousel carouselImages={promoteServerToDCImages} captions={promoteServerToDCCaptions} />
@@ -886,16 +908,52 @@ export function WinActiveDirectoryBlog() {
 
                 <h3 className="section-header">8.5 <span className="section-title">Steps to Link a GPO</span></h3>
                 <p>
-                    <li>Log into the <span className="inline-code">Windows Server 2022 Domain Controller</span> using your domain admin account.</li>
-                    <li>Open the <span className="inline-code">Group Policy Management</span> app.</li>
-                    <li>Right-click the domain or OU and select <span className="inline-code">Link an Existing GPO</span>, then select your new GPO ("Security Settings" in our example).</li>
-                    <li>Click <span className="inline-code">OK</span> to apply.</li>
+                    <ol>
+                        <li>Log into the <span className="inline-code">Windows Server 2022 Domain Controller</span> using your domain admin account.</li>
+                        <li>Open the <span className="inline-code">Group Policy Management</span> app.</li>
+                        <li>Right-click the domain or OU and select <span className="inline-code">Link an Existing GPO</span>, then select your new GPO ("Security Settings" in our example).</li>
+                        <li>Click <span className="inline-code">OK</span> to apply.</li>
+                    </ol>
                     <ImageCarousel carouselImages={linkingGPOsImages} captions={linkingGPOsCaptions} />
                 </p>
 
                 <h1 className="section-header">III. <span className="section-title">Conclusion</span></h1>
                 <h2 className="section-header">• <span className="section-title">What I Learned</span></h2>
+                <p>From creating this guide from scratch, I gained solid foundational skills and knowledge in Active Directory. Hopefully, by following along, you have also gained the following skills & knowledge:
+                    <br></br><br></br>
+                    <strong>Virtualization & Lab Setup</strong>
+                    <ul>
+                        <li>VM setup, installation, and configuration in VirtualBox</li>
+                        <li>Troubleshooting issues in VirtualBox</li>
+                    </ul>
+
+                    <strong>Windows Server & Active Directory</strong>
+                    <ul>
+                        <li>Installing and using Windows Server 2022</li>
+                        <li>Active Directory basics (hostname, domain name, OUs, Groups, Users)</li>
+                        <li>Promoting a server to a Domain Controller</li>
+                        <li>Joining a client machine to the domain</li>
+                        <li>Creating and applying Group Policy Objects (GPOs)</li>
+                    </ul>
+
+                    <strong>Networking Concepts</strong>
+                    <ul>
+                        <li>Assigning static IP addresses and why they’re important in managed networks</li>
+                        <li>Understanding subnet masks</li>
+                        <li>Using Remote Desktop for server management</li>
+                    </ul>
+
+                    <strong>Big Picture Takeaways</strong>
+                    <ul>
+                        <li>Why Active Directory networks are structured the way they are</li>
+                        <li>The role of Domain Controllers in enterprise environments</li>
+                    </ul>
+                </p>
+
                 <h2 className="section-header">• <span className="section-title">Next Steps</span></h2>
+                <p>Building this Active Directory lab was a great foundation, but there are many ways to extend it. Here’s what I plan to explore next:
+
+                </p>
             </div>
         </>
     );

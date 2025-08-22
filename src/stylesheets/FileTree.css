@@ -1,0 +1,14 @@
+.file-tree-container {
+    max-width: fit-content; /* shrink to fit content */
+    margin: 0; /* centers horizontally */
+
+    background-color: #f7f7f7;  /* light background */
+  padding: 12px 12px;
+  border-radius: 6px;
+  font-family: "Fira Code", "Courier New", monospace;
+  font-size: 1.2rem;
+  white-space: pre; /* preserve formatting */
+  overflow-x: auto; /* handle long lines */
+  line-height: 1.4;
+  border: 1px solid #ddd;
+  }
