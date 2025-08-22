@@ -4,7 +4,7 @@ export function Opening() {
     //Ideas for background: 
     // 1. Fly in Text https://www.sliderrevolution.com/resources/css-animated-background/#:~:text=with%20moving%20clouds.-,Fly%20in%20Text%20on,CodePen%20Embed%20Fallback,-Created%20by%20Sydney
     // 2. 
-    const resumeLink = process.env.REACT_APP_RESUME_LINK;
+    const resumeLink = "https://drive.google.com/file/d/1S83sn9GXitC_tcwY0-4ZQimFwDWAkUtt/view?usp=sharing";
     return (
         <>
             <div id="opening">
