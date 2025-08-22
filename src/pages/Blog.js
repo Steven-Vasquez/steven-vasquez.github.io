@@ -56,14 +56,14 @@ export function Blog() {
    */
 
     const WinActiveDirectoryBlog = {
-        completionDate: "8/8/2025",
-        projectTitle: "Windows AD Guide (name WIP)",
-        categorySkills: ["todo", "todo"],
-        techSkills: ["todo", "todo", "todo"],
-        blogDescription: "todo",
+        completionDate: "8/21/2025",
+        projectTitle: "Windows Active Directory Lab Setup Guide",
+        categorySkills: ["IT Administration", "Networking"],
+        techSkills: ["Active Directory", "Group Policy Objects", "Network Config", "User Management" ,"VirtualBox", "Windows 10/Windows Server 2022"],
+        blogDescription: "Created a guide from scratch on how to set up a <strong>Windows Active Directory lab</strong> using <strong>VirtualBox</strong>. The guide covers the installation of <strong>Windows Server 2022</strong>, configuration of <strong>Active Directory</strong>, and management of users and groups. It also includes troubleshooting tips and best practices for maintaining a secure and efficient lab environment.",
         blogRoute: "/blog/windows-active-directory-lab",
         blogImages: [
-            "",
+            "/images/Blog_Images/WinActiveDirectory/server_vm_thumbnail.png",
         ]
     };
 

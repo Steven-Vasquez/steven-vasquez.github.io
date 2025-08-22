@@ -52,7 +52,7 @@
     grid-area: title;
     font-weight: 400;
     padding-top: .5rem;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .skills-used {
@@ -192,4 +192,9 @@
 
 .project-image:hover {
     filter: brightness(0.9);
+}
+
+ul {
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
 }

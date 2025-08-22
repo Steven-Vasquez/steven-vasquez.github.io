@@ -9,7 +9,7 @@ import "../../stylesheets/Blog.css";
 
 export function WinActiveDirectoryBlog() {
     const introDetails = {
-        projectTitle: "Windows Active Directory Lab Setup Guide [THIS PAGE IS ICOMPLETE, WIP]",
+        projectTitle: "Windows Active Directory Lab Setup Guide",
         readTime: "23 minute read",
         introText: ["In this guide, I walk through <strong>building a simulated small-enterprise Windows network lab using multiple virtual machines</strong>. The lab environment includes a <strong>Windows Server 2022 machine configured as a Domain Controller</strong> and one or more <strong>Windows 10 client machines joined to the domain</strong>.",
             "This guide provides <strong>hands-on experience</strong> with core Windows administration tasks such as <strong>configuring Active Directory</strong>, <strong>creating and managing users</strong>, and <strong>applying group policies</strong>, the same tasks used in a real IT environment. Along the way, I try to explain key concepts and reasoning behind each step I chose, making this guide useful as a lab walkthrough and as a learning resource for myself and others."
@@ -797,7 +797,6 @@ export function WinActiveDirectoryBlog() {
                         <li><strong><u>Domail Local</u></strong> scope means members can be added from any domain in the Active Directory forest (the whole AD environment), but permissions only apply in the domain the group is in (locally).</li>
                         <li><strong><u>Universal</u></strong> scope means members can be added from any domain in the Active Directory forest (the whole AD environment) and permissions apply in any domain in the forest (universally).</li>
                     </ul>
-                    (todo: create a table for this info)
                 </p>
 
 
@@ -951,8 +950,14 @@ export function WinActiveDirectoryBlog() {
                 </p>
 
                 <h2 className="section-header">• <span className="section-title">Next Steps</span></h2>
-                <p>Building this Active Directory lab was a great foundation, but there are many ways to extend it. Here’s what I plan to explore next:
-
+                <p>Building this Active Directory lab was a great foundation, but this is only a basic introduction. I plan on using this guide to help me learn more advanced topics in the future, such as:
+                    <ul>
+                        <li>Creating and applying more advanced Group Policy Objects (GPOs) for <strong>security hardening amd user restrictions.</strong></li>
+                        <li>Use the domain environment as a <strong>sandbox for security tools</strong> (SIEM, vulnerability scanners, intrusion detection, etc)</li>
+                        <li><strong>Simulate common attacks</strong> (like pass-the-hash or brute-force attempts) to see how they appear in logs</li>
+                        <li>Explore <strong>Windows Event Viewer</strong> and set up centralized log collection for monitoring</li>
+                        <li>Build a <strong>Kali Linux VM</strong> in the same network to practice penetration testing techniques safely</li>
+                    </ul>
                 </p>
             </div>
         </>
