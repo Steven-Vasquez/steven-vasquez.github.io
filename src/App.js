@@ -16,6 +16,7 @@ import DealershipDatabasePage from './pages/progect_pages/DealershipDatabasePage
 import DanaBotBlog from './pages/blog_pages/DanaBotBlog';
 
 import WinActiveDirectoryBlog from './pages/blog_pages/WinActiveDirectoryBlog';
+import WarehouseNetworkRackBlog from './pages/blog_pages/WarehouseNetworkRackBlog';
 import TestPage from './pages/blog_pages/TestPage';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
 
         {/* IT Blog Pages */}
         <Route path="/blog/windows-active-directory-lab" element={<WinActiveDirectoryBlog/>} />
+        <Route path="/blog/warehouse-network-rack" element={<WarehouseNetworkRackBlog/>} />
         <Route path="/blog/test-page" element={<TestPage/>} />
 
         {/* Project Pages */}

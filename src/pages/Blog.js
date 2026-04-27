@@ -54,6 +54,17 @@ export function Blog() {
        date: "2025-07-25"
    };
    */
+    const WarehouseNetworkRackBlog = {
+        completionDate: "9/15/2025",
+        projectTitle: "Warehouse Network Rack Setup Guide",
+        categorySkills: ["IT Administration", "Networking"],
+        techSkills: ["Cisco Switches", "Network Cabling", "Rack Organization", "Network Configuration"],
+        blogDescription: "Created a comprehensive guide on how to set up a network rack for a warehouse environment. The guide covers the selection and configuration of Cisco switches, proper network cabling techniques, rack organization best practices, and network configuration tips to ensure optimal performance and reliability in a warehouse setting.",
+        blogRoute: "/blog/warehouse-network-rack",
+        blogImages: [
+            "/images/Blog_Images/WinActiveDirectory/server_vm_thumbnail.png",
+        ]
+    };
 
     const WinActiveDirectoryBlog = {
         completionDate: "8/21/2025",
