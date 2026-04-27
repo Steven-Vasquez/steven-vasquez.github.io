@@ -54,7 +54,7 @@ export function Blog() {
    };
    */
     const WarehouseNetworkRackBlog = {
-        completionDate: "9/15/2025",
+        completionDate: "2/24/2026",
         projectTitle: "Warehouse Network Rack Setup Guide",
         categorySkills: ["IT Administration", "Networking"],
         techSkills: ["Cisco Switches", "Network Cabling", "Rack Organization", "Network Configuration"],
