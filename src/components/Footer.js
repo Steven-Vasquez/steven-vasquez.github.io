@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import "../stylesheets/Footer.css";
@@ -90,8 +89,8 @@ export function Footer() {
                     <div className="contact-links">
                         <div className="footer-header">Get in touch</div>
                         <div className="footer-social-icons">
-                            <a href="https://github.com/Steven-Vasquez" target="_blank"><i className="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/steven-vasquez/" target="_blank"><i className="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/Steven-Vasquez" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/steven-vasquez/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
                             <a href="mailto:stevenvasquez.pro@gmail.com"><i className="fas fa-envelope"></i></a>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 import BlogPageIntro from "../../components/BlogPageIntro";
 import ImageCarousel from "../../components/ImageCarousel";
-import { Link as ScrollLink } from 'react-scroll';
+//import { Link as ScrollLink } from 'react-scroll';
 
 import "../../stylesheets/ProjectPage.css";
 import "../../stylesheets/Blog.css";

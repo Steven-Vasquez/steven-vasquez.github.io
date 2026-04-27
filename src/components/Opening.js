@@ -19,11 +19,11 @@ export function Opening() {
 
                 <div className='social-row'>
                     <div className="social-icons social-icons-small">
-                        <a href="https://github.com/Steven-Vasquez" target="_blank"><i className="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/steven-vasquez/" target="_blank"><i className="fab fa-linkedin"></i></a>
-                        <a href="mailto:stevenvasquez.pro@gmail.com"><i className="fas fa-envelope"></i></a>
+                        <a href="https://github.com/Steven-Vasquez" target="_blank" rel="noreferrer"><i className="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/steven-vasquez/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
+                        <a href="mailto:stevenvasquez.pro@gmail.com" rel="noreferrer"><i className="fas fa-envelope"></i></a>
                     </div>
-                    <a href={resumeLink} target="_blank" class="resume-button">Resumé <i class="fas fa-external-link-alt social-icons"></i></a>
+                    <a href={resumeLink} target="_blank" rel="noreferrer" className="resume-button">Resumé <i className="fas fa-external-link-alt social-icons"></i></a>
                 </div>
 
                 <p className='opening-description opening-item'>I’m an <b>M.S. Cybersecurity student at Georgia Tech</b>, building on a strong foundation in full-stack development. My experience includes building <b>web apps</b>, designing <b>relational databases</b>, and deploying to <b>cloud infrastructure</b>. </p>

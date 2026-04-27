@@ -32,7 +32,7 @@ export function SubylertPage() {
 
                 <h1>Project Purpose and Goal</h1>
                 <p>Me and my team originally created this mobile app to compete in the <strong>Winter 2021 Code Day Hackathon</strong>. We created and submitted version one of the app and won the <strong>Best in Class App</strong> award at the hackathon. Moving forward, we knew we could do better, so we improved the app.</p>
-                <p><a href="https://showcase.codeday.org/project/cklohluef13895811qffuyjne2t" target="_blank">Here</a> is our original hackathon submition <strong >with a demo</strong>, check it out!</p>
+                <p><a href="https://showcase.codeday.org/project/cklohluef13895811qffuyjne2t" target="_blank" rel="noreferrer">Here</a> is our original hackathon submition <strong >with a demo</strong>, check it out!</p>
 
                 <h1>Tech Stack and Explanation</h1>
                 <p>Built the project in <strong>Android Studio using Java and XML</strong> after designing the user interface in Figma. We chose to <strong>store data locally utilizing Android's Room database</strong> since this was the simplest and most effective solution.</p>

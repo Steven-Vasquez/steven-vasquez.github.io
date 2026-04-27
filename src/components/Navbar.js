@@ -4,8 +4,7 @@ import { Link as ScrollLink} from 'react-scroll';
 import '../stylesheets/Navbar.css';
 
 export function Navbar() {
-  const location = useLocation();
-
+  
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
