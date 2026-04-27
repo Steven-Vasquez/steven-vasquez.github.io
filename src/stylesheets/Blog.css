@@ -7,7 +7,6 @@
     border-radius: 4px;
     font-weight: normal;
     /* avoid bold to keep subtle */
-    white-space: nowrap;
 }
 
 .text-snippet {

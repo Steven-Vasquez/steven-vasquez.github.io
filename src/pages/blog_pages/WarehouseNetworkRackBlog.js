@@ -229,7 +229,7 @@ export function WarehouseNetworkRackBlog() {
                 {/* ── I. Introduction ─────────────────────────────────────────── */}
                 <h1 className="section-header">I. <span className="section-title">Introduction & Background</span></h1>
 
-                <h2 className="section-header">• <span className="section-title">Why I Built This</span></h2>
+                <h2 className="section-header"><span className="section-title">Why I Built This</span></h2>
                 <p>My workplace was undergoing a warehouse expansion and needed a proper networking infrastructure built from scratch in the new space. The goals were:
                     <ul>
                         <li className="indented">Set up a <strong>reliable LAN</strong> with a managed switch and router</li>
@@ -241,7 +241,7 @@ export function WarehouseNetworkRackBlog() {
                     Rather than just documenting the end result, I kept detailed notes at each step so I could reproduce the setup, troubleshoot issues, and share the process. This guide is the cleaned-up version of those notes.
                 </p>
 
-                <h2 className="section-header">• <span className="section-title">Hardware and Software Overview</span></h2>
+                <h2 className="section-header"><span className="section-title">Hardware and Software Overview</span></h2>
                 <p><strong>Rack Hardware:</strong>
                     <ul>
                         <li><strong>EdgeRouter Lite</strong> — router/gateway</li>
@@ -1186,7 +1186,7 @@ systemctl status nut-monitor`}
                 {/* ── III. Conclusion ──────────────────────────────────────────── */}
                 <h1 className="section-header">III. <span className="section-title">Conclusion</span></h1>
 
-                <h2 className="section-header">• <span className="section-title">What I Learned</span></h2>
+                <h2 className="section-header"><span className="section-title">What I Learned</span></h2>
                 <p>Building this rack for the warehouse expansion was a full-stack networking and infrastructure project. Along the way, I reinforced and picked up the following:
                     <br></br><br></br>
                     <strong>Networking</strong>
@@ -1224,7 +1224,7 @@ systemctl status nut-monitor`}
                     </ul>
                 </p>
 
-                <h2 className="section-header">• <span className="section-title">Next Steps</span></h2>
+                <h2 className="section-header"><span className="section-title">Next Steps</span></h2>
                 <p>This rack build is functional, but there's always more to refine:
                     <ul>
                         <li>Add a <strong>Coral USB accelerator</strong> or dedicated GPU to Frigate for hardware object detection (currently using CPU-based detection)</li>
