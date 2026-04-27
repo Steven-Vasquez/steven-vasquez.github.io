@@ -176,8 +176,8 @@ ul {
 
 @media (max-width: 768px) {
     .projects-section {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     
     .project-button a {
