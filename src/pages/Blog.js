@@ -62,7 +62,7 @@ export function Blog() {
         blogDescription: "Created a comprehensive guide on how to set up a network rack for a warehouse environment. The guide covers the selection and configuration of Cisco switches, proper network cabling techniques, rack organization best practices, and network configuration tips to ensure optimal performance and reliability in a warehouse setting.",
         blogRoute: "/blog/warehouse-network-rack",
         blogImages: [
-            "/images/Blog_Images/WinActiveDirectory/server_vm_thumbnail.png",
+            "/images/Blog_Images/WarehouseNetworkRack/data_rack_thumbnail.jpg",
         ]
     };
 
@@ -108,6 +108,7 @@ export function Blog() {
                 </div>
 
                 <div className="projects">
+                    <IndividualProject {...WarehouseNetworkRackBlog} />
                     <IndividualProject {...WinActiveDirectoryBlog} />
                     <IndividualProject {...DanaBotBlog} />
                 </div>
