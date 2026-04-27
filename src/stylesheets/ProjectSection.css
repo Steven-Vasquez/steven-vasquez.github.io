@@ -10,36 +10,11 @@
     font-size: 1.2rem;
 }
 
-@media only screen and (min-width: 1024px) {
-    .individual-project {
-        display: grid;
-        grid-template-columns: 3fr 2fr;
-        grid-template-areas:
-            "top top"
-            "title image"
-            "tags image"
-            "button image"
-            "text image";
-        padding-top: 2rem;
-        margin-bottom: 3rem;
-    }
-
-    .skills-used {
-        padding-right: 4rem;
-        max-width: 80%;
-    }
-
-    .project-description  {
-        max-width: 80%;
-    }
-
-
-}
-
 .individual-project {
     padding-top: 2rem;
     margin-bottom: 3rem;
 }
+
 
 
 .project-role {
@@ -197,4 +172,40 @@
 ul {
     margin-bottom: 0 !important;
     margin-left: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .project-button a {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .individual-project {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas:
+            "top top"
+            "title image"
+            "tags image"
+            "button image"
+            "text image";
+        padding-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .skills-used {
+        padding-right: 4rem;
+        max-width: 80%;
+    }
+
+    .project-description  {
+        max-width: 80%;
+    }
+
 }

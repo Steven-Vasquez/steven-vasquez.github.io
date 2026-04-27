@@ -82,6 +82,13 @@
     }
 }
 
+@media (max-width: 768px) {
+    .project-page-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
 .intro-project-details div {
     width: 100%;
     text-align: left;
