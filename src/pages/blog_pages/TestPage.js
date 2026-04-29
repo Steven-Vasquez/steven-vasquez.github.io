@@ -1,4 +1,4 @@
-import BlogPageIntro from "../../components/BlogPageIntro";
+import PageIntro from "../../components/PageIntro";
 import ImageCarousel from "../../components/ImageCarousel";
 import "../../stylesheets/ProjectPage.css"
 import "../../stylesheets/Blog.css";
@@ -9,19 +9,22 @@ export function TestPage() {
     const introDetails = {
         projectTitle: "This is a testing ground",
         readTime: "x minute read",
+        columnTitles: ["Type📁", "Tools Used🛠️", "Skills Applied🧠"],
+        columnRowsInfo: [
+            ["lab type"],
+            ["tool1", "tool2", "tool3", "tool4"],
+            ["skill1", "skill2", "skill3", "skill4"]
+        ],
+        linkColTitles: [""],
+        linkColLinks: [[""]],
+        linkTexts: [["→"]],
         introText: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         ],
-        labType: "lab type",
-        tacticsUsed: ["tactics used"],
-        toolsUsed: ["tools used"],
-        labSource: "lab source",
-        labLink: "lab link"
     };
-    
     return (
         <>
             <div className="project-page-container">
-                <BlogPageIntro {...introDetails} />
+                <PageIntro {...introDetails} />
                 <p>Normal text followed by <span className="inline-note">An inline note</span></p>
                 <p>Click the <span class="inline-code">Next</span> button</p>
                 <p>Important terms?<span class="text-snippet">lab.local</span></p>

@@ -1,18 +1,23 @@
-import ProjectPageIntro from "../../components/ProjectPageIntro";
+import PageIntro from "../../components/PageIntro";
 import ImageCarousel from "../../components/ImageCarousel";
 import "../../stylesheets/ProjectPage.css"
 
 
 export function ULingualPage() {
+
     const introDetails = {
         projectTitle: "ULingual",
         readTime: "2.5 minute read",
-        introText: "Learning a new language is difficult, especially when you don't have anyone to practice with. ULingual is a <strong>language-learning web app</strong> that connects native speakers to exchange language and culture using <strong>video rooms created with React hooks and Twilio Video API</strong>.",
-        projectType: "Education",
-        techStack: ["JavaScript", "React", "NodeJS", "ExpressJS", "MySQL", "AWS", "Twilio Video API"],
-        codeLink: "https://github.com/Steven-Vasquez/ULingual",
-        liveLink: "",
-        blogLink: "",
+        columnTitles: ["Type📁", "Tools Used🛠️", "Skills Applied🧠"],
+        columnRowsInfo: [
+            ["Educational App"],
+            ["JavaScript", "React", "NodeJS", "ExpressJS", "MySQL", "AWS", "Twilio Video API"],
+            ["• WebRTC-managed video chatrooms", "• React Hooks for state management", "• Database Design and Implementation", "• REST API Development", "• Cloud Deployment on AWS"]
+        ],
+        linkColTitles: ["Code Repository📂"],
+        linkColLinks: ["https://github.com/Steven-Vasquez/ULingual"],
+        linkTexts: ["View Code →"],
+        introText: ["Learning a new language is difficult, especially when you don't have anyone to practice with. ULingual is a <strong>language-learning web app</strong> that connects native speakers to exchange language and culture using <strong>video rooms created with React hooks and Twilio Video API</strong>."],        
     }
 
     // Design/Mockup images carousel
@@ -49,7 +54,7 @@ export function ULingualPage() {
     return (
         <>
             <div className="project-page-container">
-                <ProjectPageIntro {...introDetails} />
+                <PageIntro {...introDetails} />
 
                 <div className="image-container">
                     <img src="/images/Project_Images/ULingual/ULingual_screenshot_1.png" alt="Project Image" className="project-images"></img>

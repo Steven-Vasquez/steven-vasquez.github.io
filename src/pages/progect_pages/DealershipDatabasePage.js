@@ -1,26 +1,37 @@
-import ProjectPageIntro from "../../components/ProjectPageIntro";
+import PageIntro from "../../components/PageIntro";
 import ImageCarousel from "../../components/ImageCarousel";
 import "../../stylesheets/ProjectPage.css"
 
-export function MonopolyPage() {
+export function DealershipDatabasePage() {
+
     const introDetails = {
         projectTitle: "Car Dealership Management Database",
         readTime: "1 minute read",
-        introText: "<strong>Managing a car dealership's inventory and sales just got easier.</strong> This project is a web-based database application designed to help dealerships track vehicle inventory, customer purchases, and sales data efficiently <strong>utilizing a MySQL database</strong>. ",
-        projectType: "Database Application",
-        techStack: ["MySQL", "PHP", "Apache", "HTML/CSS"],
-        codeLink: "https://github.com/Steven-Vasquez/car-dealership-database",
-        liveLink: "",
-        blogLink: "",
-    }
+        columnTitles: ["Type📁", "Tools Used🛠️", "Skills Applied🧠"],
+        columnRowsInfo: [
+            ["Database Application"],
+            ["MySQL", "PHP", "Apache", "HTML/CSS"],
+            ["Database Design", "EER Modeling", "SQL", "Web Development"]
+        ],
+        linkColTitles: [],
+        linkColLinks: [],
+        linkTexts: [],
+        introText: [
+            "<strong>Managing a car dealership's inventory and sales just got easier.</strong> This project is a web-based database application designed to help dealerships track vehicle inventory, customer purchases, and sales data efficiently <strong>utilizing a MySQL database</strong>.",
+        ],
+    };
 
-    const carouselImages = ["/images/Project_Images/DealershipDatabase/add_customer.png",
+    const carouselImages = [
         "/images/Project_Images/DealershipDatabase/EER_diagram.png",
-        "/images/Project_Images/DealershipDatabase/eer2rel_diagram.png",]
+        "/images/Project_Images/DealershipDatabase/eer2rel_diagram.png",
+        "/images/Project_Images/DealershipDatabase/add_customer.png"
+    ]
 
-    const carouselCaptions = ["Example of website UI for adding a customer to the database",
+    const carouselCaptions = [
         "Extended Entity Relationship (EER) diagram of database design",
-        "EER to relattional mapping diagram",]
+        "EER to relational mapping diagram",
+        "Example of website UI for adding a customer to the database"
+    ]
 
     const uiCarouselImages = ["/images/Project_Images/DealershipDatabase/add_customer.png",
         "/images/Project_Images/DealershipDatabase/add_vehicle.png",
@@ -41,7 +52,7 @@ export function MonopolyPage() {
     return (
         <>
             <div className="project-page-container">
-                <ProjectPageIntro {...introDetails} />
+                <PageIntro {...introDetails} />
 
                 <ImageCarousel carouselImages={carouselImages} captions={carouselCaptions} />
 
@@ -62,4 +73,4 @@ export function MonopolyPage() {
     );
 }
 
-export default MonopolyPage;
+export default DealershipDatabasePage;

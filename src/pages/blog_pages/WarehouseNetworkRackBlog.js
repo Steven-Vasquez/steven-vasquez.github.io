@@ -1,4 +1,4 @@
-import BlogPageIntro from "../../components/BlogPageIntro";
+import PageIntro from "../../components/PageIntro";
 import ImageCarousel from "../../components/ImageCarousel";
 //import { Link as ScrollLink } from 'react-scroll';
 
@@ -6,13 +6,10 @@ import "../../stylesheets/ProjectPage.css";
 import "../../stylesheets/Blog.css";
 
 export function WarehouseNetworkRackBlog() {
+
     const introDetails = {
-        projectTitle: "Warehouse Networking Rack Build & Setup Guide",
+        projectTitle: "Warehouse Network Rack Build & Setup Guide",
         readTime: "23 minute read",
-        introText: [
-            "In this guide, I walk through the <strong>full setup of a networking rack I built for a warehouse expansion project at work</strong>. The rack houses a <strong>Proxmox virtualization server</strong>, a <strong>dedicated Docker/file server</strong>, an <strong>APC UPS</strong>, and a <strong>PoE switch</strong>. All are connected to a newly configured LAN, a UniFi wireless mesh network, a Frigate-based security camera system, and a cloud backup pipeline.",
-            "This guide covers everything from physical LAN setup to cloud-backed video surveillance, and I try to explain the reasoning behind each decision along the way to make this useful both as a personal reference and as a resource for anyone attempting something similar."
-        ],
         columnTitles: ["Type📁", "Tools Used🛠️", "Hardware Used💻", "Skills Applied🧠"],
         columnRowsInfo: [
             ["IT Guide", "Networking", "IT Infrastructure"],
@@ -20,8 +17,13 @@ export function WarehouseNetworkRackBlog() {
             ["• EdgeRouter Lite", "• TP-Link PoE Switch", "• UniFi Access Points", "• Wansview W6 Cameras", "• APC UPS"],
             ["• LAN Network Design & Configuration", "• Proxmox Virtualization", "• VM Templating & Cloning", "• UniFi Mesh Network Setup", "• IP Camera Integration", "• NVR Setup with Frigate", "• Cloud Backup Automation", "• UPS Monitoring with NUT/SNMP"]
         ],
-        labSource: "",
-        labLink: ""
+        linkColTitles: [],
+        linkColLinks: [[]],
+        linkTexts: [[]],
+        introText: [
+            "In this guide, I walk through the <strong>full setup of a networking rack I built for a warehouse expansion project at work</strong>. The rack houses a <strong>Proxmox virtualization server</strong>, a <strong>dedicated Docker/file server</strong>, an <strong>APC UPS</strong>, and a <strong>PoE switch</strong>. All are connected to a newly configured LAN, a UniFi wireless mesh network, a Frigate-based security camera system, and a cloud backup pipeline.",
+            "This guide covers everything from physical LAN setup to cloud-backed video surveillance, and I try to explain the reasoning behind each decision along the way to make this useful both as a personal reference and as a resource for anyone attempting something similar."
+        ],
     };
 
     // ─── Image Arrays ──────────────────────────────────────────────────────────
@@ -225,7 +227,7 @@ export function WarehouseNetworkRackBlog() {
     return (
         <>
             <div className="project-page-container">
-                <BlogPageIntro {...introDetails} />
+                <PageIntro {...introDetails} />
 
                 <div className="image-container">
                     <img src="/images/Blog_Images/WarehouseNetworkRack/diagrams/network_diagram_lr.png" alt="High-level network diagram of the full deployment" className="project-images"></img>

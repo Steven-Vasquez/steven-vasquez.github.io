@@ -1,25 +1,27 @@
-import BlogPageIntro from "../../components/BlogPageIntro";
+import PageIntro from "../../components/PageIntro";
 import ImageCarousel from "../../components/ImageCarousel";
 import "../../stylesheets/ProjectPage.css"
 
 export function DanaBotBlog() {
+
     const introDetails = {
         projectTitle: "DanaBot",
         readTime: "2.5 minute read",
-        introText: ["In this lab, hosted on CyberDefenders, I <strong>investigated a packet capture</strong> (PCAP) file from a network infected with DanaBot. The objective was to analyze network traffic to <strong>identify the infection vector</strong>, <strong>extract indicators of compromise</strong> (IOCs), and <strong>understand the malware’s behavior</strong> through hands-on network forensics.",
+        columnTitles: ["Type📁", "Tools Used🛠️", "Skills Applied🧠"],
+        columnRowsInfo: [
+            ["Malware Analysis", "Network Analysis"],
+            ["Wireshark", "VirusTotal", "ANY.RUN", "Kali Linux"],
+            ["Network Forensics", "IOC Extraction", "Malware Behavior Analysis", "Execution", "Command and Control"]
+        ],
+        linkColTitles: ["Lab Source🌐"],
+        linkColLinks: [["https://cyberdefenders.org/blueteam-ctf-challenges/danabot/"]],
+        linkTexts: [["CyberDefenders→"]],
+        introText: [
+            "In this lab, hosted on CyberDefenders, I <strong>investigated a packet capture</strong> (PCAP) file from a network infected with DanaBot. The objective was to analyze network traffic to <strong>identify the infection vector</strong>, <strong>extract indicators of compromise</strong> (IOCs), and <strong>understand the malware’s behavior</strong> through hands-on network forensics.",
             "DanaBot is a <strong>modular trojan malware</strong> (modular meaning it's capabilities can be extented through downloadable components) used to steal sensitive information, often targeting financial data. First observed in 2018, DanaBot became a threat globally by communicating with attackers’ remote command-and-control (C2) servers after infecting a system, enabling it to exfiltrate credentials, download additional payloads, and maintain persistent access. <strong>Infecting over 300k computers worldwide, losses totaled at over $50 million in damages</strong>."
         ],
-        columnTitles: ["Type📁", "Tactics Used🧠", "Tools Used🛠️"],
-        columnRowsInfo:
-            [
-                ["Network Analysis"],
-                ["Execution", "Command and Control"],
-                ["Wireshark", "VirusTotal", "ANY.RUN", "Kali Linux"],
-            ],
-        labSource: "CyberDefenders",
-        labLink: "https://cyberdefenders.org/blueteam-ctf-challenges/danabot/"
-    }
-
+    };
+    
     // Images used for identifying the attacker IP and DNS server
     const whatIDiscoveredImages = [
         "/images/Blog_Images/DanaBot/1_identifying_suspicious_DNS_server.png",
@@ -52,7 +54,7 @@ export function DanaBotBlog() {
     return (
         <>
             <div className="project-page-container">
-                <BlogPageIntro {...introDetails} />
+                <PageIntro {...introDetails} />
 
                 <h1>What I Set Out to Learn</h1>
                 <p>

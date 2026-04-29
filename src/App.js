@@ -13,9 +13,9 @@ import MonopolyPage from './pages/progect_pages/MonopolyPage';
 import SubylertPage from './pages/progect_pages/SubylertPage';
 import DealershipDatabasePage from './pages/progect_pages/DealershipDatabasePage';
 import WareJouseNetworkRackPage from './pages/progect_pages/WarehouseNetworkRackPage';
+import QAChatbotPage from './pages/progect_pages/QAChatbotPage';
 
 import DanaBotBlog from './pages/blog_pages/DanaBotBlog';
-
 import WinActiveDirectoryBlog from './pages/blog_pages/WinActiveDirectoryBlog';
 import WarehouseNetworkRackBlog from './pages/blog_pages/WarehouseNetworkRackBlog';
 import TestPage from './pages/blog_pages/TestPage';
@@ -41,6 +41,7 @@ function App() {
         <Route path="/blog/test-page" element={<TestPage/>} />
 
         {/* Project Pages */}
+        <Route path="/projects/QAChatbot" element={<QAChatbotPage />} />
         <Route path="/projects/WarehouseNetworkRack" element={<WareJouseNetworkRackPage />} />
         <Route path="/projects/DealershipDatabase" element={<DealershipDatabasePage />} />
         <Route path="/projects/ULingual" element={<ULingualPage />} />

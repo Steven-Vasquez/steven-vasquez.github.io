@@ -1,22 +1,29 @@
-import ProjectPageIntro from "../../components/ProjectPageIntro";
+import PageIntro from "../../components/PageIntro";
 import "../../stylesheets/ProjectPage.css"
 
 export function MonopolyPage() {
+    
     const introDetails = {
         projectTitle: "Monopoly",
         readTime: "2 minute read",
-        introText: "If you've ever wanted to play Monopoly with friends online, this is the site to use! This project is a web application that is capible of <strong>hosting unlimited simultaneous</strong> virtual Monopoly games online. Features <strong>live game updates and chat functionality using Socket.io</strong>.",
-        projectType: "Entertainment",
-        techStack: ["JavaScript", "NodeJS", "ExpressJS", "PostgreSQL", "Socket.io", "Webpack"],
-        codeLink: "https://github.com/csc-667-spring-2023-roberts/term-project-duclings",
-        liveLink: "https://monopoly-a50j.onrender.com/",
-        blogLink: "",
-    }
+        columnTitles: ["Type📁", "Tools Used🛠️", "Skills Applied🧠"],
+        columnRowsInfo: [
+            ["Entertainment"],
+            ["JavaScript", "NodeJS", "ExpressJS", "PostgreSQL", "Socket.io", "Webpack"],
+            ["• Real-time Websocket updates", "• Database design & implementation", "• API development", "• Frontend development"]
+        ],
+        linkColTitles: ["Code Repo📂"],
+        linkColLinks: [["https://github.com/csc-667-spring-2023-roberts/term-project-duclings"]],
+        linkTexts: [["Github →"]],
+        introText: [
+            "If you've ever wanted to play Monopoly with friends online, this is the site to use! This project is a web application that is capible of <strong>hosting unlimited simultaneous</strong> virtual Monopoly games online. Features <strong>live game updates and chat functionality using Socket.io</strong>.",
+        ],
+    };
 
     return (
         <>
             <div className="project-page-container">
-                <ProjectPageIntro {...introDetails} />
+                <PageIntro {...introDetails} />
 
                 <div className="image-container">
                     <img src="/images/Project_Images/Monopoly/Monopoly_screenshot_1.png" alt="Project Image" className="project-images"></img>

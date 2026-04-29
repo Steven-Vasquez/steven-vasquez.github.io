@@ -1,4 +1,4 @@
-import BlogPageIntro from "../../components/BlogPageIntro";
+import PageIntro from "../../components/PageIntro";
 import ImageCarousel from "../../components/ImageCarousel";
 import FileTree from "../../components/FileTree";
 //import { Link as ScrollLink } from 'react-scroll';
@@ -8,20 +8,22 @@ import "../../stylesheets/ProjectPage.css"
 import "../../stylesheets/Blog.css";
 
 export function WinActiveDirectoryBlog() {
+
     const introDetails = {
         projectTitle: "Windows Active Directory Lab Setup Guide",
         readTime: "23 minute read",
-        introText: ["In this guide, I walk through <strong>building a simulated small-enterprise Windows network lab using multiple virtual machines</strong>. The lab environment includes a <strong>Windows Server 2022 machine configured as a Domain Controller</strong> and one or more <strong>Windows 10 client machines joined to the domain</strong>.",
-            "This guide provides <strong>hands-on experience</strong> with core Windows administration tasks such as <strong>configuring Active Directory</strong>, <strong>creating and managing users</strong>, and <strong>applying group policies</strong>, the same tasks used in a real IT environment. Along the way, I try to explain key concepts and reasoning behind each step I chose, making this guide useful as a lab walkthrough and as a learning resource for myself and others."
-        ],
         columnTitles: ["Type📁", "Tools Used🛠️", "Skills Applied🧠"],
         columnRowsInfo: [
             ["IT Guide", "Networking"],
             ["VirtualBox", "Windows Server 2022", "Windows 10"],
             ["Active Directory", "Group Policy Objects (GPOs)", "Network Configuration", "User Management", "Windows Server Administration"]
         ],
-        labSource: "",
-        labLink: ""
+        linkColTitles: [],
+        linkColLinks: [[]],
+        linkTexts: [[]],
+        introText: ["In this guide, I walk through <strong>building a simulated small-enterprise Windows network lab using multiple virtual machines</strong>. The lab environment includes a <strong>Windows Server 2022 machine configured as a Domain Controller</strong> and one or more <strong>Windows 10 client machines joined to the domain</strong>.",
+            "This guide provides <strong>hands-on experience</strong> with core Windows administration tasks such as <strong>configuring Active Directory</strong>, <strong>creating and managing users</strong>, and <strong>applying group policies</strong>, the same tasks used in a real IT environment. Along the way, I try to explain key concepts and reasoning behind each step I chose, making this guide useful as a lab walkthrough and as a learning resource for myself and others."
+        ],
     };
 
     const fileTreeData = [
@@ -241,11 +243,11 @@ export function WinActiveDirectoryBlog() {
     return (
         <>
             <div className="project-page-container">
-                <BlogPageIntro {...introDetails} />
+                <PageIntro {...introDetails} />
 
                 <h1 className="section-header">I. <span className="section-title">Introduction & Background</span></h1>
 
-                <h2 className="section-header">• <span className="section-title">Why I Built This Guide</span></h2>
+                <h2 className="section-header"><span className="section-title">Why I Built This Guide</span></h2>
                 <p>I built this guide for two reasons:
                     <ol>
                         <li>Strengthen my hands-on skills in areas commonly used in IP support, system administration, and cybersecurity roles, including:
@@ -268,7 +270,7 @@ export function WinActiveDirectoryBlog() {
                     </ol>
                 </p>
 
-                <h2 className="section-header">• <span className="section-title">Hardware and Software Prerequisites</span></h2>
+                <h2 className="section-header"><span className="section-title">Hardware and Software Prerequisites</span></h2>
                 <p>Components Overview:
                     <ul>
                         <li><strong>Host PC</strong> - Your laptop/PC with minimum 16 GB RAM (running VirtualBox)</li>
@@ -917,7 +919,7 @@ export function WinActiveDirectoryBlog() {
                 </p>
 
                 <h1 className="section-header">III. <span className="section-title">Conclusion</span></h1>
-                <h2 className="section-header">• <span className="section-title">What I Learned</span></h2>
+                <h2 className="section-header"><span className="section-title">What I Learned</span></h2>
                 <p>From creating this guide from scratch, I gained solid foundational skills and knowledge in Active Directory. Hopefully, by following along, you have also gained the following skills & knowledge:
                     <br></br><br></br>
                     <strong>Virtualization & Lab Setup</strong>
@@ -949,7 +951,7 @@ export function WinActiveDirectoryBlog() {
                     </ul>
                 </p>
 
-                <h2 className="section-header">• <span className="section-title">Next Steps</span></h2>
+                <h2 className="section-header"><span className="section-title">Next Steps</span></h2>
                 <p>Building this Active Directory lab was a great foundation, but this is only a basic introduction. I plan on using this guide to help me learn more advanced topics in the future, such as:
                     <ul>
                         <li>Creating and applying more advanced Group Policy Objects (GPOs) for <strong>security hardening amd user restrictions.</strong></li>

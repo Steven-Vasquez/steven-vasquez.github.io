@@ -1,4 +1,4 @@
-import ProjectPageIntro from "../../components/ProjectPageIntro";
+import PageIntro from "../../components/PageIntro";
 import ImageCarousel from "../../components/ImageCarousel";
 import "../../stylesheets/ProjectPage.css"
 
@@ -7,13 +7,19 @@ export function SubylertPage() {
     const introDetails = {
         projectTitle: "Subylert",
         readTime: "1.5 minute read",
-        introText: "Ever had sneaky subscription fees that you forgot about? Subylert a mobile app meant to prevent that. <strong>By storing subscription information locally</strong> using Android's Room database, <strong>Subylert can send push and email notifications to users when a subscription is about to renew using Notivize API</strong>.",
-        projectType: "Utility",
-        techStack: ["Android Studio", "Java", "XML", "Firebase", "Room Database", "Notivize API"],
-        codeLink: "https://github.com/Steven-Vasquez/Subylert",
-        liveLink: "",
-        blogLink: "",
-    }
+        columnTitles: ["Type📁", "Tools Used🛠️", "Skills Applied🧠"],
+        columnRowsInfo: [
+            ["Android App", "Subscription Manager"],
+            ["Android Studio", "Java", "XML", "Firebase", "Room Database", "Notivize API"],
+            ["• Android app development", "• Local data storage", "• Notification API integration", "• Google login integration"]
+        ],
+        linkColTitles: ["Links🔗"],
+        linkColLinks: [["https://github.com/Steven-Vasquez/Subylert", "https://showcase.codeday.org/project/cklohluef13895811qffuyjne2t"]],
+        linkTexts: [["Read more →", "Hackathon Demo →"]],
+        introText: [
+            "Ever had sneaky subscription fees that you forgot about? Subylert a mobile app meant to prevent that. <strong>By storing subscription information locally</strong> using Android's Room database, <strong>Subylert can send push and email notifications to users when a subscription is about to renew using Notivize API</strong>.",
+        ],
+    };
 
     const carouselImages = ["/images/Project_Images/Subylert/Subylert_screenshot_1.png",
         "/images/Project_Images/Subylert/Subylert_screenshot_2.png",
@@ -26,7 +32,7 @@ export function SubylertPage() {
     return (
         <>
             <div className="project-page-container">
-                <ProjectPageIntro {...introDetails} />
+                <PageIntro {...introDetails} />
 
 
                 <ImageCarousel carouselImages={carouselImages} captions={carouselCaptions} />

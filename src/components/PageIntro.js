@@ -3,6 +3,15 @@ import "../stylesheets/ProjectPage.css"
 export function PageIntro(props) {
     const { projectTitle, readTime, columnTitles, columnRowsInfo, linkColTitles, linkColLinks, linkTexts, introText } = props;
 
+    const hasLinkColumns =
+        linkColTitles &&
+        linkColLinks &&
+        linkTexts &&
+        linkColTitles.length === linkColLinks.length &&
+        linkColTitles.length === linkTexts.length;
+
+    const toArray = (value) => (Array.isArray(value) ? value : [value]);
+
     return (
         <div className="project-intro-container">
             <h1>{projectTitle}</h1>
@@ -23,11 +32,25 @@ export function PageIntro(props) {
                     </div>
                 ))}
 
-                {linkColTitles && linkColLinks && linkTexts && linkColTitles.length === linkColLinks.length && linkColTitles.length === linkTexts.length && (
+                {hasLinkColumns && (
                     linkColTitles.map((title, index) => (
                         <div key={index} className="intro-project-detail">
                             <h3>{title}</h3>
-                            <a href={linkColLinks[index]} target="_blank" rel="noopener noreferrer">{linkTexts[index]}</a>
+                            {toArray(linkColLinks[index]).map((link, linkIndex) => {
+                                const text = toArray(linkTexts[index])[linkIndex];
+
+                                if (!link || !text) {
+                                    return null;
+                                }
+
+                                return (
+                                    <div>
+                                        <a key={linkIndex} href={link} target="_blank" rel="noopener noreferrer">
+                                            {text}
+                                        </a>
+                                    </div>
+                                );
+                            })}
                         </div>
                     ))
                 )}
@@ -38,3 +61,22 @@ export function PageIntro(props) {
 }
 
 export default PageIntro;
+
+/*
+const introDetails = {
+        projectTitle: "",
+        readTime: "x minute read",
+        columnTitles: ["Type📁", "Tools Used🛠️", "Skills Applied🧠"],
+        columnRowsInfo: [
+            [""],
+            ["", "", "", ""],
+            ["", "", "", ""]
+        ],
+        linkColTitles: [""],
+        linkColLinks: [[""]],
+        linkTexts: [["→"]],
+        introText: [
+            "",
+        ],
+    };
+*/
