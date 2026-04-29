@@ -55,10 +55,10 @@ export function Blog() {
    */
     const WarehouseNetworkRackBlog = {
         completionDate: "2/24/2026",
-        projectTitle: "Warehouse Network Rack Setup Guide",
+        projectTitle: "Warehouse Network Rack Build & Setup Guide",
         categorySkills: ["IT Administration", "Networking"],
-        techSkills: ["Cisco Switches", "Network Cabling", "Rack Organization", "Network Configuration"],
-        blogDescription: "Created a comprehensive guide on how to set up a network rack for a warehouse environment. The guide covers the selection and configuration of Cisco switches, proper network cabling techniques, rack organization best practices, and network configuration tips to ensure optimal performance and reliability in a warehouse setting.",
+        techSkills: ["Proxmox", "Docker", "Linux", "UniFi", "Frigate", "SNMP/NUT", "Backblaze B2", "EdgeRouter", "TP-Link"],
+        blogDescription: "A step-by-step guide documenting the <strong>full network infrastructure</strong> I built and deployed solo for a workplace warehouse expansion, covering <strong>LAN design, server virtualization, wireless mesh networking, physical security systems, and automated cloud backup</strong>.",
         blogRoute: "/blog/warehouse-network-rack",
         blogImages: [
             "/images/Blog_Images/WarehouseNetworkRack/data_rack_thumbnail.jpg",

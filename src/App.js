@@ -12,6 +12,7 @@ import ULingualPage from './pages/progect_pages/ULingualPage';
 import MonopolyPage from './pages/progect_pages/MonopolyPage';
 import SubylertPage from './pages/progect_pages/SubylertPage';
 import DealershipDatabasePage from './pages/progect_pages/DealershipDatabasePage';
+import WareJouseNetworkRackPage from './pages/progect_pages/WarehouseNetworkRackPage';
 
 import DanaBotBlog from './pages/blog_pages/DanaBotBlog';
 
@@ -40,10 +41,11 @@ function App() {
         <Route path="/blog/test-page" element={<TestPage/>} />
 
         {/* Project Pages */}
+        <Route path="/projects/WarehouseNetworkRack" element={<WareJouseNetworkRackPage />} />
+        <Route path="/projects/DealershipDatabase" element={<DealershipDatabasePage />} />
         <Route path="/projects/ULingual" element={<ULingualPage />} />
         <Route path="/projects/Monopoly" element={<MonopolyPage />} />
         <Route path="/projects/Subylert" element={<SubylertPage />} />
-        <Route path="/projects/DealershipDatabase" element={<DealershipDatabasePage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
 

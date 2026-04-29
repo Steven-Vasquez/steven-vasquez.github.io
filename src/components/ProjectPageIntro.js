@@ -1,7 +1,7 @@
 import "../stylesheets/ProjectPage.css"
 
 export function ProjectPageIntro(props) {
-    const { projectTitle, readTime, introText, projectType, techStack, codeLink, liveLink } = props;
+    const { projectTitle, readTime, introText, projectType, techStack, codeLink, liveLink, blogLink=null } = props;
 
     return (
         <div className="project-intro-container">
@@ -35,6 +35,13 @@ export function ProjectPageIntro(props) {
                     <div>
                         <h3>Live</h3>
                         <a href={liveLink} target="blank">Site</a>
+                    </div>
+                )}
+
+                {blogLink === "" ? null : (
+                    <div>
+                        <h3>In-Depth Blog Post</h3>
+                        <a href={blogLink} target="blank">Read More</a>
                     </div>
                 )}
 

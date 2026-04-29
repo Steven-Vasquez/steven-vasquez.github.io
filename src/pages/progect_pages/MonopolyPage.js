@@ -10,6 +10,7 @@ export function MonopolyPage() {
         techStack: ["JavaScript", "NodeJS", "ExpressJS", "PostgreSQL", "Socket.io", "Webpack"],
         codeLink: "https://github.com/csc-667-spring-2023-roberts/term-project-duclings",
         liveLink: "https://monopoly-a50j.onrender.com/",
+        blogLink: "",
     }
 
     return (

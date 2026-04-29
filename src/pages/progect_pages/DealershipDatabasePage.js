@@ -11,6 +11,7 @@ export function MonopolyPage() {
         techStack: ["MySQL", "PHP", "Apache", "HTML/CSS"],
         codeLink: "https://github.com/Steven-Vasquez/car-dealership-database",
         liveLink: "",
+        blogLink: "",
     }
 
     const carouselImages = ["/images/Project_Images/DealershipDatabase/add_customer.png",

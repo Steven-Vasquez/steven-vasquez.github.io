@@ -14,7 +14,7 @@ export function WinActiveDirectoryBlog() {
         introText: ["In this guide, I walk through <strong>building a simulated small-enterprise Windows network lab using multiple virtual machines</strong>. The lab environment includes a <strong>Windows Server 2022 machine configured as a Domain Controller</strong> and one or more <strong>Windows 10 client machines joined to the domain</strong>.",
             "This guide provides <strong>hands-on experience</strong> with core Windows administration tasks such as <strong>configuring Active Directory</strong>, <strong>creating and managing users</strong>, and <strong>applying group policies</strong>, the same tasks used in a real IT environment. Along the way, I try to explain key concepts and reasoning behind each step I chose, making this guide useful as a lab walkthrough and as a learning resource for myself and others."
         ],
-        columnTitles: ["Type📁", "Tools Used🛠️", "Skills Learned🧠"],
+        columnTitles: ["Type📁", "Tools Used🛠️", "Skills Applied🧠"],
         columnRowsInfo: [
             ["IT Guide", "Networking"],
             ["VirtualBox", "Windows Server 2022", "Windows 10"],

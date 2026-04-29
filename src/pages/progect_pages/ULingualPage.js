@@ -12,6 +12,7 @@ export function ULingualPage() {
         techStack: ["JavaScript", "React", "NodeJS", "ExpressJS", "MySQL", "AWS", "Twilio Video API"],
         codeLink: "https://github.com/Steven-Vasquez/ULingual",
         liveLink: "",
+        blogLink: "",
     }
 
     // Design/Mockup images carousel

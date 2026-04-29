@@ -1,0 +1,56 @@
+flowchart TD
+
+%% =========================
+%% Styles
+%% =========================
+classDef network fill:#1f2937,color:#fff,stroke:#3b82f6,stroke-width:1px;
+classDef device fill:#e5e7eb,color:#111,stroke:#3b82f6;
+classDef service fill:#dbeafe,color:#111,stroke:#2563eb;
+classDef storage fill:#ede9fe,color:#111,stroke:#7c3aed;
+classDef cloud fill:#cffafe,color:#111,stroke:#0891b2;
+classDef group fill:#f9fafb,stroke:#9ca3af;
+
+%% =========================
+%% CORE
+%% =========================
+Internet((Internet)):::network --> Router[EdgeRouter]:::device --> Switch[PoE Switch]:::device
+
+%% =========================
+%% RACK
+%% =========================
+subgraph Rack
+direction TB
+class Rack group
+
+UPS[UPS]:::device
+
+Proxmox[Proxmox Server]:::device
+Server[Docker + File Server]:::device
+UniFiVM[UniFi VM Server]:::service
+Storage[RAID1 Storage]:::storage
+
+UPS -.-> Proxmox
+UPS -.-> Server
+
+Proxmox --> UniFiVM
+Server --> Storage
+
+end
+
+%% =========================
+%% NETWORK DEVICES
+%% =========================
+Switch --> Proxmox
+Switch --> Server
+
+Switch --> Cameras[Cameras]:::device
+Cameras -->|RTSP| Server
+
+Switch --> APs[Access Points]:::device
+UniFiVM -.-> APs
+APs --> Clients((Clients)):::network
+
+%% =========================
+%% CLOUD
+%% =========================
+Storage -->|rclone| Backblaze[(Backblaze B2)]:::cloud

@@ -12,6 +12,7 @@ export function SubylertPage() {
         techStack: ["Android Studio", "Java", "XML", "Firebase", "Room Database", "Notivize API"],
         codeLink: "https://github.com/Steven-Vasquez/Subylert",
         liveLink: "",
+        blogLink: "",
     }
 
     const carouselImages = ["/images/Project_Images/Subylert/Subylert_screenshot_1.png",

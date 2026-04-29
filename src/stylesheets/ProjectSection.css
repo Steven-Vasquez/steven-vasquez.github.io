@@ -11,8 +11,8 @@
 }
 
 .individual-project {
-    padding-top: 2rem;
-    margin-bottom: 3rem;
+    padding-top: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 
@@ -26,7 +26,7 @@
 .project-name {
     grid-area: title;
     font-weight: 400;
-    padding-top: .5rem;
+    padding-top: 0rem;
     font-size: 3rem;
 }
 
@@ -92,12 +92,12 @@
     position: relative;
     display: block;
     width: 100%;
-    height: 125px;
+    height: 100px;
     text-decoration: none;
 }
 
 .project-button a {
-    margin-top: 2rem;
+    margin-top: 1rem;
     text-decoration: none;
     padding: 1.25rem 2rem;
     font-size: 1.3rem;
@@ -180,9 +180,6 @@ ul {
         padding-right: 2rem;
     }
     
-    .project-button a {
-        margin-top: 1rem;
-    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -195,17 +192,15 @@ ul {
             "tags image"
             "button image"
             "text image";
-        padding-top: 2rem;
-        margin-bottom: 3rem;
     }
 
     .skills-used {
         padding-right: 4rem;
-        max-width: 80%;
+        max-width: 90%;
     }
 
     .project-description  {
-        max-width: 80%;
+        max-width: 90%;
     }
 
 }

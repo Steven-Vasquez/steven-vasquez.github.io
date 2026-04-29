@@ -11,6 +11,7 @@ export function CookingSitePage() {
         techStack: [],
         codeLink: "",
         liveLink: "",
+        blogLink: "",
     }
 
     const carouselImages = ["",]

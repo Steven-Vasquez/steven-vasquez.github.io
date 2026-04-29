@@ -48,6 +48,28 @@ export function ProjectSection() {
     };
     */
 
+    const WarehouseNetworkRackData = {
+        projectRole: "SOLE IT TECHNICIAN",
+        projectTitle: "Warehouse Network Infrastructure Build",
+        techSkills: ["Proxmox", "Docker", "Linux", "UniFi", "Frigate", "NUT/SNMP", "rclone", "Backblaze B2"],
+        projectDescription: "Independently researched and deployed a <strong>full network infrastructure stack from scratch</strong> for a workplace warehouse expansion, including LAN configuration, Proxmox virtualization, a UniFi wireless mesh network, a <strong>Frigate NVR security camera system</strong> with cloud backup, and <strong>UPS-integrated graceful shutdown via SNMP</strong>.",
+        projectRoute: "/projects/WarehouseNetworkRack",
+        projectImages: [
+            "/images/Blog_Images/WarehouseNetworkRack/diagrams/network_diagram_td.png",
+        ]
+    };
+
+    const DealershipDatabaseData = {
+        projectRole: "DEVELOPER",
+        projectTitle: "Car Dealership Manager",
+        techSkills: ["MySQL", "PHP", "Apache", "HTML/CSS"],
+        projectDescription: "Worked in a team of 4 to create a <strong>web-based database application</strong> designed to help dealerships track vehicle inventory, customer purchases, and sales data efficiently <strong>utilizing a MySQL database</strong>.",
+        projectRoute: "/projects/DealershipDatabase",
+        projectImages: [
+            "/images/Project_Images/DealershipDatabase/add_customer.png",
+        ]
+    };
+
     const ULingualData = {
         projectRole: "LEAD BACKEND DEVELOPER",
         projectTitle: "ULingual",
@@ -82,16 +104,6 @@ export function ProjectSection() {
         ]
     };
 
-    const DealershipDatabaseData = {
-        projectRole: "DEVELOPER",
-        projectTitle: "Car Dealership Manager",
-        techSkills: ["MySQL", "PHP", "Apache", "HTML/CSS"],
-        projectDescription: "Worked in a team of 4 to create a <strong>web-based database application</strong> designed to help dealerships track vehicle inventory, customer purchases, and sales data efficiently <strong>utilizing a MySQL database</strong>.",
-        projectRoute: "/projects/DealershipDatabase",
-        projectImages: [
-            "/images/Project_Images/DealershipDatabase/add_customer.png",
-        ]
-    };
 
     return (
         <>
@@ -106,6 +118,7 @@ export function ProjectSection() {
                 </div>
 
                 <div className="projects">
+                    <IndividualProject {...WarehouseNetworkRackData} />
                     <IndividualProject {...DealershipDatabaseData} />
                     <IndividualProject {...ULingualData} />
                     <IndividualProject {...MonopolyData} />
