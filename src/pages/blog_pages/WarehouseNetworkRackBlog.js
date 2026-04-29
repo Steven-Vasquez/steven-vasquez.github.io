@@ -16,9 +16,9 @@ export function WarehouseNetworkRackBlog() {
         columnTitles: ["Type📁", "Tools Used🛠️", "Hardware Used💻", "Skills Applied🧠"],
         columnRowsInfo: [
             ["IT Guide", "Networking", "IT Infrastructure"],
-            ["Linux", "Proxmox VE 8.4", "Ubuntu Server 24.04", "Docker + Frigate", "Backblaze B2", "rclone", "NUT/SNMP"],
-            ["EdgeRouter Lite", "TP-Link PoE Switch", "UniFi Access Points", "Wansview W6 Cameras", "APC UPS"],
-            ["LAN Network Design & Configuration", "Proxmox Virtualization", "VM Templating & Cloning", "UniFi Mesh Network Setup", "IP Camera Integration", "NVR Setup with Frigate", "Cloud Backup Automation", "UPS Monitoring with NUT/SNMP"]
+            ["• Proxmox VE 8.4", "• Docker", "• Frigate", "• Ubuntu Server 24.04", "• UniFi", "• rclone", "• Network UPS Tools / SNMP",  "• Ubiquiti EdgeRouter", "• Backblaze B2"],
+            ["• EdgeRouter Lite", "• TP-Link PoE Switch", "• UniFi Access Points", "• Wansview W6 Cameras", "• APC UPS"],
+            ["• LAN Network Design & Configuration", "• Proxmox Virtualization", "• VM Templating & Cloning", "• UniFi Mesh Network Setup", "• IP Camera Integration", "• NVR Setup with Frigate", "• Cloud Backup Automation", "• UPS Monitoring with NUT/SNMP"]
         ],
         labSource: "",
         labLink: ""

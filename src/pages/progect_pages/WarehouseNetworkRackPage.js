@@ -1,34 +1,24 @@
-import ProjectPageIntro from "../../components/ProjectPageIntro";
+import PageIntro from "../../components/PageIntro";
 import ImageCarousel from "../../components/ImageCarousel";
 import "../../stylesheets/ProjectPage.css";
 
 export function WarehouseNetworkRackPage() {
+
     const introDetails = {
         projectTitle: "Warehouse Network Infrastructure Build",
         readTime: "5 minute read",
-        introText: "A <strong>real-world network infrastructure deployment</strong> built from scratch for a workplace warehouse expansion. This project covers the full stack: <strong>LAN design, Proxmox virtualization, a UniFi wireless mesh network, a Frigate NVR security camera system with cloud backup, and UPS-integrated graceful shutdown via SNMP</strong>. All components are rack-mounted and production-running.",
-        projectType: "IT Infrastructure / Networking",
-        techStack: ["Proxmox", "Docker", "Ubuntu Server", "UniFi", "Frigate", "rclone", "NUT/SNMP", "EdgeRouter", "Backblaze B2"],
-        codeLink: "",
-        liveLink: "",
-        blogLink: "/blog/warehouse-network-rack",
-    };
-
-    const introDetails2 = {
-        projectTitle: "Warehouse Network Infrastructure Build",
-        readTime: "5 minute read",
+        columnTitles: ["Type📁", "Tools Used🛠️", "Skills Applied🧠"],
+        columnRowsInfo: [
+            ["IT Infrastructure", "Networking"],
+            ["• Proxmox VE", "• Docker", "• Frigate", "• Ubuntu Server", "• UniFi", "• rclone", "• Network UPS Tools / SNMP", "• Ubiquiti EdgeRouter", "• Backblaze B2"],
+            ["• LAN Network Design & Configuration", "• Proxmox Virtualization", "• VM Templating & Cloning", "• UniFi Mesh Network Setup", "• IP Camera Integration", "• NVR Setup with Frigate", "• Cloud Backup Automation", "• UPS Monitoring with NUT/SNMP"]
+        ],
+        linkColTitles: ["My Blog Post📝"],
+        linkColLinks: ["/blog/warehouse-network-rack"],
+        linkTexts: ["Read more →"],
         introText: [
             "A <strong>real-world network infrastructure deployment</strong> built from scratch for a workplace warehouse expansion. This project covers the full stack: <strong>LAN design, Proxmox virtualization, a UniFi wireless mesh network, a Frigate NVR security camera system with cloud backup, and UPS-integrated graceful shutdown via SNMP</strong>. All components are rack-mounted and production-running.",
         ],
-        columnTitles: ["Type📁", "Tools Used🛠️", "Hardware Used💻", "Skills Applied🧠"],
-        columnRowsInfo: [
-            ["IT Infrastructure", "Networking"],
-            ["Proxmox", "Docker", "Ubuntu Server", "UniFi", "Frigate", "rclone", "NUT/SNMP", "EdgeRouter", "Backblaze B2"],
-            ["EdgeRouter Lite", "TP-Link PoE Switch", "Proxmox VE 8.4", "Ubuntu Server 24.04", "UniFi Access Points", "Wansview W6 Cameras", "Docker + Frigate", "Backblaze B2", "APC UPS + NUT", "rclone"],
-            ["LAN Network Design & Configuration", "Proxmox Virtualization", "VM Templating & Cloning", "UniFi Mesh Network Setup", "IP Camera Integration", "NVR Setup with Frigate", "Cloud Backup Automation", "UPS Monitoring with NUT/SNMP"]
-        ],
-        labSource: "",
-        labLink: ""
     };
     // Rack / overview images
     const overviewImages = [
@@ -93,7 +83,7 @@ export function WarehouseNetworkRackPage() {
     return (
         <>
             <div className="project-page-container">
-                <ProjectPageIntro {...introDetails} />
+                <PageIntro {...introDetails} />
 
                 <ImageCarousel carouselImages={overviewImages} captions={overviewCaptions} />
 
