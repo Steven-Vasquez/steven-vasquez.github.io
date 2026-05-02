@@ -12,8 +12,8 @@ import ULingualPage from './pages/progect_pages/ULingualPage';
 import MonopolyPage from './pages/progect_pages/MonopolyPage';
 import SubylertPage from './pages/progect_pages/SubylertPage';
 import DealershipDatabasePage from './pages/progect_pages/DealershipDatabasePage';
-import WareJouseNetworkRackPage from './pages/progect_pages/WarehouseNetworkRackPage';
-import QAChatbotPage from './pages/progect_pages/QAChatbotPage';
+import WareHouseNetworkRackPage from './pages/progect_pages/WarehouseNetworkRackPage';
+import LLMChatbotPage from './pages/progect_pages/LLMChatbotPage';
 
 import DanaBotBlog from './pages/blog_pages/DanaBotBlog';
 import WinActiveDirectoryBlog from './pages/blog_pages/WinActiveDirectoryBlog';
@@ -41,8 +41,8 @@ function App() {
         <Route path="/blog/test-page" element={<TestPage/>} />
 
         {/* Project Pages */}
-        <Route path="/projects/QAChatbot" element={<QAChatbotPage />} />
-        <Route path="/projects/WarehouseNetworkRack" element={<WareJouseNetworkRackPage />} />
+        <Route path="/projects/LLMChatbot" element={<LLMChatbotPage />} />
+        <Route path="/projects/WarehouseNetworkRack" element={<WareHouseNetworkRackPage />} />
         <Route path="/projects/DealershipDatabase" element={<DealershipDatabasePage />} />
         <Route path="/projects/ULingual" element={<ULingualPage />} />
         <Route path="/projects/Monopoly" element={<MonopolyPage />} />

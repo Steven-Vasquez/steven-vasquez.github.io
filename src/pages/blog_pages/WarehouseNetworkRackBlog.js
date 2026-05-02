@@ -230,7 +230,7 @@ export function WarehouseNetworkRackBlog() {
                 <PageIntro {...introDetails} />
 
                 <div className="image-container">
-                    <img src="/images/Blog_Images/WarehouseNetworkRack/diagrams/network_diagram_lr.png" alt="High-level network diagram of the full deployment" className="project-images"></img>
+                    <img src="/images/Blog_Images/WarehouseNetworkRack/diagrams/network_diagram_lr.png" alt="High-level network diagram of the full deployment" className="project-images-large"></img>
                 </div>
                 {/* ── I. Introduction ─────────────────────────────────────────── */}
                 <h1 className="section-header">I. <span className="section-title">Introduction & Background</span></h1>
