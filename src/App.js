@@ -14,6 +14,7 @@ import SubylertPage from './pages/progect_pages/SubylertPage';
 import DealershipDatabasePage from './pages/progect_pages/DealershipDatabasePage';
 import WareHouseNetworkRackPage from './pages/progect_pages/WarehouseNetworkRackPage';
 import LLMChatbotPage from './pages/progect_pages/LLMChatbotPage';
+import TextbookQuizGeneratorPage from './pages/progect_pages/TextbookQuizGeneratorPage';
 
 import DanaBotBlog from './pages/blog_pages/DanaBotBlog';
 import WinActiveDirectoryBlog from './pages/blog_pages/WinActiveDirectoryBlog';
@@ -41,6 +42,7 @@ function App() {
         <Route path="/blog/test-page" element={<TestPage/>} />
 
         {/* Project Pages */}
+        <Route path="/projects/TextbookQuizGenerator" element={<TextbookQuizGeneratorPage />} />
         <Route path="/projects/LLMChatbot" element={<LLMChatbotPage />} />
         <Route path="/projects/WarehouseNetworkRack" element={<WareHouseNetworkRackPage />} />
         <Route path="/projects/DealershipDatabase" element={<DealershipDatabasePage />} />
