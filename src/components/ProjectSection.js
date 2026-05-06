@@ -24,11 +24,13 @@ function IndividualProject(props) {
             <p className="project-description" dangerouslySetInnerHTML={{ __html: projectDescription }}></p>
 
             <div className="project-image-container">
-                {projectImages.map((image) => (
-                    <a href={projectRoute} key={image} className="project-image-link">
-                        <img src={image} alt="Project Image" className="project-image" />
-                    </a>
-                ))}
+                {projectImages.map((image) => {
+                    return (
+                        <a href={projectRoute} key={image} className="project-image-link">
+                            <img src={image} alt="Project Image" className="project-image" />
+                        </a>
+                    );
+                })}
             </div>
         </div>
     );
@@ -47,6 +49,16 @@ export function ProjectSection() {
         ]
     };
     */
+    const LLMChatbotData = {
+        projectRole: "SOLE DEVELOPER",
+        projectTitle: "Context-Aware LLM Chatbot Platform",
+        techSkills: ["Python", "Flask", "FastAPI", "ChromaDB", "MSSQL", "Ollama", "Vanna", "RAG"],
+        projectDescription: "Built a <strong>context-aware AI chatbot platform</strong> from scratch featuring dynamic long-term memory, topic drift detection, and an <strong>autonomous LLM agent loop</strong> capable of querying a live database in natural language and running a full <strong>web search RAG pipeline</strong> using only locally hosted models.",
+        projectRoute: "/projects/LLMChatbot",
+        projectImages: [
+            "/images/Project_Images/LLMChatbot/chatbot_ui_thumbnail4.png", 
+        ]
+    };
 
     const WarehouseNetworkRackData = {
         projectRole: "SOLE IT TECHNICIAN",
@@ -55,7 +67,7 @@ export function ProjectSection() {
         projectDescription: "Independently researched and deployed a <strong>full network infrastructure stack from scratch</strong> for a workplace warehouse expansion, including LAN configuration, Proxmox virtualization, a UniFi wireless mesh network, a <strong>Frigate NVR security camera system</strong> with cloud backup, and <strong>UPS-integrated graceful shutdown via SNMP</strong>.",
         projectRoute: "/projects/WarehouseNetworkRack",
         projectImages: [
-            "/images/Blog_Images/WarehouseNetworkRack/diagrams/network_diagram_td.png",
+            "/images/Blog_Images/WarehouseNetworkRack/diagrams/network_diagram_td.svg",
         ]
     };
 
@@ -119,6 +131,7 @@ export function ProjectSection() {
 
                 <div className="projects">
                     <IndividualProject {...WarehouseNetworkRackData} />
+                    <IndividualProject {...LLMChatbotData} />
                     <IndividualProject {...DealershipDatabaseData} />
                     <IndividualProject {...ULingualData} />
                     <IndividualProject {...MonopolyData} />

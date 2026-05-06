@@ -14,7 +14,7 @@ export function TextbookQuizGeneratorPage() {
             ["• LLM Prompt Engineering", "• PDF Text Extraction & Chunking", "• Vector Embeddings & Semantic Search", "• RAG Pipeline Design", "• Automated Answer Validation", "• LLM-Powered Autograding", "• PDF Generation", "• Full Stack Web Development"]
         ],
         linkColTitles: ["GitHub🔗"],
-        linkColLinks: ["https://github.com/stevenvasquez-avept/Textbook-Quiz-Generator"],
+        linkColLinks: ["https://github.com/Steven-Vasquez/Textbook-Quiz-Generator"],
         linkTexts: ["View on GitHub →"],
         introText: [
             "Studying from a textbook is one thing, actually testing your retention is another. This project takes a raw <strong>PDF textbook as input</strong> and runs it through a fully automated pipeline to produce randomized, chapter-specific quizzes with <strong>multiple choice, true/false, and short answer questions</strong>, complete with textbook citations, confidence scores, and <strong>LLM-powered autograding</strong> on free-response questions."

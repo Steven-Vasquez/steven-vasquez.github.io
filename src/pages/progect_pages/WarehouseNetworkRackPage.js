@@ -22,7 +22,7 @@ export function WarehouseNetworkRackPage() {
     };
     // Rack / overview images
     const overviewImages = [
-        "/images/Blog_Images/WarehouseNetworkRack/diagrams/network_diagram_lr.png",
+        "/images/Blog_Images/WarehouseNetworkRack/diagrams/network_diagram_lr.svg",
         "/images/Blog_Images/WarehouseNetworkRack/data_rack_thumbnail.jpg",
     ];
     const overviewCaptions = [

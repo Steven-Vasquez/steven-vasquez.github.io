@@ -1,56 +1,45 @@
-flowchart TD
+---
+config:
+  layout: dagre
+  themeVariables:
+    fontSize: 30px
 
-%% =========================
-%% Styles
-%% =========================
-classDef network fill:#1f2937,color:#fff,stroke:#3b82f6,stroke-width:1px;
-classDef device fill:#e5e7eb,color:#111,stroke:#3b82f6;
-classDef service fill:#dbeafe,color:#111,stroke:#2563eb;
-classDef storage fill:#ede9fe,color:#111,stroke:#7c3aed;
-classDef cloud fill:#cffafe,color:#111,stroke:#0891b2;
-classDef group fill:#f9fafb,stroke:#9ca3af;
+---
+flowchart LR
+ subgraph Rack["Rack"]
+    direction TB
+        UPS["UPS"]
+        Proxmox["Proxmox Server"]
+        Server["Docker + File Server"]
+        UniFiVM["UniFi VM Server"]
+        Storage["RAID1 Storage"]
+  end
+    Internet(("Internet")) --> Router["EdgeRouter"]
+    Router --> Switch["PoE Switch"]
+    UPS -.-> Proxmox & Server
+    Proxmox --> UniFiVM
+    Server --> Storage
+    Switch --> Proxmox & Server & Cameras["Cameras"] & APs["Access Points"]
+    Cameras -- RTSP --> Server
+    UniFiVM -.-> APs
+    APs --> Clients(("Clients"))
+    Storage -- rclone --> Backblaze[("Backblaze B2")]
 
-%% =========================
-%% CORE
-%% =========================
-Internet((Internet)):::network --> Router[EdgeRouter]:::device --> Switch[PoE Switch]:::device
-
-%% =========================
-%% RACK
-%% =========================
-subgraph Rack
-direction TB
-class Rack group
-
-UPS[UPS]:::device
-
-Proxmox[Proxmox Server]:::device
-Server[Docker + File Server]:::device
-UniFiVM[UniFi VM Server]:::service
-Storage[RAID1 Storage]:::storage
-
-UPS -.-> Proxmox
-UPS -.-> Server
-
-Proxmox --> UniFiVM
-Server --> Storage
-
-end
-
-%% =========================
-%% NETWORK DEVICES
-%% =========================
-Switch --> Proxmox
-Switch --> Server
-
-Switch --> Cameras[Cameras]:::device
-Cameras -->|RTSP| Server
-
-Switch --> APs[Access Points]:::device
-UniFiVM -.-> APs
-APs --> Clients((Clients)):::network
-
-%% =========================
-%% CLOUD
-%% =========================
-Storage -->|rclone| Backblaze[(Backblaze B2)]:::cloud
+     Internet:::network
+     Router:::device
+     Switch:::device
+     UPS:::device
+     Proxmox:::device
+     Server:::device
+     UniFiVM:::service
+     Storage:::storage
+     Cameras:::device
+     APs:::device
+     Clients:::network
+     Backblaze:::cloud
+    classDef network fill:#1f2937,color:#fff,stroke:#3b82f6,stroke-width:1px
+    classDef device fill:#e5e7eb,color:#111,stroke:#3b82f6
+    classDef service fill:#dbeafe,color:#111,stroke:#2563eb
+    classDef storage fill:#ede9fe,color:#111,stroke:#7c3aed
+    classDef cloud fill:#cffafe,color:#111,stroke:#0891b2
+    classDef group fill:#f9fafb,stroke:#9ca3af
