@@ -1,12 +1,12 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import "../stylesheets/Footer.css";
 
 export function Footer() {
 
+    const location = useLocation(); 
 
-
-    const isHomePage = window.location.pathname === '/';
+    const isHomePage = location.pathname === '/';
     return (
         <>
             <div className="footer-container">

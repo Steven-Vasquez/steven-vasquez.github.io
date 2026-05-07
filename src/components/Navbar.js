@@ -6,6 +6,7 @@ import '../stylesheets/Navbar.css';
 export function Navbar() {
   
   const [clicked, setClicked] = useState(false);
+  const location = useLocation();
 
   const handleClick = () => {
     setClicked(!clicked);
@@ -15,7 +16,7 @@ export function Navbar() {
     setClicked(false);
   };
 
-  const isHomePage = window.location.pathname === '/';
+  const isHomePage = location.pathname === '/';
 
   return (
     <>
