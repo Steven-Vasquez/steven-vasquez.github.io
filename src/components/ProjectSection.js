@@ -71,6 +71,17 @@ export function ProjectSection() {
         ]
     };
 
+    const TextbookQuizGeneratorData = {
+        projectRole: "SOLE DEVELOPER",
+        projectTitle: "Textbook Quiz Generator & Autograder",
+        techSkills: ["Python", "Flask", "PyMuPDF", "FAISS", "sentence-transformers", "Ollama", "ReportLab", "RAG"],
+        projectDescription: "Built a <strong>fully automated quiz generation pipeline</strong> that takes any textbook PDF as input and produces randomized, chapter-specific quizzes with multiple choice, true/false, and short answer questions. Features <strong>textbook-cited answer keys</strong> with confidence scores and <strong>LLM-powered autograding</strong> of free-response questions, all running on a locally hosted Gemma 3 12B model with no external API calls.",
+        projectRoute: "/projects/TextbookQuizGenerator",
+        projectImages: [
+            "/images/Project_Images/TextbookQuizGenerator/pdf/answer_key_pdf.png",
+        ]
+    };
+
     const DealershipDatabaseData = {
         projectRole: "DEVELOPER",
         projectTitle: "Car Dealership Manager",
@@ -132,6 +143,7 @@ export function ProjectSection() {
                 <div className="projects">
                     <IndividualProject {...WarehouseNetworkRackData} />
                     <IndividualProject {...LLMChatbotData} />
+                    <IndividualProject {...TextbookQuizGeneratorData} />
                     <IndividualProject {...DealershipDatabaseData} />
                     <IndividualProject {...ULingualData} />
                     <IndividualProject {...MonopolyData} />
