@@ -15,7 +15,7 @@ export function Footer() {
 
                     <div className="site-info">
                         <Link to="/" className='name-link'>Steven Vasquez</Link>
-                        <div>© 2023, Built by myself in
+                        <div>© 2026, Built by myself in
                             <span>&nbsp;</span>
                             <strong><a href='https://code.visualstudio.com/' target='blank'>Visual Studio Code</a></strong>
                             <span>&nbsp;</span>
