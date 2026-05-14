@@ -24,7 +24,10 @@
     font-weight: 300;
     line-height: 1.75;
     margin-top: .25rem;
-    list-style-position: inside;
+}
+
+.project-page-container ul {
+    padding-left: 1.5rem;
 }
 
 .project-page-container strong {
@@ -136,3 +139,29 @@ a:hover {
     max-height: 700px;
     object-fit: scale-down;
   }
+
+
+/* Special etc styling */
+.formatted-list li span,
+.formatted-list li strong {
+    display: block;
+}
+
+.formatted-list li {
+    margin-bottom: .15rem;
+}
+
+  /* ── SPL Query Blocks ─────────────────────────────────────────────────────── */
+.spl-block {
+    background-color: #1a1f2e;
+    color: #a8d8a8;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    border-left: 3px solid #00b388; /* Splunk green */
+    overflow-x: auto;
+    white-space: pre;
+    margin-bottom: 1.75rem;
+}

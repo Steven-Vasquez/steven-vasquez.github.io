@@ -19,6 +19,7 @@ import TextbookQuizGeneratorPage from './pages/progect_pages/TextbookQuizGenerat
 import DanaBotBlog from './pages/blog_pages/DanaBotBlog';
 import WinActiveDirectoryBlog from './pages/blog_pages/WinActiveDirectoryBlog';
 import WarehouseNetworkRackBlog from './pages/blog_pages/WarehouseNetworkRackBlog';
+import SplunkSSHBlog from './pages/blog_pages/SplunkSSHAuthAnalysis';
 import TestPage from './pages/blog_pages/TestPage';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         {/* IT Blog Pages */}
         <Route path="/blog/windows-active-directory-lab" element={<WinActiveDirectoryBlog/>} />
         <Route path="/blog/warehouse-network-rack" element={<WarehouseNetworkRackBlog/>} />
+        <Route path="/blog/splunk-ssh-auth-analysis" element={<SplunkSSHBlog/>} />
         <Route path="/blog/test-page" element={<TestPage/>} />
 
         {/* Project Pages */}

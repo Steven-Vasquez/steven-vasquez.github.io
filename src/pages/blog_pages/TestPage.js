@@ -73,7 +73,16 @@ export function TestPage() {
                     <li>Second item in unordered list</li>
                     <li>Third item in unordered list</li>
                 </ul>
-
+                
+                
+                <br></br>
+                <span>Special list:</span>
+                <ul className="formatted-list">
+                    <li>
+                        <strong>Bolded item in formatted list</strong>
+                        <span>Now this is indented</span>   
+                    </li>
+                </ul>
 
             </div>
         </>
