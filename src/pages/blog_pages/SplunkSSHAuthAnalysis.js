@@ -109,8 +109,10 @@ export function SplunkSSHBlog() {
                 <p>
                     Raw <span className="inline-code">auth.log</span> events aren't automatically field-extracted by Splunk. Fields like <span className="inline-code">src_ip</span> and <span className="inline-code">username</span> had to be pulled manually using <span className="inline-code">rex</span> with regex patterns throughout the investigation. Writing those extractions cleanly and reusing them consistently across queries became one of the core skills practiced here.
                 </p>
-                <ImageCarousel carouselImages={setupImages} captions={setupCaptions} />
 
+                <div className="image-container">
+                    <img src="/images/Blog_Images/SplunkSSHAnalysis/Splunk_main.png" alt="Main page of Splunk SSH Analysis" className="project-images-large"></img>
+                </div>
 
                 {/* ── PHASE 1 ──────────────────────────────────────────────── */}
                 <h1>Phase 1: Orientation — Understanding the Shape of the Data</h1>
@@ -129,7 +131,11 @@ export function SplunkSSHBlog() {
                 <p>
                     The results surfaced nine distinct message categories and a critical absence: <strong>zero "Failed password" events, zero "Accepted password" or "Accepted publickey" events</strong>. This reframed the entire investigation. We can see the logs had captured the pre-authentication phase only, specifically <strong>SSH username enumeration</strong>, occurring before the password challenge ever takes place.
                 </p>
-                <ImageCarousel carouselImages={orientationImages} captions={orientationCaptions} />
+
+                <div className="image-container">
+                    <img src="/images/Blog_Images/SplunkSSHAnalysis/Phase1.png" alt="Phase 1 of Splunk SSH Analysis" className="project-images-large"></img>
+                </div>
+
                 <span className="note">Splunk's Patterns tab can surface a similar breakdown automatically, but lacks user-defined precision.</span>
 
                 {/* ── PHASE 2 ──────────────────────────────────────────────── */}
@@ -138,9 +144,6 @@ export function SplunkSSHBlog() {
                     <strong>Finding:</strong> 2,607 unique source IPs appeared in the logs, but the distribution was heavily skewed — ~80% of IPs made fewer than 10 Invalid user attempts across the entire month, while a small minority were far more aggressive. The mean attempt count per IP was 23, but the median was just 3.
                 </p>
 
-                <div className="image-container">
-                    <img src="/images/Blog_Images/WarehouseNetworkRack/diagrams/network_diagram_lr.svg" alt="High-level network diagram of the full deployment" className="project-images-large"></img>
-                </div>
 
                 <p>
                     Since the attack being investigated is SSH scanning and credential probing, I focused on <strong>Invalid user events specifically</strong> rather than total event volume per IP — raw event counts include TCP connection overhead like pre-auth disconnects, which inflate numbers without reflecting actual attack activity.
