@@ -53,6 +53,19 @@ export function Blog() {
        date: "2025-07-25"
    };
    */
+
+    const SplunkSSHAuthAnalysisBlog = {
+        completionDate: "6/30/2026",
+        projectTitle: "SSH Brute Force Investigation with Splunk",
+        categorySkills: ["Log Analysis", "Security"],
+        techSkills: ["Splunk", "SPL", "VirusTotal", "AbuseIPDB", "Regex"],
+    blogDescription: "Investigated <strong>~86,000 real-world SSH authentication events</strong> in Splunk, playing the role of an SOC analyst handed a suspicious auth.log with no prior context. Wrote all SPL queries from scratch across <strong>seven investigation phases</strong>. Profiling 2,607 attacking IPs, building <strong>time-windowed brute force detection logic</strong>, and synthesizing findings into actionable security recommendations.",
+        blogRoute: "/blog/splunk-ssh-auth-analysis",
+        blogImages: [
+            "/images/Blog_Images/SplunkSSHAnalysis/attack_timeline_thumbnail.png",
+        ]
+    };
+
     const WarehouseNetworkRackBlog = {
         completionDate: "2/24/2026",
         projectTitle: "Warehouse Network Rack Build & Setup Guide",
@@ -107,6 +120,7 @@ export function Blog() {
                 </div>
 
                 <div className="projects">
+                    <IndividualProject {...SplunkSSHAuthAnalysisBlog} />
                     <IndividualProject {...WarehouseNetworkRackBlog} />
                     <IndividualProject {...WinActiveDirectoryBlog} />
                     <IndividualProject {...DanaBotBlog} />

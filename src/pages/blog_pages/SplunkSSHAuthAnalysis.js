@@ -24,9 +24,9 @@ export function SplunkSSHBlog() {
 
     // ── Screenshot arrays ── fill in paths as you capture them ──────────────
     const setupImages = [
-        "/images/Blog_Images/SplunkSSH/1_source_type_config.png",
-        "/images/Blog_Images/SplunkSSH/2_index_config.png",
-        "/images/Blog_Images/SplunkSSH/3_upload_review.png",
+        "/images/Blog_Images/SplunkSSHAnalysis/1_source_type_config.png",
+        "/images/Blog_Images/SplunkSSHAnalysis/2_index_config.png",
+        "/images/Blog_Images/SplunkSSHAnalysis/3_upload_review.png",
     ];
     const setupCaptions = [
         "Configuring the linux_auth source type in Splunk",
@@ -35,44 +35,55 @@ export function SplunkSSHBlog() {
     ];
 
     const orientationImages = [
-        "/images/Blog_Images/SplunkSSH/4_message_type_breakdown.png",
+        "/images/Blog_Images/SplunkSSHAnalysis/4_message_type_breakdown.png",
     ];
     const orientationCaptions = [
         "SPL catch-all query surfacing all message categories — zero success events anywhere in the dataset",
     ];
 
     const reconImages = [
-        "/images/Blog_Images/SplunkSSH/5_top_attacking_ips.png",
-        "/images/Blog_Images/SplunkSSH/6_top_attacker_timechart.png",
+        "/images/Blog_Images/SplunkSSHAnalysis/Phase2_top_10_attacking_ips.png",
+        "/images/Blog_Images/SplunkSSHAnalysis/Phase2_top_attacker_timechart.png",
+        "/images/Blog_Images/SplunkSSHAnalysis/Phase2_top_attacker_time_between_attempts.png",
     ];
     const reconCaptions = [
         "Top 10 attacking IPs by attempt count",
-        "Hourly activity for the top attacker — ~2,000 attempts/hour over 6 hours on Dec 6",
+        "Hourly activity for the top attacker. ~400 attempts/hour on Dec 6",
+        "Average seconds between attempts for the top attacker. ~5–6 seconds consistently, confirming automation",
     ];
 
     const targetImages = [
-        "/images/Blog_Images/SplunkSSH/7_top_targeted_usernames.png",
+        "/images/Blog_Images/SplunkSSHAnalysis/Phase3_top_targeted_usernames.png",
+        "/images/Blog_Images/SplunkSSHAnalysis/Phase3_top_ips_targetting_unique_usernames.png",
     ];
     const targetCaptions = [
-        "Top 10 most targeted usernames — a default-credentials dictionary, not personalized guesses",
+        "Displaying top 10 most targeted usernames. Showing a default-credentials dictionary, not personalized guesses",
+        "Top 10 IPs by number of unique usernames attempted. Many unique usernames attempted by single IPs is a strong indicator of shared tooling or a coordinated botnet",
     ];
 
     const detectionImages = [
-        "/images/Blog_Images/SplunkSSH/8_attack_timeline_timechart.png",
+        "/images/Blog_Images/SplunkSSHAnalysis/Phase4_attack_timeline_timechart.png",
+        "/images/Blog_Images/SplunkSSHAnalysis/Phase4_distribution_of_attempts_by_ip.png",
+
     ];
     const detectionCaptions = [
-        "Hourly timechart of invalid user attempts — clear discrete spikes, not constant background noise",
+        "Full timechart of invalid user attempts showing clear discrete spikes, not constant background noise",
+        "Distribution of attempts of attempts per IP. A small minority of IPs were very , top being 409 attempts each.",
     ];
 
     const enrichmentImages = [
-        "/images/Blog_Images/SplunkSSH/9_geo_distribution.png",
-        "/images/Blog_Images/SplunkSSH/10_avg_seconds_between_attempts.png",
+        "/images/Blog_Images/SplunkSSHAnalysis/Phase5_geo_distribution.png",
     ];
     const enrichmentCaptions = [
         "Geographic distribution of top attacking IPs via Splunk's iplocation command",
-        "Average seconds between attempts for the top 4 IPs — all under 10 seconds, confirming automation",
     ];
 
+    const recommendedAlertImages = [
+        "/images/Blog_Images/SplunkSSHAnalysis/Phase6_recommended_alert.png",
+    ];
+    const recommendedAlertCaptions = [
+        "Recommended alert configuration based on the analysis to detect brute force attacks in real time. 10+ invalid user attempts from a single IP within 5 minutes is a strong signal of malicious activity.",
+    ];
     return (
         <>
             <div className="project-page-container">
@@ -141,12 +152,12 @@ export function SplunkSSHBlog() {
                 {/* ── PHASE 2 ──────────────────────────────────────────────── */}
                 <h1>Phase 2: Reconnaissance — Who Was Attacking?</h1>
                 <p>
-                    <strong>Finding:</strong> 2,607 unique source IPs appeared in the logs, but the distribution was heavily skewed — ~80% of IPs made fewer than 10 Invalid user attempts across the entire month, while a small minority were far more aggressive. The mean attempt count per IP was 23, but the median was just 3.
+                    <strong>Finding:</strong> 2,607 unique source IPs appeared in the logs, but the distribution was heavily skewed. About ~80% of IPs made fewer than 10 Invalid user attempts across the entire month, while a small minority were far more aggressive. The mean attempt count per IP was 23, but the median was just 3.
                 </p>
 
 
                 <p>
-                    Since the attack being investigated is SSH scanning and credential probing, I focused on <strong>Invalid user events specifically</strong> rather than total event volume per IP — raw event counts include TCP connection overhead like pre-auth disconnects, which inflate numbers without reflecting actual attack activity.
+                    Since the attack being investigated is SSH scanning and credential probing, I focused on <strong>Invalid user events specifically</strong> rather than total event volume per IP. Raw event counts include TCP connection overhead like pre-auth disconnects, which inflate numbers without reflecting actual attack activity.
                 </p>
                 <p>
                     Filtering to Invalid user attempts only and ranking by IP:
@@ -187,7 +198,7 @@ export function SplunkSSHBlog() {
                 {/* ── PHASE 3 ──────────────────────────────────────────────── */}
                 <h1>Phase 3: Target Analysis — What Were They After?</h1>
                 <p>
-                    <strong>Finding:</strong> The top targeted usernames — admin, test, guest, oracle, ftp, ftpuser, D-Link, nagios, debug — are factory-default and well-known service account names, not personalized guesses. Only 541 unique usernames were ever attempted across the entire dataset: the same recycled wordlist replayed by hundreds of different IPs.
+                    <strong>Finding:</strong> The top targeted usernames (admin, test, guest, oracle, ftp, ftpuser, D-Link, nagios, debug) are factory-default and well-known service account names, not personalized guesses. Only 541 unique usernames were ever attempted across the entire dataset: the same recycled wordlist replayed by hundreds of different IPs.
                 </p>
                 <p>
                     Query used to rank targeted usernames, with deduplication to avoid inflating counts from the same IP retrying the same username:
@@ -212,7 +223,7 @@ export function SplunkSSHBlog() {
                     <strong>Finding:</strong> 221 IPs crossed a simple 10-attempt threshold. Tightening to a <strong>time-windowed rule (10+ attempts within any 5-minute window)</strong> flagged 199 IPs. This is a more meaningful signal, since no legitimate user should fail login 10 times in 5 minutes.
                 </p>
                 <p>
-                    Simple threshold — raw failed attempts per IP:
+                    Simple threshold of raw failed attempts per IP:
                 </p>
                 <pre className="spl-block">{
                     `index=ssh_investigation sourcetype=linux_auth
@@ -224,7 +235,7 @@ export function SplunkSSHBlog() {
 | sort -attempts`
                 }</pre>
                 <p>
-                    Time-windowed threshold — more meaningful for real-time alerting:
+                    Time-windowed threshold for more meaningful for real-time alerting:
                 </p>
                 <pre className="spl-block">{
                     `index=ssh_investigation sourcetype=linux_auth
@@ -237,7 +248,7 @@ export function SplunkSSHBlog() {
 | stats dc(src_ip) as suspicious_ip_count`
                 }</pre>
                 <p>
-                    The attack timeline showed <strong>clear discrete spikes rather than constant background noise</strong>, clustered across a 4-day window — consistent with scheduled or intermittent bot runs.
+                    The attack timeline showed <strong>clear discrete spikes rather than constant background noise</strong>, clustered across a 4-day window, consistent with scheduled or intermittent bot runs.
                 </p>
                 <ImageCarousel carouselImages={detectionImages} captions={detectionCaptions} />
 
@@ -250,9 +261,9 @@ export function SplunkSSHBlog() {
                     anywhere across 86,839 lines.
                 </p>
                 <p>
-                    As established in Phase 1, this dataset only captures pre-authentication activity, so
-                    what happened after any successful login — lateral movement, persistence, file access —
-                    would not appear here. The most accurate conclusion is: <strong>no compromise is visible
+                    This along with other analysis indicates that this dataset only captures pre-authentication activity, and
+                    what happened after any successful login (lateral movement, persistence, file access)
+                    does not appear here. The most accurate conclusion is: <strong>no compromise is visible
                         within the scope of this data.</strong>
                 </p>
 
@@ -260,7 +271,7 @@ export function SplunkSSHBlog() {
                 {/* ── PHASE 6 ──────────────────────────────────────────────── */}
                 <h1>Phase 6: Enrichment — Threat Intelligence and Geolocation</h1>
                 <p>
-                    <strong>Finding:</strong> Attack traffic originated from Spain, China, Japan, the US, and the UK — ruling out a localized or targeted attack. The top 4 IPs had <strong>identical attempt counts and identical username diversity</strong>, a strong indicator of shared tooling or a coordinated botnet.
+                    <strong>Finding:</strong> Attack traffic originated from Spain, China, Japan, the US, and the UK, ruling out a localized or targeted attack. The top 4 IPs had <strong>identical attempt counts and identical username diversity</strong>, a strong indicator of shared tooling or a coordinated botnet.
                 </p>
                 <p>
                     Geographic distribution via Splunk's built-in <code>iplocation</code> command:
@@ -276,7 +287,7 @@ export function SplunkSSHBlog() {
 | sort -total_attempts`
                 }</pre>
                 <p>
-                    Checking the top IPs against VirusTotal and AbuseIPDB returned no high-confidence malicious flags — only sparse single-user reports. This isn't reassuring; it reflects <strong>transient rotating infrastructure</strong> used specifically to stay under reputation-based blocklist thresholds. The IPs appear "clean" because they've already moved on before reports accumulate.
+                    Checking the top IPs against VirusTotal and AbuseIPDB returned no high-confidence malicious flags, only sparse single-user reports. This isn't reassuring; it reflects <strong>transient rotating infrastructure</strong> used specifically to stay under reputation-based blocklist thresholds. The IPs appear "clean" because they've already moved on before reports accumulate.
                 </p>
                 <ImageCarousel carouselImages={enrichmentImages} captions={enrichmentCaptions} />
 
@@ -284,35 +295,50 @@ export function SplunkSSHBlog() {
                 {/* ── SYNTHESIS ────────────────────────────────────────────── */}
                 <h1>Synthesis — What Actually Happened</h1>
                 <p>
-                    Over 30 days, this Linux system was subjected to <strong>continuous, automated SSH username enumeration from ~2,600 unique IPs distributed globally</strong>. The majority made only a handful of attempts — broad low-volume internet-wide crawling — while a concentrated subset of high-volume IPs conducted sustained campaigns lasting hours at a time.
+                    Over 30 days, this Linux system was subjected to <strong>continuous, automated SSH username enumeration from ~2,600 unique IPs distributed globally</strong>. The majority made only a handful of attempts (probably broad low-volume internet-wide crawling), while a concentrated subset of high-volume IPs conducted sustained campaigns lasting hours at a time.
                 </p>
                 <p>
-                    All recorded activity was pre-authentication. The attackers were <strong>validating which usernames exist on the system</strong> — likely as reconnaissance for a password spraying phase that would occur separately, against already-confirmed valid accounts. The targeted usernames (admin, test, ftp, D-Link, nagios) are default and vendor-specific names, not personalized guesses. This was <strong>opportunistic internet-wide scanning, not a targeted attack</strong>. No accounts were successfully accessed within the scope of this dataset.
+                    All recorded activity was pre-authentication. The attackers were <strong>validating which usernames exist on the system</strong>, likely as reconnaissance for a password spraying phase that would occur separately, against already-confirmed valid accounts. The targeted usernames (admin, test, ftp, D-Link, nagios) are default and vendor-specific names, not personalized guesses. This was <strong>opportunistic internet-wide scanning, not a targeted attack</strong>. No accounts were successfully accessed within the scope of this dataset.
                 </p>
 
                 <h2>Security Recommendations</h2>
                 <p>
                     If this were a production server, the evidence supports five specific controls:
                     <ul>
-                        <li><strong>Disable password authentication entirely — require SSH keys.</strong> Every attack targeted password-based access. Key-based auth renders the entire attack surface irrelevant.</li>
+                        <li><strong>Disable password authentication entirely & require SSH keys.</strong> Every attack targeted password-based access. Key-based auth renders the entire attack surface irrelevant.</li>
                         <li><strong>Deploy fail2ban or IP rate-limiting.</strong> 199 IPs exceeded 10 failed attempts within 5 minutes. An automated ban after 5 failures in 60 seconds blocks enumeration before it gathers useful data.</li>
-                        <li><strong>Move SSH off port 22.</strong> The "Bad protocol version 'GET / HTTP/1.0'" events show scanners probing port 22 reflexively — many tools only target the default port.</li>
+                        <li><strong>Move SSH off port 22.</strong> The "Bad protocol version 'GET / HTTP/1.0'" events show scanners probing port 22 reflexively as many tools only target the default port.</li>
                         <li><strong>Remove default service accounts.</strong> admin, test, guest, ftp, oracle should not exist on a hardened system. Their absence collapses the effective wordlist.</li>
                         <li><strong>Implement a live time-windowed SIEM alert.</strong> A Splunk alert on &gt;10 "Invalid user" events from a single IP within 5 minutes would have flagged 199 IPs in this dataset in near-real-time.</li>
                     </ul>
                 </p>
+                
+                <p>
+                    Recommended alert SPL query for real-time detection of brute force attacks:
+                
+                <pre className="spl-block">{
+                    `index=ssh_investigation sourcetype=linux_auth
+| rex "Invalid user (?<username>\S+)"
+| where isnotnull(username)
+| rex "from (?<src_ip>\d+\.\d+\.\d+\.\d+)"
+| bin _time span=5m
+| stats count as attempts by src_ip _time
+| where attempts > 10`
+                }</pre>
+                </p>
 
+                <ImageCarousel carouselImages={recommendedAlertImages} captions={recommendedAlertCaptions} />
 
                 {/* ── REFLECTION ───────────────────────────────────────────── */}
                 <h1>Reflection</h1>
                 <p>
-                    The most transferable skill this lab built wasn't knowing how to run Splunk — it was practicing the <strong>investigative workflow itself</strong>: orient, profile, detect, enrich, conclude. Every finding started with a hypothesis, a query to test it, and an interpretation of the results — including the ambiguous ones.
+                    The most transferable skill this lab built wasn't knowing how to run Splunk, it was practicing the <strong>investigative workflow itself</strong>: orient, profile, detect, enrich, conclude. Every finding started with a hypothesis, a query to test it, and an interpretation of the results, including the ambiguous ones.
                 </p>
                 <p>
                     Things I'd extend with more time or data:
                     <ul>
                         <li><strong>Cross-reference with network flow data</strong> to confirm what the pre-auth logs imply but can't prove about post-connection activity</li>
-                        <li><strong>Investigate IPs with burst-quiet-burst patterns</strong> — a potential signal of rate-limit evasion or distributed botnet behavior</li>
+                        <li><strong>Investigate IPs with burst-quiet-burst patterns</strong> as a potential signal of rate-limit evasion or distributed botnet behavior</li>
                         <li><strong>Build and deploy a live saved alert in Splunk</strong> with a configured webhook or email action, closing the loop from detection logic to operational response</li>
                     </ul>
                 </p>
